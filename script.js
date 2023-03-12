@@ -1,3 +1,5 @@
+// deslizando pagina home
+
 let slideIndex = 0;
 showSlides();
 
@@ -18,9 +20,24 @@ function showSlides() {
   setTimeout(showSlides, 5000); // 5 segundos
 }
 
+// pagina sobre
+
 window.sr = ScrollReveal({ reset: true });
 
 sr.reveal('#container-sobre', {
   rotate: {x: 0, y: 80, z: 0},
   duration: 2000
 });
+
+//testo piscando
+
+var teste = 0;
+ setInterval(piscar, 400);
+ function piscar(){
+	if(teste<1){
+	  teste++;
+	  document.getElementById('piscando').style.opacity = '1';
+	} else{
+	  teste = 0; 
+	  document.getElementById('piscando').style.opacity = '0';
+	}};
