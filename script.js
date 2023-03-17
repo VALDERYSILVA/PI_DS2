@@ -1,24 +1,21 @@
 // deslizando pagina home
 
-let slideIndex = 0;
-showSlides();
+let count = 1;
+document.getElementById("radio1").checked = true;
 
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+setInterval( function(){
+  nextImage();
+}, 4000)
+
+function nextImage(){
+  count++;
+  if(count>4){
+      count = 1;
+    }
+
+  document.getElementById("radio"+count).checked = true;
+
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 5000); // 5 segundos
-}
 
 // pagina sobre
 
@@ -29,15 +26,17 @@ sr.reveal('#container-sobre', {
   duration: 2000
 });
 
-//testo piscando
+//testo "assine" piscando
 
-var teste = 0;
+var assine = 0;
  setInterval(piscar, 400);
  function piscar(){
-	if(teste<1){
-	  teste++;
+	if(assine<1){
+	  assine++;
 	  document.getElementById('piscando').style.opacity = '1';
 	} else{
-	  teste = 0; 
+	  assine = 0; 
 	  document.getElementById('piscando').style.opacity = '0';
 	}};
+
+

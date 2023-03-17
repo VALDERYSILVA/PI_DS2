@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Projeto Integrador</title>
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="folhadeestilo.css">
@@ -13,7 +13,7 @@
 <!-- menu e logomarca -->
 
 <body>
-    <div class="container-principal">
+    <div id="index.html" class="principal">
         <header>
             <div class="logo_redondo">
                 <img src="imagens/logo.png" alt="logo redondo">
@@ -25,7 +25,7 @@
 
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#index.html">Home</a></li>
                     <li><a href="#planos">Planos</a></li>
                     <li><a href="#pag-sobre">Sobre</a></li>
                     <li><a href="#rodape">Contato</a></li>
@@ -42,44 +42,48 @@
         </a>
     </div>
 
-    <!-- aqui comeca o fade em javascript da pagina home -->
+    <!-- aqui começa pagina home -->
 
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-            <div class="numbertext"></div>
+    <div class="slider">
+
+    <div class="slides">
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+
+        <div class="slide primeiro">
             <img src="imagens/plano_50.png" alt="Imagem ilustrativa plano 50 mega">
-            <div class="text"></div>
         </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext"></div>
+        <div class="slide">
             <img src="imagens/plano_100.png" alt="Imagem ilustrativa plano 100 mega">
-            <div class="text"></div>
         </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext"></div>
+        <div class="slide">
             <img src="imagens/plano_200.png" alt="Imagem ilustrativa plano 200 mega">
-            <div class="text"></div>
         </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext"></div>
+        <div class="slide">
             <img src="imagens/plano_400.png" alt="Imagem ilustrativa plano 400 mega">
-            <div class="text"></div>
         </div>
+
+        <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+        </div>
+
     </div>
 
-    <br>
-
-    <div class="dot_bolinhas">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
+    <div class="manual-navigation">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
     </div>
 
-    <!-- aqui comeca pagina planos -->
+    </div>
+
+    <!-- aqui começa pagina planos -->
 
     <section id="planos">
 
@@ -93,7 +97,7 @@
 
         <div class="plano_assine">
             <img src="imagens/assine.png" alt="Imagem ilustrativa de coracao">
-            <a href="#rodape"><b id="piscando">Assine Já</b></a>
+            <a href="#openmodal3"><b id="piscando">Assine Já</b></a>
         </div>
 
     </section>
@@ -105,7 +109,8 @@
             <a href="#close" class="close">X</a>
             <h1>Tudo sobre fibra óptica</h1>
             <p>Para começar, vamos falar mais sobre o conceito de internet fibra óptica:</p>
-            <p>É um meio de transmissão que permite o tráfego de dados com altíssima velocidade, próxima à velocidade da
+            <p>É um meio de transmissão que permite o tráfego de dados com altíssima velocidade, próxima à
+                velocidade da
                 luz.</p>
             <p>Os cabos são compostos por feixes de vidro, tão finos quanto um fio de cabelo humano, revestidos de
                 plástico reflexivo e isolante.</p>
@@ -130,7 +135,8 @@
         <div>
             <a href="#close" title="Close" class="close">X</a>
             <h2>Como funciona um roteador?</h2>
-            <p>Imagine que tudo o que você faz na internet, como downloads e uploads de arquivos, precisa ter pacotes em
+            <p>Imagine que tudo o que você faz na internet, como downloads e uploads de arquivos, precisa ter
+                pacotes em
                 circulação. Para qualquer página que você deseja abrir, tudo circula por essa rede sem fio.<br>
             <p>roteador funciona orientando os dados de rede através de pacotes que contém diversos tipos de dados.
                 Estes pacotes têm várias camadas ou seções que contêm informações de identificação como:</p>
@@ -141,11 +147,47 @@
                 <li>Endereço IP de destino</li>
             </ul>
             <p>O aparelho lerá essa camada e escolherá a melhor rota a ser utilizada para cada transmissão.</p>
-            <p>Sua principal característica é buscar as melhores rotas para enviar ou receber os dados, dando prioridade
+            <p>Sua principal característica é buscar as melhores rotas para enviar ou receber os dados, dando
+                prioridade
                 por transmissões mais curtas.</p>
             </p>
         </div>
     </div>
+
+    <div id="openmodal3" class="modalDialog3">
+        <form name="email" method="POST" action="enviar.php">
+            <a href="#close" class="close">X</a>
+            <h1>Entre em contato</h1>
+            <p>Preencha o formulário abaixo e entraremos em<br>contato com você</p>
+
+            <div class="input-single">
+                <input type="text" name="nome" id="nome-box" class="input" autocomplete="off" required>
+                <label for="nome-box">Nome completo</label>
+            </div>
+
+            <div class="input-single">
+                <input type="text" name="telefone" id="telefone-box" class="input" autocomplete="off" required>
+                <label for="telefone-box">Telefone</label>
+            </div>
+
+            <div class="input-single">
+                <input type="email" name="email" id="email-box" class="input" autocomplete="off" required>
+                <label for="email-box">e-mail</label>
+            </div>
+
+            <div class="mensagem">
+                <textarea type="text" name="mensagem" rows="6" cols="25" id="mensagem-box" class="textarea"></textarea>
+                <label for="mensagem-box">Deixe aqui uma mensagem...</label>
+            </div>
+
+            <div class="btn">
+                <input type="submit" name="enviar" value="Enviar">
+            </div>
+
+        </form>
+    </div>
+
+
 
     <!-- aqui comeca pagina sobre -->
 
@@ -159,7 +201,8 @@
             <div id="txt-sobre">
                 <p>Nossa missão é fornecer um serviço de qualidade sem oscilação e sem intervenções, tendo você como
                     nosso principal cliente.<br><br>Fundada em 2010, na cidade de Paulista - PE, somos uma empresa
-                    especializada no serviço de telecomunicações. Atuando na área de internet banda larga e homologados
+                    especializada no serviço de telecomunicações. Atuando na área de internet banda larga e
+                    homologados
                     pela ANATEL.<br><br>Aplicando tecnologia avançada e inovadoras, sempre estamos comprometidos em
                     prestar um serviço de qualidade, com segurança de dados produtividade e redução de custos para a
                     satisfação de nossos clientes, seja residencial ou corporativo.
@@ -187,7 +230,8 @@
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
                 <h2>Venha nos conhecer</h2>
-                <p>Av. Antonio Cabral de Souza, 7392 H<br>Lot. Conceição Paulista - PE<br>(81) 3435.6078 / 98627.1986
+                <p>Av. Antonio Cabral de Souza, 7392 H<br>Lot. Conceição Paulista - PE<br>(81) 3435.6078 /
+                    98627.1986
                 </p>
             </div>
         </div>
@@ -233,7 +277,7 @@
                             <img src="imagens/icoface.png" alt="facebook">
                         </a></li>
                     <li><a href="https://www.instagram.com/arteempc/" target="_blank" rel="noopener">
-                            <img src="imagens/icoinsta.png" alt="instagram">
+                            <img src="imagens/icoinsta.png"><b id="instagram"></b>
                         </a></li>
                 </ul>
             </div>
@@ -245,4 +289,5 @@
     </footer>
 
 </body>
+
 </html>
