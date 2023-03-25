@@ -97,7 +97,7 @@
 
         <div class="plano_assine">
             <img src="imagens/assine.png" alt="Imagem ilustrativa de coracao">
-            <a href="#openmodal3"><b id="piscando">Assine Já</b></a>
+            <a href="#enviar_contato"><b id="piscando">Assine Já</b></a>
         </div>
 
     </section>
@@ -154,40 +154,48 @@
         </div>
     </div>
 
-    <div id="openmodal3" class="modalDialog3">
-        <form name="email" method="POST" action="enviar.php">
+    <div id="enviar_contato" class="modalDialog3">
+       
+        <form id="enviar_formulario" name="email" method="POST" action="enviar.php">
             <a href="#close" class="close">X</a>
             <h1>Entre em contato</h1>
             <p>Preencha o formulário abaixo e entraremos em<br>contato com você</p>
 
             <div class="input-single">
-                <input type="text" name="nome" id="nome-box" class="input" autocomplete="off" required>
+                <input type="text" name="nome" id="nome-box" class="input" autocomplete="off" maxlength="40" required>
                 <label for="nome-box">Nome completo</label>
             </div>
 
             <div class="input-single">
-                <input type="text" name="telefone" id="telefone-box" class="input" autocomplete="off" required>
+                <input type="text" name="telefone" id="telefone-box" class="input" autocomplete="off" maxlength="15" onkeyup="mascaraTelefone('(  )     -    ', this)" required>
                 <label for="telefone-box">Telefone</label>
+                <script src="mascara.js"></script>
             </div>
 
             <div class="input-single">
-                <input type="email" name="email" id="email-box" class="input" autocomplete="off" required>
+                <input type="text" name="email" id="email-box" class="input" autocomplete="off" maxlength="40" required>
                 <label for="email-box">e-mail</label>
             </div>
 
-            <div class="mensagem">
-                <textarea type="text" name="mensagem" rows="6" cols="25" id="mensagem-box" class="textarea"></textarea>
+            <div class="input-single">
+                <textarea type="text" name="mensagem" rows="6" cols="25" id="mensagem-box" class="textarea" autocomplete="off" maxlength="255" required></textarea>
                 <label for="mensagem-box">Deixe aqui uma mensagem...</label>
             </div>
 
             <div class="btn">
                 <input type="submit" name="enviar" value="Enviar">
             </div>
-
         </form>
+
+        <div id="sucesso" class="envio_sucesso">
+            <a href="#close" class="close">X</a>
+                <img src="imagens/carta.png">
+                <p>Seu formulário foi enviado com sucesso!<br><br>
+                Em breve iremos entrar em contato<br><br>
+                Obrigado!
+            </p>
+        </div>
     </div>
-
-
 
     <!-- aqui comeca pagina sobre -->
 

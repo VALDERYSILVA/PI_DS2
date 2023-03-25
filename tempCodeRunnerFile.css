@@ -1,0 +1,5 @@
+.modalDialog3 form .input-single .email:focus ~ label,
+.modalDialog3 form .input-single .email:valid ~ label {
+  transform: translateY(-24px);
+  font-size: 12px;
+}

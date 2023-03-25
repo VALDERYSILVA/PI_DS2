@@ -14,11 +14,10 @@ $mgm = "Olá, $nome!<br><br>A PC Tecnologia faz questão de
 sempre oferecer soluções impecáveis, que atendem 
 altos níveis de qualidade, dentro dos padrões 
 exigidos pelas normas reguladoras.<br><br>
-Por isso, é um prazer ter você como nosso cliente! 
-Temos a qualidade e a excelência para fazer parte 
-de nossos valores.<br><br>
+Em nossos valores prezamos pela qualidade e excelência 
+para melhorar atender os nosos clientes.<br><br>
 Obrigado pela confiança em solicitar nossos serviços 
-para satisfazer a você!"; // mensagem chegando no email do cliente
+para satisfazer você!"; // mensagem chegando no email do cliente
 
 // Compo E-mail
 
@@ -67,6 +66,8 @@ $arquivo = "
 </html>
 ";
 
+
+
 /* para onde será enviado o formulário */
 
 $emailenviar = "arteempc@hotmail.com";
@@ -81,12 +82,39 @@ $assunto = "Contato via web"; //assunto de email
  
 $enviaremail_cliente = mail($email, $assunto_cliente, $mgm, $headers);
 $enviaremail_empresa = mail($destino, $assunto, $arquivo, $headers);
-if($enviaremail_cliente && $enviaremail_empresa){
-  
-  echo " <meta http-equiv='refresh' content='0;URL=index.php#planos'>";
-}
-else {
-  echo "ERRO AO ENVIAR E-MAIL!";}
+if(($enviaremail_cliente) && ($enviaremail_empresa)){
 
+  echo "<script>alert('Enviado com sucesso!');history.back();</script>";
+}
+
+else {
+  echo "<script>alert('Erro ao envia e-mail!');history.back();</script>";
+
+}
+
+
+// cadastro banco de dados
+
+include("conexao.php");
+
+$nome = $_POST['nome'];
+$telefone = $_POST['telefone'];
+$email = $_POST['email'];
+$mensagem = $_POST['mensagem'];
+
+$sql = "INSERT INTO contato(nome, telefone, email, mensagem)
+VALUES ('$nome', '$telefone', '$email' ,'$mensagem')";
+
+
+if(mysqli_query($conexao, $sql)) {
+
+  echo "<script>alert('Enviado com sucesso!');history.back();</script>";
+}
+
+else {
+  echo "<script>alert('Erro ao enviar!');history.back();</script>";
+}
+
+mysqli_close($conexao);
 
 ?>

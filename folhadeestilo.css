@@ -262,22 +262,6 @@ nav ul li a:hover {
   margin-left: 30%;
 }
 
-.close {
-  background-color: #606061;
-  color: #FFFFFF;
-  line-height: 25px;
-  position: absolute;
-  right: 12px;
-  text-align: center;
-  top: -10px;
-  width: 24px;
-  text-decoration: none;
-  font-weight: bold;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  border-radius: 12px;
-}
-
 .modalDialog1 {
   position: fixed;
   font-family: 'Verdana';
@@ -426,6 +410,7 @@ nav ul li a:hover {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  display: block;
 }
 
 .modalDialog3 h1 {
@@ -461,6 +446,7 @@ nav ul li a:hover {
   left: 8px;
   bottom: 20px;
   transition: 0.4s;
+  cursor: text;
 }
 
 .modalDialog3:target {
@@ -471,6 +457,7 @@ nav ul li a:hover {
 
 .modalDialog3 textarea {
   resize: none;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: left;
   font-size: 17px;
   border: 0px;
@@ -483,7 +470,7 @@ nav ul li a:hover {
 
 .modalDialog3 textarea:focus {
   outline: 0;
-}
+} 
 
 .modalDialog3 input {
   font-size: 17px;
@@ -496,14 +483,13 @@ nav ul li a:hover {
   outline: 0;
 }
 
-.modalDialog3 form .input-single .input:focus~label,
-.modalDialog3 form .input-single .input:valid~label {
+.modalDialog3 form .input-single .input:focus ~ label,
+.modalDialog3 form .input-single .input:valid ~ label {
   transform: translateY(-24px);
   font-size: 12px;
 }
 
-
-.modalDialog3 form .mensagem .textarea:focus~label,
+.modalDialog3 form .input-single .textarea:focus~label,
 .modalDialog3 form .input-single .textarea:valid~label {
   transform: translateY(24px);
   font-size: 12px;
@@ -525,9 +511,61 @@ nav ul li a:hover {
   background-color: #0000CD;
 }
 
-.close:hover {
-  background-color: #b50900;
+   /* Botão fechar todos .modal */
+
+   .close {
+    background-color: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: 12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+  }
+  
+  .close:hover {
+    background-color: #b50900;
+  }
+
+/* teste de sucesso */
+
+.modalDialog3 .envio_sucesso {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 4px 4px 6px;
+  max-width: 600px;
+  width: 150%;
+  padding: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
 }
+
+  .modalDialog3 .envio_sucesso img{
+    padding: 10px;
+    position: relative;
+    width: 180px;
+    left: 28px;
+  }
+
+  .modalDialog3 .envio_sucesso p {
+    position: absolute;
+    font-family: Menlo;
+    font-size: 20px;
+    
+    left: 50%;
+    top: 50%;
+    transform: translate(-18%, -50%);
+  }
+  
 
 /* pagina de planos */
 
