@@ -82,17 +82,17 @@ $headers .= 'From: <nao-responder@arteempc.com.br>';
 
 $enviaremail_cliente = mail($email, $assunto_cliente, $mgm, $headers);
 $enviaremail_empresa = mail($destino, $assunto, $arquivo, $headers);
-if (($enviaremail_cliente) && ($enviaremail_empresa)) //{
+if (($enviaremail_cliente) && ($enviaremail_empresa)) {
 
-  //   echo "<script>alert('Enviado com sucesso!');history.back();</script>";
-  // } // else {
-  //   echo "<script>alert('Erro ao enviar email');history.back();</script>";
-  // }
+  echo "<script>history.back();</script>";
+} else {
+  echo "<script>history.back();</script>";
+}
 
 
-  // cadastro banco de dados
+// cadastro banco de dados
 
-  include("conexao.php");
+include("conexao.php");
 
 $nome = $_POST['nome'];
 $telefone = $_POST['telefone'];
@@ -100,14 +100,14 @@ $email = $_POST['email'];
 $mensagem = $_POST['mensagem'];
 
 $sql = "INSERT INTO contato(nome, telefone, email, mensagem)
-VALUES ('$nome', '$telefone', '$email' ,'$mensagem')";
+  VALUES ('$nome', '$telefone', '$email' ,'$mensagem')";
 
 
 if (mysqli_query($conexao, $sql)) {
 
   echo "<script>history.back();</script>";
-} //else {
-//   echo "<script>alert('Erro ao enviar BD!');history.back();</script>";
-// }
+} else {
+  echo "<script>history.back();</script>";
+}
 
 mysqli_close($conexao);
