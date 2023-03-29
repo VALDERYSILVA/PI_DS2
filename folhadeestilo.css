@@ -21,7 +21,7 @@ html {
   overflow: hidden;
 }
 
- .slides {
+.slides {
   width: 400%;
   height: 400px;
   display: flex;
@@ -34,7 +34,7 @@ html {
 .slide {
   width: 25%;
   position: relative;
-  transition: 3s;  
+  transition: 3s;
 }
 
 .slide img {
@@ -66,23 +66,23 @@ html {
   background-color: #FFFFFF;
 }
 
-#radio1:checked  ~ .primeiro{
+#radio1:checked~.primeiro {
   margin-left: 0;
 }
 
-#radio2:checked  ~ .primeiro{
+#radio2:checked~.primeiro {
   margin-left: -25%;
 }
 
-#radio3:checked  ~ .primeiro{
+#radio3:checked~.primeiro {
   margin-left: -50%;
 }
 
-#radio4:checked  ~ .primeiro{
+#radio4:checked~.primeiro {
   margin-left: -75%;
 }
 
-.navigation-auto div{
+.navigation-auto div {
   border: 2px solid #FFFFFF;
   padding: 5px;
   border-radius: 10px;
@@ -90,7 +90,7 @@ html {
   transition: 0.5s;
 }
 
-.navigation-auto{
+.navigation-auto {
   position: absolute;
   width: 100%;
   margin-top: 650px;
@@ -98,23 +98,23 @@ html {
   justify-content: center;
 }
 
-.navigation-auto div:not(:last-child){
+.navigation-auto div:not(:last-child) {
   margin-right: 20px;
 }
 
-#radio1:checked ~ .navigation-auto .auto-btn1{
+#radio1:checked~.navigation-auto .auto-btn1 {
   background-color: #FFFFFF;
 }
 
-#radio2:checked ~ .navigation-auto .auto-btn2{
+#radio2:checked~.navigation-auto .auto-btn2 {
   background-color: #FFFFFF;
 }
 
-#radio3:checked ~ .navigation-auto .auto-btn3{
+#radio3:checked~.navigation-auto .auto-btn3 {
   background-color: #FFFFFF;
 }
 
-#radio4:checked ~ .navigation-auto .auto-btn4{
+#radio4:checked~.navigation-auto .auto-btn4 {
   background-color: #FFFFFF;
 }
 
@@ -186,7 +186,7 @@ header {
 /* definir as propriedades do menu */
 nav {
   position: absolute;
-  right: 60px;
+  right: 45px;
   bottom: 0px;
 }
 
@@ -194,8 +194,8 @@ nav ul li {
   float: left;
   color: #FFF;
   width: auto;
-  margin: 1.3em;
-  font-size: 1.3em;
+  margin: 1.8em;
+  font-size: 1em;
   font-family: 'Verdana';
   list-style: none;
 }
@@ -208,6 +208,15 @@ nav ul li a {
 nav ul li a:hover {
   color: #778
 }
+
+/* .nome_empresa {
+  position: relative;
+  left: 25%;
+  background-color: #58a2f1;
+  color: #FFFFFF;
+  text-align: center;
+  width: 300px;
+} */
 
 /* definir as propriedade dos pop-ups */
 
@@ -470,7 +479,7 @@ nav ul li a:hover {
 
 .modalDialog3 textarea:focus {
   outline: 0;
-} 
+}
 
 .modalDialog3 input {
   font-size: 17px;
@@ -483,8 +492,8 @@ nav ul li a:hover {
   outline: 0;
 }
 
-.modalDialog3 form .input-single .input:focus ~ label,
-.modalDialog3 form .input-single .input:valid ~ label {
+.modalDialog3 form .input-single .input:focus~label,
+.modalDialog3 form .input-single .input:valid~label {
   transform: translateY(-24px);
   font-size: 12px;
 }
@@ -511,37 +520,37 @@ nav ul li a:hover {
   background-color: #0000CD;
 }
 
-   /* Botão fechar todos .modal */
+/* Botão fechar todos .modal */
 
-   .close {
-    background-color: #606061;
-    color: #FFFFFF;
-    line-height: 25px;
-    position: absolute;
-    right: 12px;
-    text-align: center;
-    top: -10px;
-    width: 24px;
-    text-decoration: none;
-    font-weight: bold;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    border-radius: 12px;
-  }
-  
-  .close:hover {
-    background-color: #b50900;
-  }
+.close {
+  background-color: #606061;
+  color: #FFFFFF;
+  line-height: 25px;
+  position: absolute;
+  right: 12px;
+  text-align: center;
+  top: -10px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+}
+
+.close:hover {
+  background-color: #b50900;
+}
 
 /* teste de sucesso */
 
 .modalDialog3 .envio_sucesso {
-  background-color: #FFFFFF;
+  background-color: #FFFAFA;
   border-radius: 10px;
   box-shadow: 4px 4px 6px;
-  max-width: 600px;
-  width: 150%;
-  padding: 10px;
+  max-width: 550px;
+  width: 100%;
+  padding: 12px;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -549,23 +558,39 @@ nav ul li a:hover {
   display: none;
 }
 
-  .modalDialog3 .envio_sucesso img{
-    padding: 10px;
-    position: relative;
-    width: 180px;
-    left: 28px;
-  }
+.modalDialog3 .envio_sucesso img {
+  padding: 12px;
+  position: relative;
+  width: 135px;
+  left: 38px;
+}
 
-  .modalDialog3 .envio_sucesso p {
-    position: absolute;
-    font-family: Menlo;
-    font-size: 20px;
-    
-    left: 50%;
-    top: 50%;
-    transform: translate(-18%, -50%);
-  }
-  
+.modalDialog3 .envio_sucesso p {
+  position: absolute;
+  font-size: 25px;
+  left: 50%;
+  top: 75%;
+  transform: translate(20%, -50%);
+}
+
+.modalDialog3 .envio_sucesso h2 {
+  position: absolute;
+  color: #228B22;
+  text-align: center;
+  left: 50%;
+  top: 27%;
+  transform: translate(-20%, -50%);
+}
+
+.modalDialog3 .envio_sucesso h3 {
+  position: absolute;
+  text-align: center;
+  font-size: 16px;
+  left: 50%;
+  top: 55%;
+  transform: translate(-20%, -50%);
+}
+
 
 /* pagina de planos */
 

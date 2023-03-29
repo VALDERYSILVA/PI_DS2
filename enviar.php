@@ -1,6 +1,6 @@
 <?php
 
-date_default_timezone_set ("America/Recife");
+date_default_timezone_set("America/Recife");
 
 $nome = $_POST['nome']; // nome do cliente
 $telefone = $_POST['telefone']; // telefone do cliente
@@ -74,28 +74,25 @@ $emailenviar = "arteempc@hotmail.com";
 $destino = $emailenviar;
 $assunto = "Contato via web"; //assunto de email
 
-  // É necessário indicar que o formato do e-mail é html
-  $headers  = 'MIME-Version: 1.0' . "\r\n";
-      $headers .= 'Content-type:text/html;charset=utf-8' . "\r\n";
-      $headers .= 'From: <nao-responder@arteempc.com.br>';
+// É necessário indicar que o formato do e-mail é html
+$headers  = 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Content-type:text/html;charset=utf-8' . "\r\n";
+$headers .= 'From: <nao-responder@arteempc.com.br>';
 
- 
+
 $enviaremail_cliente = mail($email, $assunto_cliente, $mgm, $headers);
 $enviaremail_empresa = mail($destino, $assunto, $arquivo, $headers);
-if(($enviaremail_cliente) && ($enviaremail_empresa)){
+if (($enviaremail_cliente) && ($enviaremail_empresa)) //{
 
-  echo "<script>alert('Enviado com sucesso!');history.back();</script>";
-}
-
-else {
-  echo "<script>alert('Erro ao envia e-mail!');history.back();</script>";
-
-}
+  //   echo "<script>alert('Enviado com sucesso!');history.back();</script>";
+  // } // else {
+  //   echo "<script>alert('Erro ao enviar email');history.back();</script>";
+  // }
 
 
-// cadastro banco de dados
+  // cadastro banco de dados
 
-include("conexao.php");
+  include("conexao.php");
 
 $nome = $_POST['nome'];
 $telefone = $_POST['telefone'];
@@ -106,15 +103,11 @@ $sql = "INSERT INTO contato(nome, telefone, email, mensagem)
 VALUES ('$nome', '$telefone', '$email' ,'$mensagem')";
 
 
-if(mysqli_query($conexao, $sql)) {
+if (mysqli_query($conexao, $sql)) {
 
-  echo "<script>alert('Enviado com sucesso!');history.back();</script>";
-}
-
-else {
-  echo "<script>alert('Erro ao enviar!');history.back();</script>";
-}
+  echo "<script>history.back();</script>";
+} //else {
+//   echo "<script>alert('Erro ao enviar BD!');history.back();</script>";
+// }
 
 mysqli_close($conexao);
-
-?>

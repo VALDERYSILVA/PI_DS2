@@ -19,9 +19,10 @@
                 <img src="imagens/logo.png" alt="logo redondo">
             </div>
 
-            <div class="logo_horizonte">
-                <img src="imagens/logo_titulo.png" alt="logo empresa">
-            </div>
+            <!-- <div class="nome_empresa">
+                <h1>PC Tecnologia</h1>
+            </div> -->
+
 
             <nav>
                 <ul>
@@ -29,6 +30,7 @@
                     <li><a href="#planos">Planos</a></li>
                     <li><a href="#pag-sobre">Sobre</a></li>
                     <li><a href="#rodape">Contato</a></li>
+                    <li><a href="#openmodal1" style="background-color: #b50900; border-radius: 15px; padding: 2px 15px;">Teste sua velocidade</a></li>
                 </ul>
             </nav>
         </header>
@@ -46,40 +48,40 @@
 
     <div class="slider">
 
-    <div class="slides">
-        <input type="radio" name="radio-btn" id="radio1">
-        <input type="radio" name="radio-btn" id="radio2">
-        <input type="radio" name="radio-btn" id="radio3">
-        <input type="radio" name="radio-btn" id="radio4">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
 
-        <div class="slide primeiro">
-            <img src="imagens/plano_50.png" alt="Imagem ilustrativa plano 50 mega">
-        </div>
-        <div class="slide">
-            <img src="imagens/plano_100.png" alt="Imagem ilustrativa plano 100 mega">
-        </div>
-        <div class="slide">
-            <img src="imagens/plano_200.png" alt="Imagem ilustrativa plano 200 mega">
-        </div>
-        <div class="slide">
-            <img src="imagens/plano_400.png" alt="Imagem ilustrativa plano 400 mega">
+            <div class="slide primeiro">
+                <img src="imagens/SL1.jpg" alt="Imagem ilustrativa plano 50 mega">
+            </div>
+            <div class="slide">
+                <img src="imagens/SL2.jpg" alt="Imagem ilustrativa plano 100 mega">
+            </div>
+            <div class="slide">
+                <img src="imagens/SL3.jpg" alt="Imagem ilustrativa plano 200 mega">
+            </div>
+            <div class="slide">
+                <img src="imagens/SL4.jpg" alt="Imagem ilustrativa plano 400 mega">
+            </div>
+
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+
         </div>
 
-        <div class="navigation-auto">
-            <div class="auto-btn1"></div>
-            <div class="auto-btn2"></div>
-            <div class="auto-btn3"></div>
-            <div class="auto-btn4"></div>
+        <div class="manual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
         </div>
-
-    </div>
-
-    <div class="manual-navigation">
-        <label for="radio1" class="manual-btn"></label>
-        <label for="radio2" class="manual-btn"></label>
-        <label for="radio3" class="manual-btn"></label>
-        <label for="radio4" class="manual-btn"></label>
-    </div>
 
     </div>
 
@@ -121,10 +123,8 @@
     <div id="openmodal1" class="modalDialog2">
         <div>
             <a href="#close" title="Close" class="close">X</a>
-            <iframe frameborder='0' height='545px' scrolling='no'
-                src='https://www.testeavelocidade.net/p/velocimetro-widget.html' width='100%' /><br />
-            <font size="2" face="Arial"> O <a href='https://www.testeavelocidade.net' rel='noopener'
-                    style='text-decoration:none;font-size: 14px;font-weight: 700;' target='_blank'>Teste de
+            <iframe frameborder='0' height='545px' scrolling='no' src='https://www.testeavelocidade.net/p/velocimetro-widget.html' width='100%' /><br />
+            <font size="2" face="Arial"> O <a href='https://www.testeavelocidade.net' rel='noopener' style='text-decoration:none;font-size: 14px;font-weight: 700;' target='_blank'>Teste de
                     Velocidade</a>
             </font>
             </iframe>
@@ -155,7 +155,12 @@
     </div>
 
     <div id="enviar_contato" class="modalDialog3">
-       
+        <script>
+            function mostra() {
+                document.getElementById('enviar_formulario').style.display = 'none';
+                document.getElementById('sucesso').style.display = 'block';
+            }
+        </script>
         <form id="enviar_formulario" name="email" method="POST" action="enviar.php">
             <a href="#close" class="close">X</a>
             <h1>Entre em contato</h1>
@@ -183,17 +188,16 @@
             </div>
 
             <div class="btn">
-                <input type="submit" name="enviar" value="Enviar">
+                <input type="submit" name="enviar" value="Enviar" onClick="mostra()">
             </div>
         </form>
 
-        <div id="sucesso" class="envio_sucesso">
-            <a href="#close" class="close">X</a>
-                <img src="imagens/carta.png">
-                <p>Seu formulário foi enviado com sucesso!<br><br>
-                Em breve iremos entrar em contato<br><br>
-                Obrigado!
-            </p>
+        <div id="sucesso" class="envio_sucesso" onClick="mostra()">
+            <a href=" #close" class="close">X</a>
+            <img src="imagens/carta.png">
+            <h2>Sua mensagem foi enviada com sucesso!</h2>
+            <h3>Em breve entraremos em contato</h3><br>
+            <p>Obrigado!</p>
         </div>
     </div>
 
@@ -232,10 +236,7 @@
 
             <div class="mulher">
                 <img src="imagens/mulher.png" alt="Imagem ilustrativa do mapa">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1602.6824106147901!2d-34.840956998483136!3d-7.898244195051964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab3e4a766c6085%3A0x33c7226231628883!2sARTE%20EM%20PC%20Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1665888290752!5m2!1spt-BR!2sbr"
-                    width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1602.6824106147901!2d-34.840956998483136!3d-7.898244195051964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab3e4a766c6085%3A0x33c7226231628883!2sARTE%20EM%20PC%20Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1665888290752!5m2!1spt-BR!2sbr" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
                 <h2>Venha nos conhecer</h2>
                 <p>Av. Antonio Cabral de Souza, 7392 H<br>Lot. Conceição Paulista - PE<br>(81) 3435.6078 /
@@ -263,8 +264,7 @@
             <ul>
                 <li>(81) 3435-6078</li>
                 <li>arteempc.com.br</li>
-                <li><a href="mailto:tecnologia@arteempc.com.br" target="_blank"
-                        rel="noopener">tecnologia@arteempc.com.br</a></li>
+                <li><a href="mailto:tecnologia@arteempc.com.br" target="_blank" rel="noopener">tecnologia@arteempc.com.br</a></li>
             </ul>
         </div>
 
