@@ -149,18 +149,15 @@ header {
   transform: rotate(360deg);
 }
 
-.logo_horizonte {
-  position: absolute;
-  width: 220px;
-  height: auto;
-  opacity: 0;
+.nome_empresa {
+  width: 190px;
 }
 
-.logo_horizonte img {
+.nome_empresa img {
   width: 180%;
   position: relative;
-  margin-top: 7%;
-  left: 70%;
+  margin-top: 6%;
+  left: 320px;
 }
 
 /* definir as propriedades da logo whatsapp */
@@ -206,7 +203,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #778
+  color: #778;
 }
 
 /* definir as propriedade dos pop-ups */
@@ -539,10 +536,10 @@ nav ul li a:hover {
   background-color: #FFFAFA;
   border-radius: 10px;
   box-shadow: 4px 4px 6px;
-  max-width: 550px;
+  max-width: 450px;
   width: 100%;
-  padding: 12px;
-  position: absolute;
+  padding: 10px 0px;
+  position: relative;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -552,19 +549,19 @@ nav ul li a:hover {
 .modalDialog3 .envio_sucesso img {
   padding: 12px;
   position: relative;
-  width: 135px;
-  left: 38px;
+  width: 130px;
+  left: 30px;
 }
 
 .modalDialog3 .envio_sucesso p {
   position: absolute;
-  font-size: 25px;
+  font-size: 20px;
   left: 50%;
-  top: 75%;
+  top: 80%;
   transform: translate(20%, -50%);
 }
 
-.modalDialog3 .envio_sucesso h2 {
+.modalDialog3 .envio_sucesso h3 {
   position: absolute;
   color: #228B22;
   text-align: center;
@@ -573,55 +570,93 @@ nav ul li a:hover {
   transform: translate(-20%, -50%);
 }
 
-.modalDialog3 .envio_sucesso h3 {
+.modalDialog3 .envio_sucesso h5 {
   position: absolute;
   text-align: center;
   font-size: 16px;
   left: 50%;
-  top: 55%;
+  top: 58%;
   transform: translate(-20%, -50%);
 }
 
+.modalDialog3 .visto img {
+  position: absolute;
+  width: 90px;
+  top: 45%;
+  left: 80%;
+}
 
 /* pagina de planos */
 
 #planos {
+  font-family: Arial Narrow black, Helvetica, sans-serif;
   position: relative;
-  height: 780px;
+  height: 760px;
+  color: #FFFFFF;
 }
 
 .banner_planos img {
   width: 100%;
-  height: 780px;
+  height: 760px;
   position: relative;
 }
 
-.plano_imagem img {
-  width: 35%;
+.planoPL2 {
+  background: linear-gradient(90deg, #0000CD, transparent);
+  width: 50%;
+  height: 760px;
   position: absolute;
   bottom: 0;
-  right: 10px;
   float: left;
 }
 
-.plano_assine img {
+.planoPL2 img {
+  height: 760px;
   position: absolute;
-  width: 60%;
-  top: 115px;
-  left: 140px;
+  opacity: 0.8;
+  bottom: 0;
   float: left;
 }
 
-.plano_assine a {
+.planoPL3 img {
+  width: 680px;
   position: absolute;
-  top: 470px;
-  left: 600px;
+  opacity: 0.9;
+  bottom: 0;
+  float: left;
+  top: 150px;
+}
+
+.planoPL3 h1 {
+  position: absolute;
+  top: 230px;
+  left: 180px;
+  font-size: 5.3em;
+}
+
+.planoPL3 h2 {
+  position: absolute;
+  top: 320px;
+  left: 180px;
+  font-size: 3.5em;
+}
+
+.planoPL3 p {
+  position: absolute;
+  top: 450px;
+  left: 180px;
+  font-size: 1.5em;
+}
+
+.assine a {
+  position: absolute;
+  top: 530px;
+  left: 180px;
   width: 250px;
   line-height: 0px;
   color: #FFFFFF;
   text-decoration: none;
   box-shadow: 0px 0px 10px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 1.8em;
   text-shadow: 0px 0px 8px #000;
 }
@@ -629,6 +664,231 @@ nav ul li a:hover {
 #piscando {
   opacity: 1;
   transition-duration: 0.4s;
+}
+
+
+.planoPL4 img {
+  width: 280px;
+  position: absolute;
+  opacity: 0.9;
+  bottom: 0;
+  float: left;
+  top: 0px;
+  right: 0px;
+}
+
+.planoPL5 img {
+  width: 230px;
+  position: absolute;
+  opacity: 0.9;
+  bottom: 0;
+  float: left;
+  bottom: 0px;
+  right: 0px;
+}
+
+.planoPL6 img {
+  width: 90px;
+  position: absolute;
+  top: 100px;
+  left: 500px;
+  float: left;
+}
+
+.planoPL7 img {
+  width: 80px;
+  position: absolute;
+  bottom: 100px;
+  left: 400px;
+  float: left;
+}
+
+.planoPL8 img {
+  width: 70px;
+  position: absolute;
+  bottom: 200px;
+  left: 780px;
+  float: left;
+}
+
+.planoPL9 {
+  position: absolute;
+  background: #ddd;
+  opacity: 0.4;
+  bottom: 260px;
+  right: 60px;
+  border-radius: 20px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #FFFFFF;
+  width: 370px;
+  height: 270px;
+  float: right;
+}
+
+.planoPL9_borda {
+  position: absolute;
+  background: transparent;
+  bottom: 260px;
+  right: 60px;
+  border-radius: 20px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #FFFFFF;
+  width: 370px;
+  height: 270px;
+  float: right;
+}
+
+.planoPL10 {
+  position: absolute;
+  background: #FF0000;
+  opacity: 0.6;
+  bottom: 282px;
+  right: 90px;
+  border-radius: 40px;
+  width: 310px;
+  height: 60px;
+  float: right;
+}
+
+.planoPL11 {
+  position: absolute;
+  background: #FF0000;
+  opacity: 0.6;
+  bottom: 363px;
+  right: 90px;
+  border-radius: 40px;
+  width: 310px;
+  height: 60px;
+  float: right;
+
+}
+
+.planoPL12 {
+  position: absolute;
+  background: #FF0000;
+  opacity: 0.6;
+  bottom: 445px;
+  right: 90px;
+  border-radius: 40px;
+  width: 310px;
+  height: 60px;
+  float: right;
+}
+
+.planoPL13 {
+  position: absolute;
+  background: transparent;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #FFFFFF;
+  bottom: 460px;
+  right: 110px;
+  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+  float: right;
+}
+
+.planoPL13 img {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 27px;
+  height: 27px;
+}
+
+.planoPL13 h3 {
+  position: absolute;
+  width: 265px;
+  bottom: 13px;
+  right: 0px;
+  font-size: 21px;
+}
+
+.planoPL13 p {
+  position: absolute;
+  width: 265px;
+  top: 2px;
+  right: 0px;
+  font-size: 0.6em;
+}
+
+.planoPL14 {
+  position: absolute;
+  background: transparent;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #FFFFFF;
+  bottom: 382px;
+  right: 110px;
+  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+  float: right;
+}
+
+.planoPL14 img {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 27px;
+  height: 27px;
+}
+
+.planoPL14 h3 {
+  position: absolute;
+  width: 265px;
+  bottom: 10px;
+  right: 0px;
+  font-size: 21px;
+}
+
+.planoPL14 p {
+  position: absolute;
+  width: 265px;
+  top: 5px;
+  right: 0px;
+  font-size: 0.6em;
+}
+
+.planoPL15 {
+  position: absolute;
+  background: transparent;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #FFFFFF;
+  bottom: 300px;
+  right: 110px;
+  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+  float: right;
+}
+
+.planoPL15 img {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 27px;
+  height: 27px;
+}
+
+.planoPL15 h3 {
+  position: absolute;
+  width: 265px;
+  bottom: 10px;
+  right: 0px;
+  font-size: 21px;
+}
+
+.planoPL15 p {
+  position: absolute;
+  width: 265px;
+  top: 5px;
+  right: 0px;
+  font-size: 0.6em;
 }
 
 /* definir as propriedades da página sobre */
@@ -1312,11 +1572,11 @@ nav ul li a:hover {
     opacity: 0;
   }
 
-  .logo_horizonte {
+  .nome_empresa {
     opacity: 1;
   }
 
-  .logo_horizonte img {
+  .nome_empresa img {
     width: 170%;
     margin-top: 8%;
     left: 15%;

@@ -19,9 +19,9 @@
                 <img src="imagens/logo.png" alt="logo redondo">
             </div>
 
-            <!-- <div class="nome_empresa">
-                <h1>PC Tecnologia</h1>
-            </div> -->
+            <div class="nome_empresa">
+                <img src="imagens/logotitulo.png">
+            </div>
 
 
             <nav>
@@ -30,7 +30,7 @@
                     <li><a href="#planos">Planos</a></li>
                     <li><a href="#pag-sobre">Sobre</a></li>
                     <li><a href="#rodape">Contato</a></li>
-                    <li><a href="#openmodal1" style="background-color: #b50900; border-radius: 15px; padding: 2px 15px;">Teste sua velocidade</a></li>
+                    <li><a href="#openmodal1" style="background-color: #FF0000; border-radius: 15px; padding: 2px 15px;">Teste sua velocidade</a></li>
                 </ul>
             </nav>
         </header>
@@ -90,16 +90,76 @@
     <section id="planos">
 
         <div class="banner_planos">
-            <img src="imagens/background_4.png" alt="Imagem ilustrativa fundo planos">
+            <img src="imagens/PL1.jpg" alt="Imagem ilustrativa fundo planos">
         </div>
 
-        <div class="plano_imagem">
-            <img src="imagens/jovem.png" alt="Imagem ilustrativa de planos">
+        <div class="planoPL2">
+            <img src="imagens/PL2.png" alt="Imagem ilustrativa de planos">
         </div>
 
-        <div class="plano_assine">
-            <img src="imagens/assine.png" alt="Imagem ilustrativa de coracao">
-            <a href="#enviar_contato"><b id="piscando">Assine Já</b></a>
+        <div class="planoPL3">
+            <img src="imagens/PL3.png" alt="Imagem ilustrativa de planos">
+            <h1>400 mega</h1>
+            <h2>Sempre ativo<br>
+                Pra você</h2>
+            <p>Planos básicos a partir<br>
+                de R$ 70,00
+            </p>
+        </div>
+
+        <div class="planoPL4">
+            <img src="imagens/PL4.png" alt="Imagem ilustrativa de planos">
+        </div>
+
+        <div class="planoPL5">
+            <img src="imagens/LP5.png" alt="Imagem ilustrativa de planos">
+        </div>
+
+        <div class="planoPL6">
+            <img src="imagens/LP6.png" alt="Imagem ilustrativa de planos">
+        </div>
+
+        <div class="planoPL7">
+            <img src="imagens/LP7.png" alt="Imagem ilustrativa de planos">
+        </div>
+
+        <div class="planoPL8">
+            <img src="imagens/LP8.png" alt="Imagem ilustrativa de planos">
+        </div>
+
+        <div class="planoPL9"></div> <!-- Balão maior -->
+        <div class="planoPL9_borda"></div> <!-- Linha do Balão maior -->
+
+        <div class="planoPL10"></div> <!-- Balão interno -->
+        <div class="planoPL11"></div> <!-- Balão interno -->
+        <div class="planoPL12"></div> <!-- Balão interno -->
+
+        <div class="planoPL13">
+            <img src="imagens/visto.png" alt="visto">
+            <h3>Plano Premium 100mb</h3>
+            <p>Exelente para você que navega sem limites muito<br>
+                usados para pesquisas, e-mail, rede sociais e etc.
+            </p>
+        </div>
+
+        <div class="planoPL14">
+            <img src="imagens/visto.png" alt="visto">
+            <h3>Plano Extra Top 200mb</h3>
+            <p>Muito top para você que joga on-line, filmes, series<br>
+                entre outros.
+            </p>
+        </div>
+
+        <div class="planoPL15">
+            <img src="imagens/visto.png" alt="visto">
+            <h3>Plano Maximus 400mb</h3>
+            <p>Tudo em um só plano, pelo menor preço e qualidade<br>
+                Nesse plano você só tem a ganhar.
+            </p>
+        </div>
+
+        <div class="assine">
+            <a href="#enviar_contato"><b id="piscando">ASSINE JÁ</b></a>
         </div>
 
     </section>
@@ -195,9 +255,12 @@
         <div id="sucesso" class="envio_sucesso" onClick="mostra()">
             <a href=" #close" class="close">X</a>
             <img src="imagens/carta.png">
-            <h2>Sua mensagem foi enviada com sucesso!</h2>
-            <h3>Em breve entraremos em contato</h3><br>
+            <h3>Sua mensagem foi enviada com sucesso!</h3>
+            <h5>Em breve entraremos em contato</h5>
             <p>Obrigado!</p>
+            <div class="visto">
+                <img src="imagens/visto.png" alt="visto ok">
+            </div>
         </div>
     </div>
 
@@ -253,7 +316,7 @@
         <div class="footer-texto">
             <h3>Menu</h3>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="#planos">Nossos planos</a></li>
                 <li><a href="#pag-sobre">Sobre a empresa</a></li>
             </ul>
