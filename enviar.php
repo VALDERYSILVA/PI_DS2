@@ -1,6 +1,6 @@
 <?php
 
-date_default_timezone_set("America/Recife");
+date_default_timezone_set('America/Recife');
 
 $nome = $_POST['nome']; // nome do cliente
 $telefone = $_POST['telefone']; // telefone do cliente
@@ -15,7 +15,7 @@ sempre oferecer soluções impecáveis, que atendem
 altos níveis de qualidade, dentro dos padrões 
 exigidos pelas normas reguladoras.<br><br>
 Em nossos valores prezamos pela qualidade e excelência 
-para melhorar atender os nosos clientes.<br><br>
+para melhorar atender os nossos clientes.<br><br>
 Obrigado pela confiança em solicitar nossos serviços 
 para satisfazer você!"; // mensagem chegando no email do cliente
 
@@ -84,13 +84,14 @@ $enviaremail_cliente = mail($email, $assunto_cliente, $mgm, $headers);
 $enviaremail_empresa = mail($destino, $assunto, $arquivo, $headers);
 if (($enviaremail_cliente) && ($enviaremail_empresa)) {
 
-  echo "<script>history.back();</script>";
+  echo "<script>alert('Email enviado com sucesso!');history.back();</script>";
 } else {
-  echo "<script>history.back();</script>";
+  echo "<script>alert('E-mail não enviado!');history.back();</script>";
 }
 
 
 // cadastro banco de dados
+
 
 include("conexao.php");
 
@@ -99,9 +100,8 @@ $telefone = $_POST['telefone'];
 $email = $_POST['email'];
 $mensagem = $_POST['mensagem'];
 
-$sql = "INSERT INTO contato(nome, telefone, email, mensagem)
-  VALUES ('$nome', '$telefone', '$email' ,'$mensagem')";
-
+$sql = "INSERT INTO contato(nome, telefone, email, mensagem, data_cadastro)
+  VALUES ('$nome', '$telefone', '$email', '$mensagem', (now()))";
 
 if (mysqli_query($conexao, $sql)) {
 

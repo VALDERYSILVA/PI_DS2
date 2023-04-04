@@ -6,14 +6,13 @@
     <title>Projeto Integrador</title>
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="folhadeestilo.css">
-    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="script.js" defer></script>
 </head>
 
 <!-- menu e logomarca -->
 
 <body>
-    <div id="index.html" class="principal">
+    <div id="index.php" class="principal">
         <header>
             <div class="logo_redondo">
                 <img src="imagens/logo.png" alt="logo redondo">
@@ -26,9 +25,9 @@
 
             <nav>
                 <ul>
-                    <li><a href="#index.html">Home</a></li>
+                    <li><a href="#index.php">Home</a></li>
                     <li><a href="#planos">Planos</a></li>
-                    <li><a href="#pag-sobre">Sobre</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#rodape">Contato</a></li>
                     <li><a href="#openmodal1" style="background-color: #FF0000; border-radius: 15px; padding: 2px 15px;">Teste sua velocidade</a></li>
                 </ul>
@@ -47,6 +46,10 @@
     <!-- aqui começa pagina home -->
 
     <div class="slider">
+        <h1>INTERNET PARA<br>TODA FAMÍLIA</h1>
+        <p>Navegue na melhor internet do bairro<br>
+            usando fibra óptica até a sua residência<br><br>
+        </p>
 
         <div class="slides">
             <input type="radio" name="radio-btn" id="radio1">
@@ -159,7 +162,7 @@
         </div>
 
         <div class="assine">
-            <a href="#enviar_contato"><b id="piscando">ASSINE JÁ</b></a>
+            <a href="#enviar_contato"><b>ASSINE JÁ</b></a>
         </div>
 
     </section>
@@ -215,12 +218,12 @@
     </div>
 
     <div id="enviar_contato" class="modalDialog3">
-        <script>
+        <!-- <script>
             function mostra() {
                 document.getElementById('enviar_formulario').style.display = 'none';
                 document.getElementById('sucesso').style.display = 'block';
             }
-        </script>
+        </script> -->
         <form id="enviar_formulario" name="email" method="POST" action="enviar.php">
             <a href="#close" class="close">X</a>
             <h1>Entre em contato</h1>
@@ -251,7 +254,7 @@
                 <input type="submit" name="enviar" value="Enviar" onClick="mostra()">
             </div>
         </form>
-
+        <!-- 
         <div id="sucesso" class="envio_sucesso" onClick="mostra()">
             <a href=" #close" class="close">X</a>
             <img src="imagens/carta.png">
@@ -261,19 +264,19 @@
             <div class="visto">
                 <img src="imagens/visto.png" alt="visto ok">
             </div>
-        </div>
+        </div> -->
     </div>
 
     <!-- aqui comeca pagina sobre -->
 
-    <div id='pag-sobre'>
-
-        <div class='img-titulo'>
-            <img src="imagens/sob.png" alt="imagem de sobre">
+    <section id="sobre">
+        <div class="SB1">
+            <img src="imagens/SB1.png" alt="imagem ilustrativa">
         </div>
-
-        <section id="container-sobre">
-            <div id="txt-sobre">
+        <div class='logo_sobre'>
+            <img src="imagens/SB.png" alt="imagem ilustrativa">
+            <div class="container-sobre">
+                <img src="imagens/sobre_interno.jpg" alt="Imagem ilustrativa do sobre">
                 <p>Nossa missão é fornecer um serviço de qualidade sem oscilação e sem intervenções, tendo você como
                     nosso principal cliente.<br><br>Fundada em 2010, na cidade de Paulista - PE, somos uma empresa
                     especializada no serviço de telecomunicações. Atuando na área de internet banda larga e
@@ -283,11 +286,8 @@
                     satisfação de nossos clientes, seja residencial ou corporativo.
                 </p>
             </div>
-            <div id='img-conteudo-sobre'>
-                <img src="imagens/sobre_2.jpg" alt="Imagem ilustrativa do sobre">
-            </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
     <!-- mapa -->
 
@@ -297,13 +297,12 @@
                 <img src="imagens/quadro.png" alt="Imagem do mapa">
             </div>
 
-            <div class="mulher">
-                <img src="imagens/mulher.png" alt="Imagem ilustrativa do mapa">
+            <div class="endereco">
+                <!-- <img src="imagens/mulher.png" alt="Imagem ilustrativa do mapa"> -->
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1602.6824106147901!2d-34.840956998483136!3d-7.898244195051964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab3e4a766c6085%3A0x33c7226231628883!2sARTE%20EM%20PC%20Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1665888290752!5m2!1spt-BR!2sbr" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
-                <h2>Venha nos conhecer</h2>
-                <p>Av. Antonio Cabral de Souza, 7392 H<br>Lot. Conceição Paulista - PE<br>(81) 3435.6078 /
-                    98627.1986
+                <p>VENHA CONHECER<br>
+                    A NOSSA LOJA!
                 </p>
             </div>
         </div>
@@ -316,9 +315,9 @@
         <div class="footer-texto">
             <h3>Menu</h3>
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="#index.php">Home</a></li>
                 <li><a href="#planos">Nossos planos</a></li>
-                <li><a href="#pag-sobre">Sobre a empresa</a></li>
+                <li><a href="#sobre">Sobre a empresa</a></li>
             </ul>
         </div>
 
@@ -342,14 +341,18 @@
 
         <div class="footer-texto">
             <h3>Segue lá</h3>
-            <div class="sociais">
+            <div id="rede_socias" class="sociais">
                 <ul>
-                    <li><a href="https://www.facebook.com/ARTEEMPC/" target="_blank" rel="noopener">
-                            <img src="imagens/icoface.png" alt="facebook">
-                        </a></li>
-                    <li><a href="https://www.instagram.com/arteempc/" target="_blank" rel="noopener">
-                            <img src="imagens/icoinsta.png"><b id="instagram"></b>
-                        </a></li>
+                    <div class="face">
+                        <li><a href="https://www.facebook.com/ARTEEMPC/" target="_blank" rel="noopener">
+                                <img src="imagens/icoface.png" alt="facebook">
+                            </a></li>
+                    </div>
+                    <div class="insta">
+                        <li><a href="https://www.instagram.com/arteempc/" target="_blank" rel="noopener">
+                                <img src="imagens/icoinsta.png" alt="instagram">
+                            </a></li>
+                    </div>
                 </ul>
             </div>
         </div>

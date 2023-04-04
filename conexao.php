@@ -1,14 +1,12 @@
 <?php
 
 $servidor = "localhost";
-$banco = "formulario";
+$banco = "bd_projeto";
 $usuario = "root";
 $senha = "";
 
 
 $conexao = mysqli_connect($servidor, $usuario, $senha, $banco);
 if (!$conexao) {
-    die ("Falha ao conectar: " .mysqli_connect_error());
+    die("Falha ao conectar: " . mysqli_connect_error());
 }
-
-?>
