@@ -9,7 +9,12 @@
 @font-face {
   font-family: 'Hey August';
   src: url('font/Hey August.otf') format('opentype'),
-    url('font/Hey August.otf') format('truetype');
+    url('font/Hey August.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+  font-family: 'Androgyne_TB';
+  src: url('font/Androgyne_TB.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -34,7 +39,7 @@ html {
   margin-top: 270px;
   left: 200px;
   font-size: 3.4em;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Androgyne_TB, Arial, Helvetica, sans-serif;
   color: #FFFFFF;
   z-index: 1;
   animation: internetPara 1.5s linear;
@@ -68,7 +73,7 @@ html {
   margin-top: 420px;
   left: 200px;
   font-size: 1.5em;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Androgyne_TB, Arial, Helvetica, sans-serif;
   color: #FFFFFF;
   z-index: 1;
   animation: navegue 3s linear;
@@ -83,16 +88,6 @@ html {
   100% {
     opacity: 1;
   }
-}
-
-.slider p {
-  position: absolute;
-  margin-top: 420px;
-  left: 200px;
-  font-size: 1.5em;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #FFFFFF;
-  z-index: 1;
 }
 
 .slides {
@@ -1297,20 +1292,21 @@ a:hover {
 
   .slider {
     background: linear-gradient(90deg, #58a2f1, #03256C);
-    height: 87vh;
+    height: 1700px;
     margin-top: 0;
   }
 
   .slider h1 {
-    margin-top: 35%;
-    left: 28%;
+    margin-top: 120%;
+    left: 16%;
     text-align: center;
+    font-size: 3.8em;
   }
 
   .slider p {
-    top: 4%;
-    left: 14%;
-    font-size: 2.5em;
+    top: -60px;
+    left: 9%;
+    font-size: 2.8em;
     text-align: center;
   }
 
@@ -1330,7 +1326,7 @@ a:hover {
   }
 
   .slide img {
-    margin-top: 700px;
+    margin-top: 550px;
     width: 100%;
   }
 
@@ -1344,14 +1340,15 @@ a:hover {
 
   .imagemDeFundo_home {
     position: absolute;
+    opacity: 0.1;
+    width: 100%;
   }
 
   .imagemDeFundo_home img {
     display: block;
     z-index: 1;
-    margin-top: -450px;
-    width: 100%;
-    height: 450px;
+    margin-top: -440px;
+    height: 420px;
   }
 
   /* definições de plano responsivo */
@@ -1749,7 +1746,7 @@ a:hover {
   /* rede sociais mobile */
 
   #rodape .sociais li a img {
-    bottom: 115vh;
+    bottom: 2200px;
     width: 120px;
     height: 100px;
     left: -500px;
@@ -1758,16 +1755,16 @@ a:hover {
   #rodape .sociais .insta li a img {
     position: absolute;
     float: left;
-    width: 170px;
-    height: 130px;
+    width: 190px;
+    height: 150px;
     margin-left: 190px;
   }
 
   #rodape .sociais .face li a img {
     position: absolute;
     float: left;
-    width: 170px;
-    height: 130px;
+    width: 190px;
+    height: 150px;
     margin-left: -80px;
   }
 

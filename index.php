@@ -60,7 +60,7 @@
     <!-- aqui começa pagina home -->
 
     <div class="slider">
-        <h1>INTERNET PARA<br>TODA FAMÍLIA</h1>
+        <h1>INTERNET PARA TODA<br>FAMÍLIA</h1>
         <p>Navegue na melhor internet do bairro<br>
             usando fibra óptica até a sua residência<br><br>
         </p>
