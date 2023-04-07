@@ -13,23 +13,37 @@
 
 <body>
     <div id="index.php" class="principal">
-        <header>
+        <header id="header">
             <div class="logo_redondo">
                 <img src="imagens/logo.png" alt="logo redondo">
             </div>
 
-            <div class="nome_empresa">
-                <img src="imagens/logotitulo.png">
-            </div>
-
-
-            <nav>
-                <ul>
-                    <li><a href="#index.php">Home</a></li>
+            <a id="logo" href="#index.php">
+                <img src="imagens/logotitulo.png"></a>
+            <nav id="nav">
+                <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+                    <span id="hamburger"></span>
+                </button>
+                <ul id="menu" role="Menu">
+                    <li><a id="menu-voltar" href="#index.php">Home</a></li>
                     <li><a href="#planos">Planos</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#rodape">Contato</a></li>
-                    <li><a href="#openmodal1" style="background-color: #FF0000; border-radius: 15px; padding: 2px 15px;">Teste sua velocidade</a></li>
+                    <li><a id="velocimetro" href="#openmodal1">Teste de velocidade</a></li>
+                    <div id="rede_socias_menu" class="sociais">
+                        <ul>
+                            <div class="face">
+                                <li><a href="https://www.facebook.com/ARTEEMPC/" target="_blank" rel="noopener">
+                                        <img src="imagens/icoface.png" alt="facebook">
+                                    </a></li>
+                            </div>
+                            <div class="insta">
+                                <li><a href="https://www.instagram.com/arteempc/" target="_blank" rel="noopener">
+                                        <img src="imagens/icoinsta.png" alt="instagram">
+                                    </a></li>
+                            </div>
+                        </ul>
+                    </div>
                 </ul>
             </nav>
         </header>
@@ -38,7 +52,7 @@
     <!-- whatsapp fixo sempre na tela -->
 
     <div class="whatsapp_logo">
-        <a href="https://web.whatsapp.com/send?phone=5581986271986" target="_blank" rel="noopener">
+        <a href="https://wa.me/5581986271986" target="_blank" rel="noopener">
             <img src="imagens/whatsapp_logo.png" alt="whatsapp logo">
         </a>
     </div>
@@ -88,6 +102,10 @@
 
     </div>
 
+    <div class="imagemDeFundo_home">
+        <img src="imagens/H1.png">
+    </div>
+
     <!-- aqui começa pagina planos -->
 
     <section id="planos">
@@ -102,9 +120,10 @@
 
         <div class="planoPL3">
             <img src="imagens/PL3.png" alt="Imagem ilustrativa de planos">
-            <h1>400 mega</h1>
-            <h2>Sempre ativo<br>
-                Pra você</h2>
+            <h1>400</h1>
+            <h2>MEGA</h2>
+            <h3>Sempre ativo<br>
+                Pra você</h3>
             <p>Planos básicos a partir<br>
                 de R$ 70,00
             </p>

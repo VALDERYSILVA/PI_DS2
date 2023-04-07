@@ -6,6 +6,14 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Hey August';
+  src: url('font/Hey August.otf') format('opentype'),
+    url('font/Hey August.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -18,7 +26,6 @@ html {
   position: relative;
   margin-top: 80px;
   width: 100%;
-  height: 750px;
   overflow: hidden;
 }
 
@@ -78,9 +85,18 @@ html {
   }
 }
 
+.slider p {
+  position: absolute;
+  margin-top: 420px;
+  left: 200px;
+  font-size: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #FFFFFF;
+  z-index: 1;
+}
+
 .slides {
   width: 400%;
-  height: 400px;
   display: flex;
 }
 
@@ -96,7 +112,6 @@ html {
 
 .slide img {
   width: 100%;
-  height: 750px;
 }
 
 .manual-navigation {
@@ -175,46 +190,90 @@ html {
   background-color: #FFFFFF;
 }
 
+.imagemDeFundo_home {
+  position: absolute;
+}
+
+.imagemDeFundo_home img {
+  display: none;
+  z-index: 1;
+  margin-top: -350px;
+  width: 100%;
+}
+
 /* definir as propriedades do topo */
 
-header {
-  width: 100%;
-  height: 80px;
+#header {
+  box-sizing: border-box;
+  top: 0;
+  height: 100px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background: linear-gradient(90deg, #58a2f1, #03256C);
   box-shadow: 0px 3px 10px #464646;
   position: fixed;
-  top: 0px;
   z-index: 2;
+}
+
+#rede_socias_menu {
+  display: none;
+}
+
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+#menu a {
+  display: block;
+  padding: 0.2rem;
+}
+
+#btn-mobile {
+  display: none;
+}
+
+a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: sans-serif, Verdana, Tahoma, sans-serif;
+}
+
+a:hover {
+  color: #778;
+}
+
+#logo img {
+  margin-left: 37%;
+  width: 40%;
+}
+
+#velocimetro {
+  background-color: #FF0000;
+  border-radius: 15px;
+  width: 190px;
+  text-align: center;
 }
 
 /* definir as propriedades do logo redondo */
 .logo_redondo {
   position: absolute;
+  margin-top: 60px;
+  left: 6%;
   width: 120px;
-  height: auto;
 }
 
 .logo_redondo img {
   width: 100%;
   position: relative;
-  margin-top: 20%;
-  left: 70%;
   transition: transform 0.7s ease-in-out;
 }
 
 .logo_redondo img:hover {
   transform: rotate(360deg);
-}
-
-.nome_empresa {
-  width: 190px;
-}
-
-.nome_empresa img {
-  width: 180%;
-  position: relative;
-  margin-top: 6%;
-  left: 320px;
 }
 
 /* definir as propriedades da logo whatsapp */
@@ -236,31 +295,6 @@ header {
   transition: all 0.5s;
 }
 
-/* definir as propriedades do menu */
-nav {
-  position: absolute;
-  right: 45px;
-  bottom: 0px;
-}
-
-nav ul li {
-  float: left;
-  color: #FFF;
-  width: auto;
-  margin: 1.8em;
-  font-size: 1em;
-  font-family: 'Verdana';
-  list-style: none;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #FFFFFF;
-}
-
-nav ul li a:hover {
-  color: #778;
-}
 
 /* definir as propriedade dos pop-ups */
 
@@ -365,6 +399,8 @@ nav ul li a:hover {
   position: relative;
   margin-left: 30%;
 }
+
+/* velocimetro */
 
 .modalDialog2 {
   position: fixed;
@@ -586,88 +622,34 @@ nav ul li a:hover {
   background-color: #b50900;
 }
 
-/* teste de sucesso */
-
-.modalDialog3 .envio_sucesso {
-  background-color: #FFFAFA;
-  border-radius: 10px;
-  box-shadow: 4px 4px 6px;
-  max-width: 450px;
-  width: 100%;
-  padding: 10px 0px;
-  position: relative;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  display: none;
-}
-
-.modalDialog3 .envio_sucesso img {
-  padding: 12px;
-  position: relative;
-  width: 130px;
-  left: 30px;
-}
-
-.modalDialog3 .envio_sucesso p {
-  position: absolute;
-  font-size: 20px;
-  left: 50%;
-  top: 80%;
-  transform: translate(20%, -50%);
-}
-
-.modalDialog3 .envio_sucesso h3 {
-  position: absolute;
-  color: #228B22;
-  text-align: center;
-  left: 50%;
-  top: 27%;
-  transform: translate(-20%, -50%);
-}
-
-.modalDialog3 .envio_sucesso h5 {
-  position: absolute;
-  text-align: center;
-  font-size: 16px;
-  left: 50%;
-  top: 58%;
-  transform: translate(-20%, -50%);
-}
-
-.modalDialog3 .visto img {
-  position: absolute;
-  width: 90px;
-  top: 45%;
-  left: 80%;
-}
-
 /* pagina de planos */
 
 #planos {
-  font-family: Arial Narrow black, Helvetica, sans-serif;
   position: relative;
-  height: 760px;
+  margin-top: -4px;
+  width: 100%;
+  height: 850px;
+  font-family: Arial Narrow black, Helvetica, sans-serif;
   color: #FFFFFF;
 }
 
 .banner_planos img {
   width: 100%;
-  height: 760px;
-  position: relative;
+  position: absolute;
 }
 
 .planoPL2 {
   background: linear-gradient(90deg, #0000CD, transparent);
   width: 50%;
-  height: 760px;
+  height: 100%;
   position: absolute;
-  bottom: 0;
+  top: 0;
   float: left;
 }
 
 .planoPL2 img {
-  height: 760px;
+  width: 90%;
+  height: 100%;
   position: absolute;
   opacity: 0.8;
   bottom: 0;
@@ -678,7 +660,6 @@ nav ul li a:hover {
   width: 680px;
   position: absolute;
   opacity: 0.9;
-  bottom: 0;
   float: left;
   top: 150px;
 }
@@ -691,6 +672,13 @@ nav ul li a:hover {
 }
 
 .planoPL3 h2 {
+  position: absolute;
+  top: 260px;
+  left: 330px;
+  font-size: 3em;
+}
+
+.planoPL3 h3 {
   position: absolute;
   top: 320px;
   left: 180px;
@@ -734,13 +722,10 @@ nav ul li a:hover {
   }
 }
 
-
-
 .planoPL4 img {
   width: 280px;
   position: absolute;
   opacity: 0.9;
-  bottom: 0;
   float: left;
   top: 0px;
   right: 0px;
@@ -752,7 +737,6 @@ nav ul li a:hover {
   opacity: 0.9;
   bottom: 0;
   float: left;
-  bottom: 0px;
   right: 0px;
 }
 
@@ -784,7 +768,7 @@ nav ul li a:hover {
   position: absolute;
   background: #ddd;
   opacity: 0.4;
-  bottom: 260px;
+  bottom: 360px;
   right: 60px;
   border-radius: 20px;
   border-width: 3px;
@@ -798,7 +782,7 @@ nav ul li a:hover {
 .planoPL9_borda {
   position: absolute;
   background: transparent;
-  bottom: 260px;
+  bottom: 360px;
   right: 60px;
   border-radius: 20px;
   border-width: 3px;
@@ -813,7 +797,7 @@ nav ul li a:hover {
   position: absolute;
   background: #FF0000;
   opacity: 0.6;
-  bottom: 282px;
+  bottom: 382px;
   right: 90px;
   border-radius: 40px;
   width: 310px;
@@ -825,7 +809,7 @@ nav ul li a:hover {
   position: absolute;
   background: #FF0000;
   opacity: 0.6;
-  bottom: 363px;
+  bottom: 463px;
   right: 90px;
   border-radius: 40px;
   width: 310px;
@@ -838,7 +822,7 @@ nav ul li a:hover {
   position: absolute;
   background: #FF0000;
   opacity: 0.6;
-  bottom: 445px;
+  bottom: 545px;
   right: 90px;
   border-radius: 40px;
   width: 310px;
@@ -852,7 +836,7 @@ nav ul li a:hover {
   border-width: 2px;
   border-style: solid;
   border-color: #FFFFFF;
-  bottom: 460px;
+  bottom: 560px;
   right: 110px;
   border-radius: 4px;
   width: 20px;
@@ -890,7 +874,7 @@ nav ul li a:hover {
   border-width: 2px;
   border-style: solid;
   border-color: #FFFFFF;
-  bottom: 382px;
+  bottom: 482px;
   right: 110px;
   border-radius: 4px;
   width: 20px;
@@ -928,7 +912,7 @@ nav ul li a:hover {
   border-width: 2px;
   border-style: solid;
   border-color: #FFFFFF;
-  bottom: 300px;
+  bottom: 400px;
   right: 110px;
   border-radius: 4px;
   width: 20px;
@@ -967,6 +951,7 @@ nav ul li a:hover {
   background: linear-gradient(90deg, #58a2f1, #03256C);
   width: 100%;
   height: 800px;
+  margin-top: 0;
 }
 
 #sobre .SB1 img {
@@ -984,7 +969,7 @@ nav ul li a:hover {
 }
 
 .container-sobre {
-  position: relative;
+  position: absolute;
   width: 62%;
   height: 410px;
   top: 210px;
@@ -1014,7 +999,7 @@ nav ul li a:hover {
 
 #mapa {
   position: relative;
-  font-family: Hey August;
+  font-family: Hey August, Arial, Helvetica, sans-serif;
   color: #03256C;
   width: 100%;
   height: 480px;
@@ -1050,6 +1035,7 @@ nav ul li a:hover {
 }
 
 /* definir as propriedade do footer (rodape) */
+
 #rodape {
   position: relative;
   width: 100%;
@@ -1169,463 +1155,7 @@ nav ul li a:hover {
   font-size: 12px;
 }
 
-@media screen and (max-width: 600px) and (min-width: 500px) {
-
-  /* definições de plano responsivo */
-
-  /* pagina de planos */
-
-  #planos {
-    position: relative;
-    height: 480px;
-    top: 30px;
-  }
-
-  .banner_planos img {
-    width: 100%;
-    height: 780px;
-    position: relative;
-  }
-
-  .plano_imagem img {
-    width: 35%;
-    position: absolute;
-    top: 35%;
-    right: 10px;
-    float: left;
-  }
-
-  /* definições da pagina sobre responsivo */
-
-  #container-sobre {
-    top: 0px;
-    width: 55%;
-    height: 600px;
-    padding: 0;
-    right: 200px;
-    text-align: center;
-
-  }
-
-  #txt-sobre p {
-    width: 350%;
-    top: 0px;
-    font-size: 1em;
-    padding: 2%;
-  }
-
-  body #img-conteudo-sobre img {
-    position: absolute;
-    width: 340px;
-    right: 20px;
-    top: 0px;
-    padding: 0;
-
-  }
-
-  .img-titulo img {
-    display: none;
-  }
-
-
-  /* propriedades do mapa responsivo */
-
-  body #mapa {
-    height: 240px
-  }
-
-  body #mapa iframe {
-    width: 250px;
-    height: 130px;
-    top: 52px;
-    left: 8%;
-  }
-
-  body #mapa h2 {
-    top: 87px;
-    right: 26.5%;
-    font-size: 1em;
-  }
-
-  body #mapa .endereco img {
-    width: 130px;
-    right: 5%;
-  }
-
-  body #mapa p {
-    top: 105px;
-    right: 26%;
-    font-size: 0.6em;
-  }
-
-  /* definir as propriedade do footer (rodape) */
-
-  #rodape .footer-texto {
-    width: 23.5%;
-    left: 20px;
-  }
-
-  #rodape .sociais li a img {
-    width: 80px;
-    height: 60px;
-    right: 40%;
-  }
-
-  #rodape .sociais li a img {
-    position: relative;
-    width: 60px;
-    height: 40px;
-    float: right;
-    right: 45%;
-    padding: 2%;
-  }
-
-  /* definir as propriedades da logo whatsapp */
-  .whatsapp_logo {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 700px) and (min-width: 600px) {
-
-  /* definições de plano responsivo */
-
-  /* pagina de planos */
-
-  #planos {
-    position: relative;
-    height: 480px;
-    top: 30px;
-  }
-
-  .banner_planos img {
-    width: 100%;
-    height: 780px;
-    position: relative;
-  }
-
-  .plano_imagem img {
-    width: 35%;
-    position: absolute;
-    top: 35%;
-    right: 10px;
-    float: left;
-  }
-
-  /* definições da pagina sobre responsivo */
-
-  #container-sobre {
-    top: 0px;
-    width: 55%;
-    height: 600px;
-    padding: 0;
-    right: 200px;
-    text-align: center;
-
-  }
-
-  #txt-sobre p {
-    width: 350%;
-    top: 0px;
-    font-size: 1em;
-    padding: 2%;
-  }
-
-  body #img-conteudo-sobre img {
-    position: absolute;
-    width: 300px;
-    right: 20px;
-    top: 0px;
-    padding: 0;
-
-  }
-
-  .img-titulo img {
-    display: none;
-  }
-
-  /* propriedades do mapa responsivo */
-
-  body #mapa {
-    height: 220px
-  }
-
-  body #mapa iframe {
-    width: 250px;
-    height: 130px;
-    top: 52px;
-    left: 8%;
-  }
-
-  body #mapa h2 {
-    top: 87px;
-    right: 26.5%;
-    font-size: 1em;
-  }
-
-  body #mapa .endereco img {
-    width: 110px;
-    right: 5%;
-  }
-
-  body #mapa p {
-    top: 105px;
-    right: 26%;
-    font-size: 0.6em;
-  }
-
-  /* definir as propriedade do footer (rodape) */
-
-  #rodape .footer-texto {
-    width: 23.5%;
-    left: 20px;
-  }
-
-  #rodape .sociais li a img {
-    width: 80px;
-    height: 60px;
-    right: 40%;
-  }
-
-  #rodape .sociais li a img {
-    position: relative;
-    width: 60px;
-    height: 40px;
-    float: right;
-    right: 20%;
-    padding: 2%;
-  }
-
-  /* definir as propriedades da logo whatsapp */
-  .whatsapp_logo {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 800px) and (min-width: 700px) {
-
-  /* definições de plano responsivo */
-
-  /* pagina de planos */
-
-  #planos {
-    position: relative;
-    height: 480px;
-    top: 30px;
-  }
-
-  .banner_planos img {
-    width: 100%;
-    height: 780px;
-    position: relative;
-  }
-
-  .plano_imagem img {
-    width: 35%;
-    position: absolute;
-    top: 35%;
-    right: 10px;
-    float: left;
-  }
-
-  /* definições da pagina sobre responsivo */
-
-  #container-sobre {
-    top: 0px;
-    width: 55%;
-    height: 600px;
-    padding: 0;
-    right: 200px;
-    text-align: center;
-
-  }
-
-  #txt-sobre p {
-    width: 350%;
-    top: 0px;
-    font-size: 1em;
-    padding: 2%;
-  }
-
-  body #img-conteudo-sobre img {
-    position: absolute;
-    width: 340px;
-    right: 20px;
-    top: 0px;
-    padding: 0;
-
-  }
-
-  .img-titulo img {
-    display: none;
-  }
-
-  /* propriedades do mapa responsivo */
-
-  body #mapa {
-    height: 240px
-  }
-
-  body #mapa iframe {
-    width: 250px;
-    height: 130px;
-    top: 52px;
-    left: 8%;
-  }
-
-  body #mapa h2 {
-    top: 87px;
-    right: 26.5%;
-    font-size: 1em;
-  }
-
-  body #mapa .endereco img {
-    width: 130px;
-    right: 5%;
-  }
-
-  body #mapa p {
-    top: 105px;
-    right: 26%;
-    font-size: 0.6em;
-  }
-
-  /* definir as propriedade do footer (rodape) */
-
-  #rodape .footer-texto {
-    width: 23.5%;
-    left: 20px;
-  }
-
-  #rodape .sociais li a img {
-    width: 80px;
-    height: 60px;
-    right: 40%;
-  }
-
-  #rodape .sociais li a img {
-    position: relative;
-    width: 60px;
-    height: 40px;
-    float: right;
-    right: 45%;
-    padding: 2%;
-  }
-
-  /* definir as propriedades da logo whatsapp */
-  .whatsapp_logo {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 900px) and (min-width: 800px) {
-
-  /* definições de plano responsivo */
-
-  /* pagina de planos */
-
-  #planos {
-    position: relative;
-    top: 30px;
-  }
-
-  .banner_planos img {
-    width: 100%;
-    height: 780px;
-    position: relative;
-  }
-
-  /* definições da pagina sobre responsivo */
-
-  #container-sobre {
-    top: 0px;
-    width: 55%;
-    height: 600px;
-    padding: 0;
-    right: 200px;
-    text-align: center;
-
-  }
-
-  #txt-sobre p {
-    width: 350%;
-    top: 0px;
-    font-size: 1em;
-    padding: 2%;
-  }
-
-  body #img-conteudo-sobre img {
-    position: absolute;
-    width: 400px;
-    right: 20px;
-    top: 0px;
-    padding: 0;
-
-  }
-
-  .img-titulo img {
-    display: none;
-  }
-
-  /* propriedades do mapa responsivo */
-
-  body #mapa {
-    height: 280px;
-  }
-
-  body #mapa iframe {
-    width: 340px;
-    height: 220px;
-    top: 35px;
-    left: 8%;
-  }
-
-  body #mapa h2 {
-    top: 85px;
-    right: 22.5%;
-    font-size: 1.2em;
-  }
-
-  body #mapa .endereco img {
-    width: 140px;
-    right: 4%;
-  }
-
-  body #mapa p {
-    top: 110px;
-    right: 20%;
-    font-size: 0.8em;
-  }
-
-  /* definir as propriedade do footer (rodape) */
-
-  #rodape .footer-texto {
-    width: 23.5%;
-    left: 20px;
-  }
-
-  #rodape .sociais li a img {
-    width: 80px;
-    height: 60px;
-    right: 40%;
-  }
-
-  #rodape .sociais li a img {
-    position: relative;
-    width: 60px;
-    height: 40px;
-    float: right;
-    right: 45%;
-    padding: 2%;
-  }
-
-  /* definir as propriedades da logo whatsapp */
-  .whatsapp_logo {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 1000px) and (min-width: 900px) {
+@media screen and (max-width: 1000px) {
 
   /* responsivo celular */
 
@@ -1637,76 +1167,128 @@ nav ul li a:hover {
     height: 450px;
   } */
 
-  /* definir as propriedades do menu */
-  header {
-    width: 100%;
-    height: 800px;
-    background: linear-gradient(90deg, #58a2f1, #03256C);
-    box-shadow: 0px 3px 10px #464646;
-    position: relative;
-    top: 0px;
-    z-index: 0;
-  }
+
+  /* pagina topo carrosel */
+
+  /* Slides container */
+
 
   /* definir as propriedades do logo redondo */
+
   .logo_redondo {
     opacity: 0;
   }
 
-  .nome_empresa {
-    width: 190px;
-  }
-
-  .nome_empresa img {
-    width: 180%;
-    position: relative;
-    margin-top: 6%;
-    left: 320px;
-  }
-
   /* definir as propriedades da logo whatsapp */
   .whatsapp_logo {
-    position: fixed;
-    width: 13%;
-    bottom: 16%;
-    right: 30px;
-    z-index: 1;
+    width: 150px;
+    bottom: 10%;
+    right: 130px;
+    z-index: 9999;
   }
 
   .whatsapp_logo img {
-    width: 35%;
-    transition: all 0.5s;
+    width: 100%;
   }
 
-  .whatsapp_logo a img:hover {
-    transform: scale(1.2);
-    transition: all 0.5s;
-  }
 
   /* definir as propriedades do menu */
-  nav {
-    position: absolute;
-    right: 45px;
-    bottom: 0px;
+
+  #header {
+    height: 250px;
   }
 
-  nav ul li {
-    float: left;
-    color: #FFF;
-    width: auto;
-    margin: 1.8em;
+  #rede_socias_menu {
+    display: block;
+  }
+
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 248px;
+    height: 0;
+    right: 0;
+    visibility: hidden;
+    background: linear-gradient(90deg, #58a2f1, #03256C);
+    box-shadow: none;
     font-size: 1em;
     font-family: 'Verdana';
-    list-style: none;
-  }
-
-  nav ul li a {
-    text-decoration: none;
     color: #FFFFFF;
+    list-style: none;
+    transition: 0.6s;
+    z-index: 1000;
+    overflow-y: hidden;
   }
 
-  nav ul li a:hover {
-    color: #778;
+  #logo img {
+    margin-left: 3%;
+    width: 90%;
+  }
+
+  #nav.active #menu {
+    height: calc(100vh - 250px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+
+  #menu a {
+    position: relative;
+    top: 100px;
+    padding: 2.5rem 3.5rem;
+    margin: 0 3rem;
+    border-bottom: 2px solid #FFFFFF;
+    font-size: 3em;
+  }
+
+  #velocimetro {
+    background-color: transparent;
+    border-radius: 0;
+    width: 90%;
+    text-align: left;
+  }
+
+  #btn-mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+
+  #hamburger {
+    color: #FFFFFF;
+    display: block;
+    width: 65px;
+    border-top: 4px solid;
+  }
+
+  #hamburger::after,
+  #hamburger::before {
+    content: '';
+    display: block;
+    width: 65px;
+    height: 5px;
+    background: currentColor;
+    margin-top: 20px;
+    transition: 0.8s;
+    position: relative;
+  }
+
+  #nav.active #hamburger {
+    border-top-color: transparent;
+  }
+
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -25px;
   }
 
   /* pagina topo carrosel */
@@ -1714,11 +1296,62 @@ nav ul li a:hover {
   /* Slides container */
 
   .slider {
-    position: relative;
+    background: linear-gradient(90deg, #58a2f1, #03256C);
+    height: 87vh;
     margin-top: 0;
+  }
+
+  .slider h1 {
+    margin-top: 35%;
+    left: 28%;
+    text-align: center;
+  }
+
+  .slider p {
+    top: 4%;
+    left: 14%;
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  .slides {
+    width: 400%;
+    display: flex;
+  }
+
+  .slides input {
+    display: none;
+  }
+
+  .slide {
+    width: 25%;
+    position: relative;
+    transition: 3s;
+  }
+
+  .slide img {
+    margin-top: 700px;
     width: 100%;
-    height: 750px;
-    overflow: hidden;
+  }
+
+  .manual-btn {
+    display: none;
+  }
+
+  .navigation-auto div {
+    display: none;
+  }
+
+  .imagemDeFundo_home {
+    position: absolute;
+  }
+
+  .imagemDeFundo_home img {
+    display: block;
+    z-index: 1;
+    margin-top: -450px;
+    width: 100%;
+    height: 450px;
   }
 
   /* definições de plano responsivo */
@@ -1728,27 +1361,23 @@ nav ul li a:hover {
   #planos {
     font-family: Arial Narrow black, Helvetica, sans-serif;
     position: relative;
-    height: 760px;
     color: #FFFFFF;
   }
 
   .banner_planos img {
     width: 100%;
-    height: 760px;
     position: relative;
   }
 
   .planoPL2 {
     background: linear-gradient(90deg, #0000CD, transparent);
     width: 50%;
-    height: 760px;
     position: absolute;
     bottom: 0;
     float: left;
   }
 
   .planoPL2 img {
-    height: 760px;
     position: absolute;
     opacity: 0.8;
     bottom: 0;
@@ -2117,401 +1746,457 @@ nav ul li a:hover {
     left: 20px;
   }
 
-  #rodape .sociais li a img {
-    width: 80px;
-    height: 60px;
-    right: 40%;
-  }
+  /* rede sociais mobile */
 
   #rodape .sociais li a img {
-    position: relative;
-    width: 60px;
-    height: 40px;
-    float: right;
-    right: 45%;
-    padding: 2%;
+    bottom: 115vh;
+    width: 120px;
+    height: 100px;
+    left: -500px;
   }
 
-  /* definir as propriedades da logo whatsapp */
-  .whatsapp_logo {
-    display: none;
+  #rodape .sociais .insta li a img {
+    position: absolute;
+    float: left;
+    width: 170px;
+    height: 130px;
+    margin-left: 190px;
   }
+
+  #rodape .sociais .face li a img {
+    position: absolute;
+    float: left;
+    width: 170px;
+    height: 130px;
+    margin-left: -80px;
+  }
+
+  /* temina redes socais mobile */
+
+  .close {
+    line-height: 100px;
+    right: 10px;
+    top: -110px;
+    width: 100px;
+    border-radius: 50px;
+    font-size: 4rem;
+  }
+
+  .modalDialog2 div {
+    width: 900px;
+    height: 75vh;
+    margin: 4% auto;
+    margin-top: 150px;
+    -moz-border-radius: 12px;
+    border-radius: 30px;
+  }
+
 }
 
 @media screen and (max-width: 1100px) and (min-width: 1000px) {
-  /* definições de plano responsivo */
+  /* definir as propriedades do menu */
 
-  /* pagina de planos */
-
-  #planos {
-    position: relative;
-    height: 780px;
-    top: 30px;
+  .nome_empresa {
+    width: 130px;
   }
 
-  .banner_planos img {
-    width: 100%;
-    height: 780px;
-    position: relative;
+  .nome_empresa img {
+    margin-top: 16%;
+    left: 287px;
   }
 
-  .plano_imagem img {
-    width: 40%;
-    position: absolute;
-    top: 43%;
-    right: 10px;
-    float: left;
+  nav {
+    bottom: 20px;
+  }
+
+  nav ul li {
+    margin: 0.6em;
+  }
+
+  .slider h1 {
+    font-size: 3em;
+  }
+
+  .slider p {
+    margin-top: 390px;
+    font-size: 1.2em;
+  }
+
+  /* velocimetro */
+
+  .modalDialog2 div {
+    margin: 3% auto;
   }
 
   /* definições da pagina sobre responsivo */
 
-  #container-sobre {
-    width: 90%;
-    height: 450px;
-    right: 5%;
+  .logo_sobre img {
+    width: 16%;
+    opacity: 0;
   }
 
-  #txt-sobre p {
-    width: 120%;
-    font-size: 100%;
+  .container-sobre {
+    width: 80%;
+    top: 160px;
   }
 
-  #img-conteudo-sobre {
-    width: 55%;
-    height: 50%;
-  }
-
-  .img-titulo img {
-    display: none;
-  }
-
-  /* propriedades do mapa responsivo */
-
-  body #mapa {
-    height: 350px;
-  }
-
-  body .quadro {
-    height: 600px;
-  }
-
-  body #mapa iframe {
-    position: absolute;
-    width: 380px;
-    height: 250px;
-    top: 45px;
-    left: 10%;
-  }
-
-  body #mapa h2 {
-    font-size: 1.4em;
-    top: 28%;
-    right: 24.5%;
-  }
-
-  body #mapa .endereco img {
-    width: 180px;
-    right: 6%;
-  }
-
-  body #mapa p {
-    font-size: 0.8em;
-    right: 25%;
-    top: 35%;
-  }
-
-
-  /* definir as propriedade do footer (rodape) */
-
-  #rodape .footer-texto {
-    width: 23.5%;
-    left: 20px;
-  }
-
-  #rodape .sociais li a img {
-    width: 80px;
-    height: 60px;
-    right: 40%;
-  }
-
-  #rodape .sociais li a img {
-    position: relative;
-    width: 60px;
-    height: 40px;
-    float: right;
-    right: 45%;
-    padding: 2%;
-  }
-
-}
-
-@media screen and (max-width: 1200px) and (min-width: 1100px) {
-  /* definições de plano responsivo */
-
-  /* pagina de planos */
-
-  #planos {
-    position: relative;
-    height: 780px;
-    top: 30px;
-  }
-
-  .banner_planos img {
-    width: 100%;
-    height: 780px;
-    position: relative;
-  }
-
-  .plano_imagem img {
-    width: 40%;
-    position: absolute;
-    top: 38%;
-    right: 10px;
-    float: left;
-  }
-
-  /* definições da pagina sobre responsivo */
-
-  #container-sobre {
-    width: 90%;
-    height: 450px;
-    right: 5%;
-  }
-
-  #txt-sobre p {
-    width: 120%;
-    font-size: 100%;
-  }
-
-  #img-conteudo-sobre {
-    width: 55%;
-    height: 50%;
-  }
-
-  .img-titulo img {
-    display: none;
-  }
-
-  /* propriedades do mapa responsivo */
-
-  body #mapa {
-    height: 390px;
-  }
-
-  body .quadro {
-    height: 640px;
-  }
-
-  body #mapa iframe {
-    position: absolute;
-    width: 420px;
-    height: 300px;
-    top: 45px;
-    left: 10%;
-  }
-
-  body #mapa h2 {
-    font-size: 1.7em;
-    top: 28%;
-    right: 24.5%;
-  }
-
-  body #mapa .endereco img {
-    width: 220px;
-    right: 6%;
-  }
-
-  body #mapa p {
-    font-size: 1em;
-    right: 25%;
-    top: 35%;
-  }
-
-
-  /* definir as propriedade do footer (rodape) */
-
-  #rodape .footer-texto {
-    width: 23.5%;
-    left: 20px;
-  }
-
-  #rodape .sociais li a img {
-    width: 80px;
-    height: 60px;
-    right: 40%;
-  }
-
-  #rodape .sociais li a img {
-    position: relative;
-    width: 60px;
-    height: 40px;
-    float: right;
-    right: 45%;
-    padding: 2%;
-  }
-
-}
-
-@media screen and (max-width: 1400px) and (min-width: 1200px) {
-
-  /* definições da home slide */
-
-  .slideshow-container img {
-    height: 580px;
-  }
-
-
-  /* definições de plano responsivo */
-
-  /* pagina de planos */
-
-  #planos {
-    position: relative;
-    height: 680px;
-  }
-
-  .banner_planos img {
-    width: 100%;
-    height: 780px;
-    position: relative;
-  }
-
-  .plano_imagem img {
-    width: 40%;
-    position: absolute;
-    top: 22%;
-    right: 10px;
-    float: left;
-  }
-
-  .plano_assine img {
-    position: absolute;
-    width: 60%;
-    top: 115px;
-    left: 140px;
-    float: left;
-  }
-
-  .plano_assine a {
-    position: absolute;
-    top: 430px;
-    left: 480px;
-    width: 250px;
-    line-height: 0px;
-    color: #FFFFFF;
-    text-decoration: none;
-    box-shadow: 0px 0px 10px;
-    font-family: 'Bahnschrift Condensed';
-    font-size: 2.2em;
-    font-weight: 600;
-    text-align: center;
-    text-shadow: 0px 0px 8px #000;
-  }
-
-  #piscando {
+  .container-sobre img {
+    width: 470px;
+    height: 360px;
+    top: 25px;
+    left: 370px;
     opacity: 1;
-    transition-duration: 0.4s;
   }
 
-
-  /* definições da pagina sobre responsivo */
-
-  #container-sobre {
-    width: 90%;
-    height: 450px;
-    right: 5%;
+  .container-sobre p {
+    width: 370px;
+    font-size: 1em;
   }
 
-  #txt-sobre p {
-    width: 120%;
-    font-size: 100%;
-  }
-
-  #img-conteudo-sobre {
-    width: 55%;
-    height: 50%;
-  }
-
-  .img-titulo img {
-    display: none;
-  }
 
   /* propriedades do mapa responsivo */
 
-  body #mapa {
-    height: 420px;
-    float: left;
+
+  /* propriedades do mapa */
+
+  #mapa {
+    height: 380px;
   }
 
-  body #mapa iframe {
-    width: 500px;
+  #mapa iframe {
+    width: 450px;
     height: 280px;
-    position: absolute;
-    top: 110px;
-    left: 8%;
+    left: 12%;
+    top: 75px;
   }
 
-  body #mapa h2 {
-    font-size: 1.7em;
-    top: 28%;
-    right: 24.5%;
+  #mapa p {
+    top: 160px;
+    right: 170px;
+    font-size: 2.5em;
   }
-
-  body #mapa .endereco img {
-    top: 20%;
-    width: 240px;
-    right: 6%;
-  }
-
-  body #mapa p {
-    font-size: 1em;
-    top: 35%;
-  }
-
 
   /* definir as propriedade do footer (rodape) */
 
   #rodape {
-    width: 100%;
     height: 240px;
-    background-color: #0000CD;
-    position: relative;
-    float: left;
-    font-family: 'verdana';
   }
-
-  #rodape img {
-    position: absolute;
-    width: 100%;
-    height: 240px;
-    opacity: 0.3;
-  }
-
-
 
   #rodape .footer-texto {
-    width: 23.5%;
-    left: 20px;
+    left: 100px;
   }
 
-  #rodape .sociais li a img {
-    width: 80px;
-    height: 60px;
-    right: 40%;
-  }
-
-  #rodape .sociais li a img {
-    position: absolute;
+  #rodape .sociais .face li a img {
     width: 60px;
     height: 40px;
-    float: right;
-    right: 45%;
-    padding: 2%;
+    right: 145px;
   }
 
-  #rede_sociais {
-    opacity: 1;
-    transition-duration: 0.4s;
+  #rodape .sociais .insta li a img {
+    width: 60px;
+    height: 40px;
+    right: 160px;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1100px) {
+
+  /* definir as propriedades do menu */
+
+  .nome_empresa {
+    width: 140px;
   }
 
+  .nome_empresa img {
+    margin-top: 15%;
+    left: 287px;
+  }
+
+  nav {
+    bottom: 16px;
+  }
+
+  nav ul li {
+    margin: 0.8em;
+  }
+
+  .slider h1 {
+    font-size: 3em;
+  }
+
+  .slider p {
+    margin-top: 390px;
+    font-size: 1.2em;
+  }
+
+  /* velocimetro */
+
+  .modalDialog2 div {
+    margin: 3% auto;
+  }
+
+  /* definições da pagina sobre responsivo */
+
+  .logo_sobre img {
+    width: 16%;
+  }
+
+  .container-sobre {
+    width: 64%;
+    top: 160px;
+  }
+
+  .container-sobre img {
+    width: 470px;
+    height: 360px;
+    top: 25px;
+    left: 370px;
+  }
+
+  .container-sobre p {
+    width: 370px;
+    font-size: 1em;
+  }
+
+
+  /* propriedades do mapa responsivo */
+
+
+  /* propriedades do mapa */
+
+  #mapa iframe {
+    width: 450px;
+    height: 280px;
+    left: 16%;
+    top: 175px;
+  }
+
+  #mapa p {
+    top: 250px;
+    font-size: 3em;
+  }
+
+  /* definir as propriedade do footer (rodape) */
+
+  #rodape {
+    height: 240px;
+  }
+
+  #rodape .footer-texto {
+    left: 100px;
+  }
+
+  #rodape .sociais .face li a img {
+    width: 60px;
+    height: 40px;
+    right: 145px;
+  }
+
+  #rodape .sociais .insta li a img {
+    width: 60px;
+    height: 40px;
+    right: 160px;
+  }
+}
+
+@media screen and (max-width: 1300px) and (min-width: 1200px) {
+
+
+  /* definir as propriedades do menu */
+
+  .nome_empresa {
+    width: 150px;
+  }
+
+  .nome_empresa img {
+    margin-top: 11%;
+    left: 290px;
+  }
+
+  nav {
+    bottom: 15px;
+  }
+
+  nav ul li {
+    margin: 0.8em;
+  }
+
+  .slider h1 {
+    font-size: 3em;
+  }
+
+  .slider p {
+    margin-top: 390px;
+    font-size: 1.2em;
+  }
+
+  /* velocimetro */
+
+  .modalDialog2 div {
+    margin: 3% auto;
+  }
+
+  /* definições da pagina sobre responsivo */
+
+  .logo_sobre img {
+    width: 16%;
+  }
+
+  .container-sobre {
+    width: 64%;
+    top: 160px;
+  }
+
+  .container-sobre img {
+    width: 470px;
+    height: 360px;
+    top: 25px;
+    left: 370px;
+  }
+
+  .container-sobre p {
+    width: 370px;
+    font-size: 1em;
+  }
+
+
+  /* propriedades do mapa responsivo */
+
+
+  /* propriedades do mapa */
+
+  #mapa iframe {
+    width: 450px;
+    height: 280px;
+    left: 16%;
+    top: 175px;
+  }
+
+  #mapa p {
+    top: 250px;
+    font-size: 3em;
+  }
+
+  /* definir as propriedade do footer (rodape) */
+
+  #rodape {
+    height: 240px;
+  }
+
+  #rodape .footer-texto {
+    left: 100px;
+  }
+
+  #rodape .sociais .face li a img {
+    width: 60px;
+    height: 40px;
+    right: 145px;
+  }
+
+  #rodape .sociais .insta li a img {
+    width: 60px;
+    height: 40px;
+    right: 160px;
+  }
+}
+
+@media screen and (max-width: 1400px) and (min-width: 1300px) {
+
+
+  /* definir as propriedades do menu */
+
+  .nome_empresa {
+    width: 160px;
+  }
+
+  .nome_empresa img {
+    margin-top: 10%;
+    left: 310px;
+  }
+
+  nav {
+    bottom: 7px;
+  }
+
+  nav ul li {
+    margin: 1.3em;
+  }
+
+  .slider h1 {
+    font-size: 3em;
+  }
+
+  .slider p {
+    margin-top: 390px;
+    font-size: 1.2em;
+  }
+
+  /* velocimetro */
+
+  .modalDialog2 div {
+    margin: 3% auto;
+  }
+
+  /* definições da pagina sobre responsivo */
+
+  .logo_sobre img {
+    width: 16%;
+  }
+
+  .container-sobre {
+    width: 64%;
+    top: 160px;
+  }
+
+  .container-sobre img {
+    width: 470px;
+    height: 360px;
+    top: 25px;
+    left: 370px;
+  }
+
+  .container-sobre p {
+    width: 370px;
+    font-size: 1em;
+  }
+
+
+  /* propriedades do mapa responsivo */
+
+
+  /* propriedades do mapa */
+
+  #mapa iframe {
+    width: 450px;
+    height: 280px;
+    left: 16%;
+    top: 175px;
+  }
+
+  #mapa p {
+    top: 250px;
+    font-size: 3em;
+  }
+
+  /* definir as propriedade do footer (rodape) */
+
+  #rodape {
+    height: 240px;
+  }
+
+  #rodape .footer-texto {
+    left: 100px;
+  }
+
+  #rodape .sociais .face li a img {
+    width: 60px;
+    height: 40px;
+    right: 145px;
+  }
+
+  #rodape .sociais .insta li a img {
+    width: 60px;
+    height: 40px;
+    right: 160px;
+  }
 }
