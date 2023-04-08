@@ -149,37 +149,38 @@
             <img src="imagens/LP8.png" alt="Imagem ilustrativa de planos">
         </div>
 
-        <div class="planoPL9"></div> <!-- Balão maior -->
-        <div class="planoPL9_borda"></div> <!-- Linha do Balão maior -->
+        <div class="superPlanos">
+            <div class="planoPL9"></div> <!-- Balão maior -->
+            <div class="planoPL9_borda"></div> <!-- Linha do Balão maior -->
 
-        <div class="planoPL10"></div> <!-- Balão interno -->
-        <div class="planoPL11"></div> <!-- Balão interno -->
-        <div class="planoPL12"></div> <!-- Balão interno -->
+            <div class="planoPL10"></div> <!-- Balão interno -->
+            <div class="planoPL11"></div> <!-- Balão interno -->
+            <div class="planoPL12"></div> <!-- Balão interno -->
 
-        <div class="planoPL13">
-            <img src="imagens/visto.png" alt="visto">
-            <h3>Plano Premium 100mb</h3>
-            <p>Exelente para você que navega sem limites muito<br>
-                usados para pesquisas, e-mail, rede sociais e etc.
-            </p>
+            <div class="planoPL13">
+                <img src="imagens/visto.png" alt="visto">
+                <h3>Plano Premium 100mb</h3>
+                <p>Exelente para você que navega sem limites muito<br>
+                    usados para pesquisas, e-mail, rede sociais e etc.
+                </p>
+            </div>
+
+            <div class="planoPL14">
+                <img src="imagens/visto.png" alt="visto">
+                <h3>Plano Extra Top 200mb</h3>
+                <p>Muito top para você que joga on-line, filmes, series<br>
+                    entre outros.
+                </p>
+            </div>
+
+            <div class="planoPL15">
+                <img src="imagens/visto.png" alt="visto">
+                <h3>Plano Maximus 400mb</h3>
+                <p>Tudo em um só plano, pelo menor preço e qualidade<br>
+                    Nesse plano você só tem a ganhar.
+                </p>
+            </div>
         </div>
-
-        <div class="planoPL14">
-            <img src="imagens/visto.png" alt="visto">
-            <h3>Plano Extra Top 200mb</h3>
-            <p>Muito top para você que joga on-line, filmes, series<br>
-                entre outros.
-            </p>
-        </div>
-
-        <div class="planoPL15">
-            <img src="imagens/visto.png" alt="visto">
-            <h3>Plano Maximus 400mb</h3>
-            <p>Tudo em um só plano, pelo menor preço e qualidade<br>
-                Nesse plano você só tem a ganhar.
-            </p>
-        </div>
-
         <div class="assine">
             <a href="#enviar_contato"><b>ASSINE JÁ</b></a>
         </div>

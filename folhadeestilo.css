@@ -647,12 +647,12 @@ a:hover {
   height: 100%;
   position: absolute;
   opacity: 0.8;
-  bottom: 0;
+  top: 0;
   float: left;
 }
 
 .planoPL3 img {
-  width: 680px;
+  width: 45%;
   position: absolute;
   opacity: 0.9;
   float: left;
@@ -1356,72 +1356,76 @@ a:hover {
   /* pagina de planos */
 
   #planos {
-    font-family: Arial Narrow black, Helvetica, sans-serif;
     position: relative;
-    color: #FFFFFF;
+    height: 1700px;
+    overflow: hidden;
   }
 
   .banner_planos img {
-    width: 100%;
-    position: relative;
+    width: 310%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
   }
 
   .planoPL2 {
     background: linear-gradient(90deg, #0000CD, transparent);
     width: 50%;
+    height: 100%;
     position: absolute;
-    bottom: 0;
+    top: 0;
     float: left;
   }
 
   .planoPL2 img {
+    width: 90%;
+    height: 35%;
     position: absolute;
     opacity: 0.8;
-    bottom: 0;
+    top: 0;
     float: left;
   }
 
-  .planoPL3 img {
-    width: 680px;
-    position: absolute;
-    opacity: 0.9;
-    bottom: 0;
-    float: left;
-    top: 150px;
+  .planoPL3 {
+    position: relative;
+    right: 100px;
+    margin-top: 280px;
   }
 
   .planoPL3 h1 {
     position: absolute;
-    top: 230px;
+    top: 210px;
     left: 180px;
-    font-size: 5.3em;
+    font-size: 6.5em;
   }
 
   .planoPL3 h2 {
     position: absolute;
+    top: 255px;
+    left: 370px;
+    font-size: 3.3em;
+  }
+
+  .planoPL3 h3 {
+    position: absolute;
     top: 320px;
     left: 180px;
-    font-size: 3.5em;
+    font-size: 4em;
   }
 
   .planoPL3 p {
     position: absolute;
-    top: 450px;
+    top: 470px;
     left: 180px;
-    font-size: 1.5em;
+    font-size: 2.3em;
   }
 
   .assine a {
-    position: absolute;
-    top: 530px;
-    left: 180px;
-    width: 250px;
-    line-height: 0px;
-    color: #FFFFFF;
-    text-decoration: none;
-    box-shadow: 0px 0px 10px;
-    font-size: 1.8em;
-    text-shadow: 0px 0px 8px #000;
+    top: 420px;
+    left: 80px;
+    width: 350px;
+    font-size: 3em;
   }
 
   #piscando {
@@ -1429,6 +1433,9 @@ a:hover {
     transition-duration: 0.4s;
   }
 
+  .planoPL3 img {
+    top: -160px;
+  }
 
   .planoPL4 img {
     width: 280px;
@@ -1447,7 +1454,8 @@ a:hover {
     bottom: 0;
     float: left;
     bottom: 0px;
-    right: 0px;
+    left: 0px;
+    transform: rotateY(180deg);
   }
 
   .planoPL6 img {
@@ -1474,33 +1482,23 @@ a:hover {
     float: left;
   }
 
+  .superPlanos {
+    position: relative;
+    top: 1350px;
+    right: 210px;
+  }
+
   .planoPL9 {
-    position: absolute;
-    background: #ddd;
-    opacity: 0.4;
     bottom: 260px;
-    right: 60px;
-    border-radius: 20px;
-    border-width: 3px;
-    border-style: solid;
-    border-color: #FFFFFF;
-    width: 370px;
-    height: 270px;
-    float: right;
+    width: 620px;
+    height: 420px;
+
   }
 
   .planoPL9_borda {
-    position: absolute;
-    background: transparent;
     bottom: 260px;
-    right: 60px;
-    border-radius: 20px;
-    border-width: 3px;
-    border-style: solid;
-    border-color: #FFFFFF;
-    width: 370px;
-    height: 270px;
-    float: right;
+    width: 620px;
+    height: 420px;
   }
 
   .planoPL10 {
@@ -1508,10 +1506,10 @@ a:hover {
     background: #FF0000;
     opacity: 0.6;
     bottom: 282px;
-    right: 90px;
-    border-radius: 40px;
-    width: 310px;
-    height: 60px;
+    right: 80px;
+    border-radius: 60px;
+    width: 580px;
+    height: 110px;
     float: right;
   }
 
@@ -1519,11 +1517,11 @@ a:hover {
     position: absolute;
     background: #FF0000;
     opacity: 0.6;
-    bottom: 363px;
-    right: 90px;
-    border-radius: 40px;
-    width: 310px;
-    height: 60px;
+    bottom: 413px;
+    right: 80px;
+    border-radius: 60px;
+    width: 580px;
+    height: 110px;
     float: right;
 
   }
@@ -1532,11 +1530,11 @@ a:hover {
     position: absolute;
     background: #FF0000;
     opacity: 0.6;
-    bottom: 445px;
-    right: 90px;
-    border-radius: 40px;
-    width: 310px;
-    height: 60px;
+    bottom: 545px;
+    right: 80px;
+    border-radius: 60px;
+    width: 580px;
+    height: 110px;
     float: right;
   }
 
@@ -1746,7 +1744,7 @@ a:hover {
   /* rede sociais mobile */
 
   #rodape .sociais li a img {
-    bottom: 2200px;
+    bottom: 3050px;
     width: 120px;
     height: 100px;
     left: -500px;
@@ -1755,7 +1753,7 @@ a:hover {
   #rodape .sociais .insta li a img {
     position: absolute;
     float: left;
-    width: 190px;
+    width: 210px;
     height: 150px;
     margin-left: 190px;
   }
@@ -1764,7 +1762,7 @@ a:hover {
     position: absolute;
     float: left;
     width: 190px;
-    height: 150px;
+    height: 130px;
     margin-left: -80px;
   }
 
