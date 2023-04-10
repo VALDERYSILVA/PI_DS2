@@ -60,10 +60,15 @@
     <!-- aqui começa pagina home -->
 
     <div class="slider">
-        <h1>INTERNET PARA TODA<br>FAMÍLIA</h1>
+        <!-- <img src="imagens/H1.png" alt="Imagem ilustrativa"> -->
+        <h1>INTERNET PARA<br>TODOS DA FAMÍLIA</h1>
         <p>Navegue na melhor internet do bairro<br>
             usando fibra óptica até a sua residência<br><br>
         </p>
+
+        <div class="imagemDeFundo_home">
+            <img src="imagens/H1.png">
+        </div>
 
         <div class="slides">
             <input type="radio" name="radio-btn" id="radio1">
@@ -72,16 +77,16 @@
             <input type="radio" name="radio-btn" id="radio4">
 
             <div class="slide primeiro">
-                <img src="imagens/SL1.jpg" alt="Imagem ilustrativa plano 50 mega">
+                <img src="imagens/SL1.jpg" alt="Imagem ilustrativa">
             </div>
             <div class="slide">
-                <img src="imagens/SL2.jpg" alt="Imagem ilustrativa plano 100 mega">
+                <img src="imagens/SL2.jpg" alt="Imagem ilustrativa">
             </div>
             <div class="slide">
-                <img src="imagens/SL3.jpg" alt="Imagem ilustrativa plano 200 mega">
+                <img src="imagens/SL3.jpg" alt="Imagem ilustrativa">
             </div>
             <div class="slide">
-                <img src="imagens/SL4.jpg" alt="Imagem ilustrativa plano 400 mega">
+                <img src="imagens/SL4.jpg" alt="Imagem ilustrativa">
             </div>
 
             <div class="navigation-auto">
@@ -102,7 +107,7 @@
 
     </div>
 
-    <div class="imagemDeFundo_home">
+    <div class="imagemDeFundo_homeBaixo">
         <img src="imagens/H1.png">
     </div>
 

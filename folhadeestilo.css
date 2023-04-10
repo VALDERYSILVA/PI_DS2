@@ -185,16 +185,14 @@ html {
   background-color: #FFFFFF;
 }
 
-.imagemDeFundo_home {
-  position: absolute;
-}
-
 .imagemDeFundo_home img {
   display: none;
-  z-index: 1;
-  margin-top: -350px;
-  width: 100%;
 }
+
+.imagemDeFundo_homeBaixo img {
+  display: none;
+}
+
 
 /* definir as propriedades do topo */
 
@@ -792,7 +790,7 @@ a:hover {
   position: absolute;
   background: #FF0000;
   opacity: 0.6;
-  bottom: 382px;
+  bottom: 545px;
   right: 90px;
   border-radius: 40px;
   width: 310px;
@@ -817,7 +815,7 @@ a:hover {
   position: absolute;
   background: #FF0000;
   opacity: 0.6;
-  bottom: 545px;
+  bottom: 382px;
   right: 90px;
   border-radius: 40px;
   width: 310px;
@@ -828,9 +826,7 @@ a:hover {
 .planoPL13 {
   position: absolute;
   background: transparent;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #FFFFFF;
+  border: 2px solid #FFFFFF;
   bottom: 560px;
   right: 110px;
   border-radius: 4px;
@@ -866,9 +862,7 @@ a:hover {
 .planoPL14 {
   position: absolute;
   background: transparent;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #FFFFFF;
+  border: 2px solid #FFFFFF;
   bottom: 482px;
   right: 110px;
   border-radius: 4px;
@@ -904,9 +898,7 @@ a:hover {
 .planoPL15 {
   position: absolute;
   background: transparent;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #FFFFFF;
+  border: 2px solid #FFFFFF;
   bottom: 400px;
   right: 110px;
   border-radius: 4px;
@@ -1177,7 +1169,7 @@ a:hover {
   /* definir as propriedades da logo whatsapp */
   .whatsapp_logo {
     width: 150px;
-    bottom: 10%;
+    bottom: 6%;
     right: 130px;
     z-index: 9999;
   }
@@ -1297,37 +1289,31 @@ a:hover {
   }
 
   .slider h1 {
-    margin-top: 120%;
-    left: 16%;
-    text-align: center;
+    margin-top: 153%;
+    left: 5%;
+    text-align: left;
     font-size: 3.8em;
   }
 
   .slider p {
-    top: -60px;
+    top: -100px;
     left: 9%;
     font-size: 2.8em;
     text-align: center;
   }
 
   .slides {
-    width: 400%;
-    display: flex;
+    width: 770%;
   }
 
   .slides input {
     display: none;
   }
 
-  .slide {
-    width: 25%;
-    position: relative;
-    transition: 3s;
-  }
-
   .slide img {
-    margin-top: 550px;
-    width: 100%;
+    margin-top: 470px;
+    left: 500px;
+
   }
 
   .manual-btn {
@@ -1347,8 +1333,88 @@ a:hover {
   .imagemDeFundo_home img {
     display: block;
     z-index: 1;
-    margin-top: -440px;
+    margin-top: 130px;
+    width: 100%;
     height: 420px;
+    transform: rotateY(180deg);
+  }
+
+  .imagemDeFundo_homeBaixo {
+    position: absolute;
+    opacity: 0.1;
+    width: 100%;
+  }
+
+  .imagemDeFundo_homeBaixo img {
+    display: block;
+    z-index: 1;
+    margin-top: -300px;
+    width: 100%;
+    height: 300px;
+  }
+
+  /* Entre em contato form */
+
+  .modalDialog3 form {
+    border-radius: 20px;
+    max-width: 900px;
+    max-height: 1100px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .modalDialog3 h1 {
+    font-size: 3.5em;
+  }
+
+  .modalDialog3 p {
+    font-size: 1.8em;
+  }
+
+  .modalDialog3 .input-single {
+    top: 100px;
+    font-size: 2em;
+    padding: 12px;
+  }
+
+  .modalDialog3 .input-single label {
+    padding: 12px;
+  }
+
+  .modalDialog3 .input-single .input {
+    font-size: 35px;
+    margin: 10px 0;
+    padding: 25px;
+  }
+
+
+  .modalDialog3 textarea {
+    font-size: 25px;
+    width: 100%;
+    height: 200px;
+    margin: 4px 0;
+  }
+
+  .modalDialog3 form .input-single .input:focus~label,
+  .modalDialog3 form .input-single .input:valid~label {
+    transform: translateY(-50px);
+    font-size: 25px;
+  }
+
+  .modalDialog3 form .input-single .textarea:focus~label,
+  .modalDialog3 form .input-single .textarea:valid~label {
+    transform: translateY(40px);
+    font-size: 25px;
+  }
+
+  .modalDialog3 form input[type=submit] {
+    margin-top: 130px;
+    height: 70px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -webkit-appearance: none;
+    font-size: 2.5em;
   }
 
   /* definições de plano responsivo */
@@ -1380,7 +1446,7 @@ a:hover {
 
   .planoPL2 img {
     width: 90%;
-    height: 35%;
+    height: 32%;
     position: absolute;
     opacity: 0.8;
     top: 0;
@@ -1390,7 +1456,7 @@ a:hover {
   .planoPL3 {
     position: relative;
     right: 100px;
-    margin-top: 280px;
+    margin-top: 180px;
   }
 
   .planoPL3 h1 {
@@ -1421,8 +1487,12 @@ a:hover {
     font-size: 2.3em;
   }
 
+  .planoPL3 img {
+    top: -50px;
+  }
+
   .assine a {
-    top: 420px;
+    top: 350px;
     left: 80px;
     width: 350px;
     font-size: 3em;
@@ -1431,10 +1501,6 @@ a:hover {
   #piscando {
     opacity: 1;
     transition-duration: 0.4s;
-  }
-
-  .planoPL3 img {
-    top: -160px;
   }
 
   .planoPL4 img {
@@ -1484,172 +1550,124 @@ a:hover {
 
   .superPlanos {
     position: relative;
-    top: 1350px;
-    right: 210px;
+    top: 85%;
+    left: 43%;
+    transform: translateX(-50%) translateY(-50%);
   }
 
   .planoPL9 {
     bottom: 260px;
-    width: 620px;
-    height: 420px;
+    width: 700px;
+    height: 480px;
 
   }
 
   .planoPL9_borda {
     bottom: 260px;
-    width: 620px;
-    height: 420px;
+    width: 700px;
+    height: 480px;
   }
 
   .planoPL10 {
-    position: absolute;
-    background: #FF0000;
-    opacity: 0.6;
-    bottom: 282px;
+    bottom: 585px;
     right: 80px;
-    border-radius: 60px;
-    width: 580px;
-    height: 110px;
-    float: right;
+    border-radius: 70px;
+    width: 660px;
+    height: 132px;
   }
 
   .planoPL11 {
-    position: absolute;
-    background: #FF0000;
-    opacity: 0.6;
-    bottom: 413px;
+    bottom: 433px;
     right: 80px;
-    border-radius: 60px;
-    width: 580px;
-    height: 110px;
-    float: right;
-
+    border-radius: 70px;
+    width: 660px;
+    height: 132px;
   }
 
   .planoPL12 {
-    position: absolute;
-    background: #FF0000;
-    opacity: 0.6;
-    bottom: 545px;
+    bottom: 283px;
     right: 80px;
-    border-radius: 60px;
-    width: 580px;
-    height: 110px;
-    float: right;
+    border-radius: 70px;
+    width: 660px;
+    height: 132px;
   }
 
   .planoPL13 {
-    position: absolute;
-    background: transparent;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #FFFFFF;
-    bottom: 460px;
-    right: 110px;
+    bottom: 640px;
+    right: 130px;
     border-radius: 4px;
-    width: 20px;
-    height: 20px;
-    float: right;
+    border: 4px solid;
+    width: 48px;
+    height: 48px;
   }
 
   .planoPL13 img {
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    width: 27px;
-    height: 27px;
+    width: 60px;
+    height: 60px;
   }
 
   .planoPL13 h3 {
-    position: absolute;
-    width: 265px;
-    bottom: 13px;
-    right: 0px;
-    font-size: 21px;
+    width: 565px;
+    bottom: 12px;
+    font-size: 2.9em;
   }
 
   .planoPL13 p {
-    position: absolute;
-    width: 265px;
-    top: 2px;
-    right: 0px;
-    font-size: 0.6em;
+    width: 565px;
+    top: 30px;
+    font-size: 1.4em;
   }
 
   .planoPL14 {
-    position: absolute;
-    background: transparent;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #FFFFFF;
-    bottom: 382px;
-    right: 110px;
+    bottom: 485px;
+    right: 130px;
     border-radius: 4px;
-    width: 20px;
-    height: 20px;
-    float: right;
+    border: 4px solid;
+    width: 48px;
+    height: 48px;
   }
 
   .planoPL14 img {
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    width: 27px;
-    height: 27px;
+    width: 60px;
+    height: 60px;
   }
 
   .planoPL14 h3 {
-    position: absolute;
-    width: 265px;
-    bottom: 10px;
-    right: 0px;
-    font-size: 21px;
+    width: 565px;
+    bottom: 12px;
+    font-size: 2.9em;
   }
 
   .planoPL14 p {
-    position: absolute;
-    width: 265px;
-    top: 5px;
-    right: 0px;
-    font-size: 0.6em;
+    width: 565px;
+    top: 30px;
+    font-size: 1.4em;
   }
 
   .planoPL15 {
-    position: absolute;
-    background: transparent;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #FFFFFF;
-    bottom: 300px;
-    right: 110px;
+    bottom: 340px;
+    right: 130px;
     border-radius: 4px;
-    width: 20px;
-    height: 20px;
-    float: right;
+    border: 4px solid;
+    width: 48px;
+    height: 48px;
   }
 
   .planoPL15 img {
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    width: 27px;
-    height: 27px;
+    width: 60px;
+    height: 60px;
   }
 
   .planoPL15 h3 {
-    position: absolute;
-    width: 265px;
-    bottom: 10px;
-    right: 0px;
-    font-size: 21px;
+    width: 565px;
+    bottom: 12px;
+    font-size: 2.9em;
   }
 
   .planoPL15 p {
-    position: absolute;
-    width: 265px;
-    top: 5px;
-    right: 0px;
-    font-size: 0.6em;
+    width: 565px;
+    top: 30px;
+    font-size: 1.4em;
   }
 
   /* definições da pagina sobre responsivo */
@@ -1744,10 +1762,10 @@ a:hover {
   /* rede sociais mobile */
 
   #rodape .sociais li a img {
-    bottom: 3050px;
+    bottom: 2940px;
     width: 120px;
     height: 100px;
-    left: -500px;
+    left: -170px;
   }
 
   #rodape .sociais .insta li a img {
@@ -1755,7 +1773,7 @@ a:hover {
     float: left;
     width: 210px;
     height: 150px;
-    margin-left: 190px;
+    margin-left: 200px;
   }
 
   #rodape .sociais .face li a img {
@@ -1763,7 +1781,7 @@ a:hover {
     float: left;
     width: 190px;
     height: 130px;
-    margin-left: -80px;
+    margin-left: 50px;
   }
 
   /* temina redes socais mobile */
@@ -1771,7 +1789,7 @@ a:hover {
   .close {
     line-height: 100px;
     right: 10px;
-    top: -110px;
+    top: -40px;
     width: 100px;
     border-radius: 50px;
     font-size: 4rem;
