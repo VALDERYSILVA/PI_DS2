@@ -5,27 +5,30 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Projeto Integrador</title>
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="folhadeestilo.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="CSS/styleRespWeb.css">
+    <link rel="stylesheet" type="text/css" href="CSS/styleRespMobile.css">
+    <script src="JS/script.js" defer></script>
 </head>
 
 <!-- menu e logomarca -->
 
 <body>
-    <div id="index.php" class="principal">
+    <div id="index.html" class="principal">
         <header id="header">
             <div class="logo_redondo">
                 <img src="imagens/logo.png" alt="logo redondo">
             </div>
 
-            <a id="logo" href="#index.php">
+            <a id="logo" href="#index.html">
                 <img src="imagens/logotitulo.png"></a>
             <nav id="nav">
-                <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+                <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                    aria-expanded="false">
                     <span id="hamburger"></span>
                 </button>
                 <ul id="menu" role="Menu">
-                    <li><a id="menu-voltar" href="#index.php">Home</a></li>
+                    <li><a id="menu-voltar" href="#index.html">Home</a></li>
                     <li><a href="#planos">Planos</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#rodape">Contato</a></li>
@@ -60,7 +63,6 @@
     <!-- aqui começa pagina home -->
 
     <div class="slider">
-        <!-- <img src="imagens/H1.png" alt="Imagem ilustrativa"> -->
         <h1>INTERNET PARA<br>TODOS DA FAMÍLIA</h1>
         <p>Navegue na melhor internet do bairro<br>
             usando fibra óptica até a sua residência<br><br>
@@ -156,11 +158,11 @@
 
         <div class="superPlanos">
             <div class="planoPL9"></div> <!-- Balão maior -->
-            <div class="planoPL9_borda"></div> <!-- Linha do Balão maior -->
+            <div class="planoPL9_borda"></div> <!-- borda do Balão maior -->
 
-            <div class="planoPL10"></div> <!-- Balão interno -->
-            <div class="planoPL11"></div> <!-- Balão interno -->
-            <div class="planoPL12"></div> <!-- Balão interno -->
+            <div class="planoPL10"></div> <!-- Balão vermelho interno -->
+            <div class="planoPL11"></div> <!-- Balão vermelho interno -->
+            <div class="planoPL12"></div> <!-- Balão vermelho interno -->
 
             <div class="planoPL13">
                 <img src="imagens/visto.png" alt="visto">
@@ -211,8 +213,10 @@
     <div id="openmodal1" class="modalDialog2">
         <div>
             <a href="#close" title="Close" class="close">X</a>
-            <iframe frameborder='0' height='545px' scrolling='no' src='https://www.testeavelocidade.net/p/velocimetro-widget.html' width='100%' /><br />
-            <font size="2" face="Arial"> O <a href='https://www.testeavelocidade.net' rel='noopener' style='text-decoration:none;font-size: 14px;font-weight: 700;' target='_blank'>Teste de
+            <iframe frameborder='0' height='545px' scrolling='no'
+                src='https://www.testeavelocidade.net/p/velocimetro-widget.html' width='100%' /><br />
+            <font size="2" face="Arial"> O <a href='https://www.testeavelocidade.net' rel='noopener'
+                    style='text-decoration:none;font-size: 14px;font-weight: 700;' target='_blank'>Teste de
                     Velocidade</a>
             </font>
             </iframe>
@@ -243,12 +247,6 @@
     </div>
 
     <div id="enviar_contato" class="modalDialog3">
-        <!-- <script>
-            function mostra() {
-                document.getElementById('enviar_formulario').style.display = 'none';
-                document.getElementById('sucesso').style.display = 'block';
-            }
-        </script> -->
         <form id="enviar_formulario" name="email" method="POST" action="enviar.php">
             <a href="#close" class="close">X</a>
             <h1>Entre em contato</h1>
@@ -260,7 +258,8 @@
             </div>
 
             <div class="input-single">
-                <input type="text" name="telefone" id="telefone-box" class="input" autocomplete="off" maxlength="15" onkeyup="mascaraTelefone('(  )     -    ', this)" required>
+                <input type="text" name="telefone" id="telefone-box" class="input" autocomplete="off" maxlength="15"
+                    onkeyup="mascaraTelefone('(  )     -    ', this)" required>
                 <label for="telefone-box">Telefone</label>
                 <script src="mascara.js"></script>
             </div>
@@ -271,7 +270,8 @@
             </div>
 
             <div class="input-single">
-                <textarea type="text" name="mensagem" rows="6" cols="25" id="mensagem-box" class="textarea" autocomplete="off" maxlength="255" required></textarea>
+                <textarea type="text" name="mensagem" rows="6" cols="25" id="mensagem-box" class="textarea"
+                    autocomplete="off" maxlength="255" required></textarea>
                 <label for="mensagem-box">Deixe aqui uma mensagem...</label>
             </div>
 
@@ -279,17 +279,6 @@
                 <input type="submit" name="enviar" value="Enviar" onClick="mostra()">
             </div>
         </form>
-        <!-- 
-        <div id="sucesso" class="envio_sucesso" onClick="mostra()">
-            <a href=" #close" class="close">X</a>
-            <img src="imagens/carta.png">
-            <h3>Sua mensagem foi enviada com sucesso!</h3>
-            <h5>Em breve entraremos em contato</h5>
-            <p>Obrigado!</p>
-            <div class="visto">
-                <img src="imagens/visto.png" alt="visto ok">
-            </div>
-        </div> -->
     </div>
 
     <!-- aqui comeca pagina sobre -->
@@ -323,8 +312,10 @@
             </div>
 
             <div class="endereco">
-                <!-- <img src="imagens/mulher.png" alt="Imagem ilustrativa do mapa"> -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1602.6824106147901!2d-34.840956998483136!3d-7.898244195051964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab3e4a766c6085%3A0x33c7226231628883!2sARTE%20EM%20PC%20Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1665888290752!5m2!1spt-BR!2sbr" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1602.6824106147901!2d-34.840956998483136!3d-7.898244195051964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab3e4a766c6085%3A0x33c7226231628883!2sARTE%20EM%20PC%20Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1665888290752!5m2!1spt-BR!2sbr"
+                    width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
                 <p>VENHA CONHECER<br>
                     A NOSSA LOJA!
@@ -340,7 +331,7 @@
         <div class="footer-texto">
             <h3>Menu</h3>
             <ul>
-                <li><a href="#index.php">Home</a></li>
+                <li><a href="#index.html">Home</a></li>
                 <li><a href="#planos">Nossos planos</a></li>
                 <li><a href="#sobre">Sobre a empresa</a></li>
             </ul>
@@ -351,7 +342,8 @@
             <ul>
                 <li>(81) 3435-6078</li>
                 <li>arteempc.com.br</li>
-                <li><a href="mailto:tecnologia@arteempc.com.br" target="_blank" rel="noopener">tecnologia@arteempc.com.br</a></li>
+                <li><a href="mailto:tecnologia@arteempc.com.br" target="_blank"
+                        rel="noopener">tecnologia@arteempc.com.br</a></li>
             </ul>
         </div>
 

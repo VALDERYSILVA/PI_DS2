@@ -1,0 +1,407 @@
+@media screen and (max-width: 1100px) and (min-width: 1000px) {
+    /* definir as propriedades do menu */
+  
+    .nome_empresa {
+      width: 130px;
+    }
+  
+    .nome_empresa img {
+      margin-top: 16%;
+      left: 287px;
+    }
+  
+    nav {
+      bottom: 20px;
+    }
+  
+    nav ul li {
+      margin: 0.6em;
+    }
+  
+    .slider h1 {
+      font-size: 3em;
+    }
+  
+    .slider p {
+      margin-top: 390px;
+      font-size: 1.2em;
+    }
+  
+    /* velocimetro */
+  
+    .modalDialog2 div {
+      margin: 3% auto;
+    }
+  
+    /* definições da pagina sobre responsivo */
+  
+    .logo_sobre img {
+      width: 16%;
+      opacity: 0;
+    }
+  
+    .container-sobre {
+      width: 80%;
+      top: 160px;
+    }
+  
+    .container-sobre img {
+      width: 470px;
+      height: 360px;
+      top: 25px;
+      left: 370px;
+      opacity: 1;
+    }
+  
+    .container-sobre p {
+      width: 370px;
+      font-size: 1em;
+    }
+  
+  
+    /* propriedades do mapa responsivo */
+  
+  
+    /* propriedades do mapa */
+  
+    #mapa {
+      height: 380px;
+    }
+  
+    #mapa iframe {
+      width: 450px;
+      height: 280px;
+      left: 12%;
+      top: 75px;
+    }
+  
+    #mapa p {
+      top: 160px;
+      right: 170px;
+      font-size: 2.5em;
+    }
+  
+    /* definir as propriedade do footer (rodape) */
+  
+    #rodape {
+      height: 240px;
+    }
+  
+    #rodape .footer-texto {
+      left: 100px;
+    }
+  
+    #rodape .sociais .face li a img {
+      width: 60px;
+      height: 40px;
+      right: 145px;
+    }
+  
+    #rodape .sociais .insta li a img {
+      width: 60px;
+      height: 40px;
+      right: 160px;
+    }
+  }
+  
+  @media screen and (max-width: 1200px) and (min-width: 1100px) {
+  
+    /* definir as propriedades do menu */
+  
+    .nome_empresa {
+      width: 140px;
+    }
+  
+    .nome_empresa img {
+      margin-top: 15%;
+      left: 287px;
+    }
+  
+    nav {
+      bottom: 16px;
+    }
+  
+    nav ul li {
+      margin: 0.8em;
+    }
+  
+    .slider h1 {
+      font-size: 3em;
+    }
+  
+    .slider p {
+      margin-top: 390px;
+      font-size: 1.2em;
+    }
+  
+    /* velocimetro */
+  
+    .modalDialog2 div {
+      margin: 3% auto;
+    }
+  
+    /* definições da pagina sobre responsivo */
+  
+    .logo_sobre img {
+      width: 16%;
+    }
+  
+    .container-sobre {
+      width: 64%;
+      top: 160px;
+    }
+  
+    .container-sobre img {
+      width: 470px;
+      height: 360px;
+      top: 25px;
+      left: 370px;
+    }
+  
+    .container-sobre p {
+      width: 370px;
+      font-size: 1em;
+    }
+  
+  
+    /* propriedades do mapa responsivo */
+  
+  
+    /* propriedades do mapa */
+  
+    #mapa iframe {
+      width: 450px;
+      height: 280px;
+      left: 16%;
+      top: 175px;
+    }
+  
+    #mapa p {
+      top: 250px;
+      font-size: 3em;
+    }
+  
+    /* definir as propriedade do footer (rodape) */
+  
+    #rodape {
+      height: 240px;
+    }
+  
+    #rodape .footer-texto {
+      left: 100px;
+    }
+  
+    #rodape .sociais .face li a img {
+      width: 60px;
+      height: 40px;
+      right: 145px;
+    }
+  
+    #rodape .sociais .insta li a img {
+      width: 60px;
+      height: 40px;
+      right: 160px;
+    }
+  }
+  
+  @media screen and (max-width: 1300px) and (min-width: 1200px) {
+  
+  
+    /* definir as propriedades do menu */
+  
+    .nome_empresa {
+      width: 150px;
+    }
+  
+    .nome_empresa img {
+      margin-top: 11%;
+      left: 290px;
+    }
+  
+    nav {
+      bottom: 15px;
+    }
+  
+    nav ul li {
+      margin: 0.8em;
+    }
+  
+    .slider h1 {
+      font-size: 3em;
+    }
+  
+    .slider p {
+      margin-top: 390px;
+      font-size: 1.2em;
+    }
+  
+    /* velocimetro */
+  
+    .modalDialog2 div {
+      margin: 3% auto;
+    }
+  
+    /* definições da pagina sobre responsivo */
+  
+    .logo_sobre img {
+      width: 16%;
+    }
+  
+    .container-sobre {
+      width: 64%;
+      top: 160px;
+    }
+  
+    .container-sobre img {
+      width: 470px;
+      height: 360px;
+      top: 25px;
+      left: 370px;
+    }
+  
+    .container-sobre p {
+      width: 370px;
+      font-size: 1em;
+    }
+  
+  
+    /* propriedades do mapa responsivo */
+  
+  
+    /* propriedades do mapa */
+  
+    #mapa iframe {
+      width: 450px;
+      height: 280px;
+      left: 16%;
+      top: 175px;
+    }
+  
+    #mapa p {
+      top: 250px;
+      font-size: 3em;
+    }
+  
+    /* definir as propriedade do footer (rodape) */
+  
+    #rodape {
+      height: 240px;
+    }
+  
+    #rodape .footer-texto {
+      left: 100px;
+    }
+  
+    #rodape .sociais .face li a img {
+      width: 60px;
+      height: 40px;
+      right: 145px;
+    }
+  
+    #rodape .sociais .insta li a img {
+      width: 60px;
+      height: 40px;
+      right: 160px;
+    }
+  }
+  
+  @media screen and (max-width: 1400px) and (min-width: 1300px) {
+  
+  
+    /* definir as propriedades do menu */
+  
+    .nome_empresa {
+      width: 160px;
+    }
+  
+    .nome_empresa img {
+      margin-top: 10%;
+      left: 310px;
+    }
+  
+    nav {
+      bottom: 7px;
+    }
+  
+    nav ul li {
+      margin: 1.3em;
+    }
+  
+    .slider h1 {
+      font-size: 3em;
+    }
+  
+    .slider p {
+      margin-top: 390px;
+      font-size: 1.2em;
+    }
+  
+    /* velocimetro */
+  
+    .modalDialog2 div {
+      margin: 3% auto;
+    }
+  
+    /* definições da pagina sobre responsivo */
+  
+    .logo_sobre img {
+      width: 16%;
+    }
+  
+    .container-sobre {
+      width: 64%;
+      top: 160px;
+    }
+  
+    .container-sobre img {
+      width: 470px;
+      height: 360px;
+      top: 25px;
+      left: 370px;
+    }
+  
+    .container-sobre p {
+      width: 370px;
+      font-size: 1em;
+    }
+  
+  
+    /* propriedades do mapa responsivo */
+  
+  
+    /* propriedades do mapa */
+  
+    #mapa iframe {
+      width: 450px;
+      height: 280px;
+      left: 16%;
+      top: 175px;
+    }
+  
+    #mapa p {
+      top: 250px;
+      font-size: 3em;
+    }
+  
+    /* definir as propriedade do footer (rodape) */
+  
+    #rodape {
+      height: 240px;
+    }
+  
+    #rodape .footer-texto {
+      left: 100px;
+    }
+  
+    #rodape .sociais .face li a img {
+      width: 60px;
+      height: 40px;
+      right: 145px;
+    }
+  
+    #rodape .sociais .insta li a img {
+      width: 60px;
+      height: 40px;
+      right: 160px;
+    }
+  }
