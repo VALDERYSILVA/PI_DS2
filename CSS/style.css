@@ -1029,13 +1029,11 @@ a:hover {
 
 #rodape {
   position: relative;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 100%;
-  height: 250px;
-  bottom: 0px;
+  min-height: 250px;
   background-color: #0000CD;
-  color: #fff;
-  float: left;
-  font-family: 'verdana';
+  display: flex;
 }
 
 #rodape img {
@@ -1046,48 +1044,45 @@ a:hover {
 }
 
 #rodape .footer-texto {
-  padding: 30px 0px 70px 0px;
-  text-align: left;
-  width: 21%;
-  position: relative;
-  left: 10%;
-  float: left;
+  padding: 20px;
+  width: 320px;
+  min-height: 150px;
+}
+
+#rodape .footer-texto:nth-child(4) {
+  width: 400px;
 }
 
 #rodape .footer-texto h3 {
-  position: relative;
-  text-align: left;
-  left: 10%;
+  color: #FFFFFF;
+  margin: 20px 60px 0;
 }
 
-#rodape .footer-texto ul {
-  width: 100%;
-  margin: 6%;
+#rodape .footer-texto ul li {
   position: relative;
+  left: 60px;
+  margin: 10px 0px;
   list-style: none;
 }
 
-#rodape .footer-texto li {
-  margin: 4%;
-  font-size: 13px;
-}
-
-#rodape .footer-texto a {
+#rodape .footer-texto ul li a {
   color: #FFFFFF;
   text-decoration: none;
 }
 
-#rodape .sociais ul {
-  list-style: none;
+#rodape .footer-texto ul li a:hover {
+  color: #ddd;
 }
 
-#rodape .sociais .face li a img {
-  position: relative;
+#rodape .footer-texto p {
+  color: #FFFFFF;
+}
+
+#rodape .sociais .face img {
   opacity: 1;
+  left: -50px;
   width: 70px;
   height: 50px;
-  float: right;
-  right: 170px;
   animation: face 0.7s linear infinite;
 }
 
@@ -1105,14 +1100,11 @@ a:hover {
   }
 }
 
-#rodape .sociais .insta li a img {
-  position: relative;
+#rodape .sociais .insta img {
   opacity: 1;
-  transition-duration: 0.4s;
+  left: 50px;
   width: 70px;
   height: 50px;
-  float: right;
-  right: 185px;
   animation: insta 0.7s linear infinite;
 }
 
@@ -1134,6 +1126,7 @@ a:hover {
 }
 
 #rodape .developer p {
+  color: #FFFFFF;
   position: absolute;
   text-align: center;
   bottom: 12%;
@@ -1141,7 +1134,7 @@ a:hover {
   border-style: none;
   border-top: dotted;
   border-width: 1.5px;
-  width: 80%;
-  left: 10%;
+  width: 90%;
+  left: 75px;
   font-size: 12px;
 }

@@ -152,7 +152,7 @@
 
     .slide img {
         margin-top: 470px;
-        left: 500px;
+        margin-left: -28%;
 
     }
 
@@ -639,19 +639,9 @@
 
     #mapa .endereco p {
         top: 70px;
-        right: 15%;
-
-        /* Definir o plano de fundo do texto */
-        background: linear-gradient(to right, #FFFFFF 0, #03256C 100%);
-        display: inline-block;
-
-        /*Recortar o fundo até o texto*/
-        -webkit-background-clip: text;
-        background-clip: text;
-
-        /*Definir a cor do texto para transparente*/
-        color: transparent;
-
+        right: 13%;
+        color: #ddd;
+        text-shadow: #000 4px 4px 6px;
         font-size: 4em;
     }
 
@@ -666,70 +656,49 @@
     /* definir as propriedade do footer (rodape) */
 
     #rodape {
-        height: 650px;
-        bottom: 0px;
-    }
-
-    #rodape .footer-texto {
-        padding: 0;
-        text-align: left;
-        width: 45%;
-        position: relative;
-        top: 20px;
-        left: 30px;
+        flex-direction: column;
     }
 
     #rodape .footer-texto h3 {
+        font-size: 2.4em;
+        width: 300px;
+        left: 90px;
+    }
+
+    #rodape .footer-texto ul li {
         position: relative;
-        text-align: left;
-        padding-top: 10px;
-        left: 10px;
+        left: 90px;
+        margin: 10px 0px;
+    }
+
+    #rodape .footer-texto ul li a {
         font-size: 2em;
     }
 
-    #rodape .footer-texto ul {
-        width: 100%;
-        margin-left: 30px;
-        position: relative;
-        list-style: none;
+
+    #rodape .footer-texto p {
+        font-size: 2em;
     }
 
-    #rodape .footer-texto li {
-        margin: 0;
-        font-size: 1.6em;
+    #rodape .segue_la {
+        display: none;
     }
-
-    #rodape .footer-texto a {
-        color: #FFFFFF;
-        text-decoration: none;
-    }
-
 
     /* rede sociais mobile */
 
-    #rodape .sociais li a img {
-        margin-top: -15px;
-        width: 90px;
-        height: 80px;
-        left: -100px;
-    }
 
-    #rodape .sociais .insta li a img {
-        position: absolute;
-        float: left;
-        width: 180px;
-        height: 130px;
-        margin-left: 200px;
-        top: 0px;
-    }
-
-    #rodape .sociais .face li a img {
-        position: absolute;
-        float: left;
-        width: 160px;
+    #rodape .sociais .face img {
+        bottom: 57px;
+        left: 450px;
+        width: 120px;
         height: 100px;
-        margin-left: 50px;
-        top: 12px;
+    }
+
+    #rodape .sociais .insta img {
+        bottom: 55px;
+        left: 600px;
+        width: 130px;
+        height: 100px;
     }
 
     /* temina redes socais mobile */
@@ -741,6 +710,13 @@
         width: 100px;
         border-radius: 50px;
         font-size: 4rem;
+    }
+
+    #rodape .developer p {
+        border-width: 3px;
+        width: 90%;
+        left: 5%;
+        font-size: 1.1em;
     }
 
 }
