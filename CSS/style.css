@@ -12,7 +12,9 @@
     url('fontes/Hey August.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+}
 
+@font-face {
   font-family: 'Androgyne_TB';
   src: url('fontes/Androgyne_TB.otf') format('opentype'),
     url('fontes/Androgyne_TB.ttf') format('truetype');
@@ -963,7 +965,7 @@ a:hover {
   top: 210px;
   right: 100px;
   background-color: #FFFFFF;
-  box-shadow: 4px 4px 6px;
+  box-shadow: #000 4px 4px 6px;
   border-radius: 15px;
   float: right;
 }
@@ -987,7 +989,6 @@ a:hover {
 
 #mapa {
   position: relative;
-  font-family: Hey August, Arial, Helvetica, sans-serif;
   color: #03256C;
   width: 100%;
   height: 480px;
@@ -1008,14 +1009,16 @@ a:hover {
   float: left;
 }
 
-#mapa p {
+#mapa .endereco p {
   position: absolute;
   top: 200px;
   right: 250px;
+  font-family: Hey August, Arial, Helvetica, sans-serif;
   font-size: 3.2em;
 }
 
 #mapa .endereco img {
+  display: none;
   position: absolute;
   bottom: 0px;
   width: 240px;
