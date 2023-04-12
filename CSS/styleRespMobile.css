@@ -623,7 +623,7 @@
     /* propriedades do mapa responsivo */
 
     body #mapa {
-        height: 1150px;
+        height: 800px;
     }
 
     #mapa .quadro img {
@@ -632,13 +632,13 @@
 
     body #mapa iframe {
         width: 84%;
-        height: 650px;
-        top: 300px;
+        height: 500px;
+        top: 250px;
         left: 8%;
     }
 
     #mapa .endereco p {
-        top: 70px;
+        top: 55px;
         right: 13%;
         color: #ddd;
         text-shadow: #000 4px 4px 6px;
@@ -647,7 +647,7 @@
 
     #mapa .endereco img {
         display: block;
-        top: 80px;
+        top: 55px;
         left: 130px;
         width: 150px;
     }
@@ -660,9 +660,10 @@
     }
 
     #rodape .footer-texto h3 {
-        font-size: 2.4em;
+        color: #FF0000;
+        font-size: 2.5em;
         width: 300px;
-        left: 90px;
+        margin-left: 90px;
     }
 
     #rodape .footer-texto ul li {
@@ -713,6 +714,7 @@
     }
 
     #rodape .developer p {
+        bottom: 60px;
         border-width: 3px;
         width: 90%;
         left: 5%;
