@@ -1,0 +1,851 @@
+@media screen and (max-width: 1100px) and (min-width: 1000px) {
+
+
+  /* definir as propriedades do topo */
+
+  #header {
+    padding: 0;
+    font-size: 0.8em;
+  }
+
+  #menu {
+    gap: 0;
+  }
+
+
+  #logo img {
+    margin-left: 40%;
+    width: 50%;
+  }
+
+
+  .logo_redondo {
+    left: 4%;
+  }
+
+
+  /* definir as propriedades do menu */
+
+  .nome_empresa {
+    width: 160px;
+  }
+
+  .nome_empresa img {
+    margin-top: 10%;
+    left: 310px;
+  }
+
+  nav {
+    bottom: 7px;
+  }
+
+  nav ul li {
+    margin: 1.3em;
+  }
+
+  .slider h1 {
+    font-size: 3em;
+  }
+
+  .slider p {
+    margin-top: 390px;
+    font-size: 1.2em;
+  }
+
+  /* velocimetro */
+
+  .modalDialog2 div {
+    margin: 3% auto;
+  }
+
+  /* pagina de planos */
+
+  #planos {
+    height: 550px;
+  }
+
+  .planoPL3 {
+    position: relative;
+    bottom: 120px;
+  }
+
+  .planoPL3 img {
+    top: 240px;
+  }
+
+  .superPlanos {
+    position: relative;
+    top: 135%;
+    left: 0;
+  }
+
+
+  /* definições da pagina sobre responsivo */
+
+  #sobre {
+    height: 600px;
+  }
+
+  .logo_sobre img {
+    display: none;
+  }
+
+  .container-sobre {
+    width: 87%;
+    top: 87px;
+    left: 55px;
+  }
+
+  .container-sobre img {
+    display: block;
+    width: 470px;
+    height: 360px;
+    top: 25px;
+    left: 370px;
+  }
+
+  .container-sobre p {
+    width: 370px;
+    font-size: 1em;
+  }
+
+
+  /* propriedades do mapa responsivo */
+
+
+  /* propriedades do mapa */
+
+  #mapa {
+    height: 350px;
+  }
+
+  #mapa iframe {
+    width: 450px;
+    height: 280px;
+    left: 100px;
+    top: 40px;
+  }
+
+  #mapa .endereco p {
+    top: 130px;
+    right: 80px;
+    font-size: 3em;
+  }
+
+
+  /* definir as propriedade do footer (rodape) */
+
+  #rodape {
+    height: 240px;
+  }
+
+  #rodape .footer-texto {
+    width: 250px;
+    padding: 0 20px 0;
+  }
+
+  #rodape .footer-texto:nth-child(4) {
+    width: 220px;
+  }
+
+  #rodape .footer-texto h3 {
+    width: 150px;
+  }
+
+  #rodape .sociais .face li a img {
+    width: 60px;
+    height: 40px;
+    right: 145px;
+  }
+
+  #rodape .sociais .insta li a img {
+    width: 60px;
+    height: 40px;
+    right: 160px;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1100px) {
+
+
+  /* definir as propriedades do topo */
+
+  #header {
+    padding: 0;
+    font-size: 0.8em;
+  }
+
+  #menu {
+    gap: 0;
+  }
+
+
+  #logo img {
+    margin-left: 40%;
+    width: 50%;
+  }
+
+
+  .logo_redondo {
+    left: 4%;
+  }
+
+
+  /* definir as propriedades do menu */
+
+  .nome_empresa {
+    width: 160px;
+  }
+
+  .nome_empresa img {
+    margin-top: 10%;
+    left: 310px;
+  }
+
+  nav {
+    bottom: 7px;
+  }
+
+  nav ul li {
+    margin: 1.3em;
+  }
+
+  .slider h1 {
+    font-size: 3em;
+  }
+
+  .slider p {
+    margin-top: 390px;
+    font-size: 1.2em;
+  }
+
+  /* velocimetro */
+
+  .modalDialog2 div {
+    margin: 3% auto;
+  }
+
+  /* pagina de planos */
+
+  #planos {
+    height: 550px;
+  }
+
+  .planoPL3 {
+    position: relative;
+    bottom: 120px;
+  }
+
+  .planoPL3 img {
+    top: 240px;
+  }
+
+  .superPlanos {
+    position: relative;
+    top: 135%;
+    left: 0;
+  }
+
+
+  /* definições da pagina sobre responsivo */
+
+  #sobre {
+    height: 600px;
+  }
+
+  .logo_sobre img {
+    display: none;
+  }
+
+  .container-sobre {
+    width: 87%;
+    top: 87px;
+    left: 55px;
+  }
+
+  .container-sobre img {
+    display: block;
+    width: 520px;
+    height: 360px;
+    top: 25px;
+    left: 400px;
+  }
+
+  .container-sobre p {
+    width: 370px;
+    font-size: 1em;
+  }
+
+
+  /* propriedades do mapa responsivo */
+
+
+  /* propriedades do mapa */
+
+  #mapa {
+    height: 350px;
+  }
+
+  #mapa iframe {
+    width: 450px;
+    height: 280px;
+    left: 100px;
+    top: 40px;
+  }
+
+  #mapa .endereco p {
+    top: 130px;
+    right: 80px;
+    font-size: 3em;
+  }
+
+
+  /* definir as propriedade do footer (rodape) */
+
+  #rodape {
+    height: 240px;
+  }
+
+  #rodape .footer-texto {
+    width: 280px;
+    padding: 0 30px 0;
+  }
+
+  #rodape .footer-texto:nth-child(4) {
+    width: 230px;
+  }
+
+  #rodape .footer-texto h3 {
+    width: 150px;
+  }
+
+  #rodape .sociais .face li a img {
+    width: 60px;
+    height: 40px;
+    right: 145px;
+  }
+
+  #rodape .sociais .insta li a img {
+    width: 60px;
+    height: 40px;
+    right: 160px;
+  }
+}
+
+@media screen and (max-width: 1300px) and (min-width: 1200px) {
+
+
+  /* definir as propriedades do topo */
+
+  #header {
+    padding: 0;
+    font-size: 0.8em;
+  }
+
+  #menu {
+    gap: 0;
+  }
+
+
+  #logo img {
+    margin-left: 40%;
+    width: 50%;
+  }
+
+
+  .logo_redondo {
+    left: 4%;
+  }
+
+
+  /* definir as propriedades do menu */
+
+  .nome_empresa {
+    width: 160px;
+  }
+
+  .nome_empresa img {
+    margin-top: 10%;
+    left: 310px;
+  }
+
+  nav {
+    bottom: 7px;
+  }
+
+  nav ul li {
+    margin: 1.3em;
+  }
+
+  .slider h1 {
+    font-size: 3em;
+  }
+
+  .slider p {
+    margin-top: 390px;
+    font-size: 1.2em;
+  }
+
+  /* velocimetro */
+
+  .modalDialog2 div {
+    margin: 3% auto;
+  }
+
+  /* pagina de planos */
+
+  #planos {
+    height: 550px;
+  }
+
+  .planoPL2 {
+    height: 119%;
+    top: 0;
+  }
+
+
+  .planoPL3 {
+    position: relative;
+    bottom: 120px;
+  }
+
+  .planoPL3 img {
+    top: 240px;
+  }
+
+  .superPlanos {
+    position: relative;
+    top: 135%;
+    left: 0;
+  }
+
+  .planoPL5 img {
+    position: absolute;
+    bottom: -101px;
+  }
+
+  /* definições da pagina sobre responsivo */
+
+  #sobre {
+    margin-top: 100px;
+    height: 600px;
+  }
+
+  .logo_sobre img {
+    display: none;
+  }
+
+  .container-sobre {
+    width: 87%;
+    top: 87px;
+    left: 55px;
+  }
+
+  .container-sobre img {
+    display: block;
+    width: 520px;
+    height: 360px;
+    top: 25px;
+    left: 480px;
+  }
+
+  .container-sobre p {
+    width: 370px;
+    font-size: 1em;
+  }
+
+
+  /* propriedades do mapa responsivo */
+
+
+  /* propriedades do mapa */
+
+  #mapa {
+    height: 350px;
+  }
+
+  #mapa iframe {
+    width: 450px;
+    height: 280px;
+    left: 100px;
+    top: 40px;
+  }
+
+  #mapa .endereco p {
+    top: 130px;
+    right: 80px;
+    font-size: 3em;
+  }
+
+
+  /* definir as propriedade do footer (rodape) */
+
+  #rodape {
+    height: 240px;
+  }
+
+  #rodape .footer-texto {
+    width: 310px;
+    padding: 0 30px 0;
+  }
+
+  #rodape .footer-texto:nth-child(4) {
+    width: 240px;
+  }
+
+  #rodape .footer-texto h3 {
+    width: 150px;
+  }
+
+  #rodape .sociais .face li a img {
+    width: 60px;
+    height: 40px;
+    right: 145px;
+  }
+
+  #rodape .sociais .insta li a img {
+    width: 60px;
+    height: 40px;
+    right: 160px;
+  }
+}
+
+@media screen and (max-width: 1400px) and (min-width: 1300px) {
+
+  /* definir as propriedades do topo */
+
+  #header {
+    padding: 0;
+    font-size: 0.8em;
+  }
+
+  #menu {
+    gap: 0;
+  }
+
+
+  #logo img {
+    margin-left: 40%;
+    width: 50%;
+  }
+
+
+  .logo_redondo {
+    left: 4%;
+  }
+
+
+  /* definir as propriedades do menu */
+
+  #logo img {
+    margin-left: 35%;
+    width: 40%;
+  }
+
+  nav {
+    bottom: 7px;
+  }
+
+  nav ul li {
+    margin: 1.3em;
+  }
+
+  .slider h1 {
+    font-size: 3em;
+  }
+
+  .slider p {
+    margin-top: 390px;
+    font-size: 1.2em;
+  }
+
+  /* velocimetro */
+
+  .modalDialog2 div {
+    margin: 3% auto;
+  }
+
+  /* pagina de planos */
+
+  #planos {
+    height: 550px;
+  }
+
+  .planoPL2 {
+    height: 119%;
+    top: 0;
+  }
+
+
+  .planoPL3 {
+    position: relative;
+    bottom: 120px;
+  }
+
+  .planoPL3 img {
+    top: 240px;
+  }
+
+  .superPlanos {
+    position: relative;
+    top: 135%;
+    left: 0;
+  }
+
+  .planoPL5 img {
+    position: absolute;
+    bottom: -101px;
+  }
+
+  /* definições da pagina sobre responsivo */
+
+  #sobre {
+    margin-top: 100px;
+    height: 600px;
+  }
+
+  .logo_sobre img {
+    display: none;
+  }
+
+  .container-sobre {
+    width: 87%;
+    top: 87px;
+    left: 55px;
+  }
+
+  .container-sobre img {
+    display: block;
+    width: 520px;
+    height: 360px;
+    top: 25px;
+    left: 580px;
+  }
+
+  .container-sobre p {
+    width: 540px;
+    font-size: 1.2em;
+  }
+
+  /* propriedades do mapa */
+
+  #mapa {
+    height: 350px;
+  }
+
+  #mapa iframe {
+    width: 450px;
+    height: 280px;
+    left: 180px;
+    top: 40px;
+  }
+
+  #mapa .endereco p {
+    top: 130px;
+    right: 150px;
+    font-size: 3.2em;
+  }
+
+
+  /* definir as propriedade do footer (rodape) */
+
+  #rodape {
+    height: 240px;
+  }
+
+  #rodape .footer-texto {
+    width: 320px;
+    padding: 0 20px 0;
+  }
+
+  #rodape .footer-texto:nth-child(4) {
+    width: 280px;
+  }
+
+  #rodape .footer-texto h3 {
+    width: 150px;
+  }
+
+  #rodape .sociais .face li a img {
+    width: 60px;
+    height: 40px;
+    right: 145px;
+  }
+
+  #rodape .sociais .insta li a img {
+    width: 60px;
+    height: 40px;
+    right: 160px;
+  }
+}
+
+@media screen and (max-width: 1500px) and (min-width: 1400px) {
+
+  /* definir as propriedades do topo */
+
+  #header {
+    padding: 20px;
+    font-size: 1em;
+  }
+
+  #menu {
+    gap: 0;
+  }
+
+
+  #logo img {
+    margin-left: 40%;
+    width: 50%;
+  }
+
+
+  .logo_redondo {
+    left: 4%;
+  }
+
+
+  /* definir as propriedades do menu */
+
+  #logo img {
+    margin-left: 35%;
+    width: 40%;
+  }
+
+  nav {
+    bottom: 7px;
+  }
+
+  nav ul li {
+    margin: 1.3em;
+  }
+
+  .slider h1 {
+    font-size: 3.5em;
+  }
+
+  .slider p {
+    margin-top: 420px;
+    font-size: 1.7em;
+  }
+
+  /* velocimetro */
+
+  .modalDialog2 div {
+    margin: 3% auto;
+  }
+
+  /* pagina de planos */
+
+  #planos {
+    height: 550px;
+  }
+
+  .planoPL2 {
+    height: 137%;
+    top: 0;
+  }
+
+
+  .planoPL3 {
+    position: relative;
+    bottom: 120px;
+  }
+
+  .planoPL3 img {
+    top: 240px;
+  }
+
+  .superPlanos {
+    position: relative;
+    top: 135%;
+    left: 0;
+  }
+
+  .planoPL5 img {
+    position: absolute;
+    bottom: -201px;
+  }
+
+  /* definições da pagina sobre responsivo */
+
+  #sobre {
+    margin-top: 200px;
+    height: 600px;
+  }
+
+  .logo_sobre img {
+    display: none;
+  }
+
+  .container-sobre {
+    width: 87%;
+    height: 80%;
+    top: 87px;
+    left: 55px;
+  }
+
+  .container-sobre img {
+    display: block;
+    width: 621px;
+    height: 400px;
+    top: 38px;
+    left: 563px;
+  }
+
+  .container-sobre p {
+    margin-top: 14px;
+    width: 557px;
+    font-size: 1.3em;
+  }
+
+  /* propriedades do mapa */
+
+  #mapa {
+    height: 350px;
+  }
+
+  #mapa iframe {
+    width: 450px;
+    height: 280px;
+    left: 180px;
+    top: 40px;
+  }
+
+  #mapa .endereco p {
+    top: 130px;
+    right: 150px;
+    font-size: 3.2em;
+  }
+
+
+  /* definir as propriedade do footer (rodape) */
+
+  #rodape {
+    height: 240px;
+  }
+
+  #rodape .footer-texto {
+    width: 320px;
+    padding: 0 20px 0;
+  }
+
+  #rodape .footer-texto:nth-child(4) {
+    width: 280px;
+  }
+
+  #rodape .footer-texto h3 {
+    width: 150px;
+  }
+
+  #rodape .sociais .face li a img {
+    width: 60px;
+    height: 40px;
+    right: 145px;
+  }
+
+  #rodape .sociais .insta li a img {
+    width: 60px;
+    height: 40px;
+    right: 160px;
+  }
+}

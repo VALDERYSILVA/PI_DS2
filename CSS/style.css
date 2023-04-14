@@ -26,9 +26,107 @@ html {
   scroll-behavior: smooth;
 }
 
-/* pagina topo carrosel */
+/* definir as propriedades do topo */
 
-/* Slides container */
+#header {
+  box-sizing: border-box;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #58a2f1, #03256C);
+  box-shadow: 0px 3px 10px #464646;
+  position: fixed;
+  z-index: 2;
+}
+
+#rede_socias_menu {
+  position: relative;
+  display: none;
+  right: 50px;
+}
+
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+#menu a {
+  display: block;
+  padding: 0.2rem;
+}
+
+#btn-mobile {
+  display: none;
+}
+
+a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: sans-serif, Verdana, Tahoma, sans-serif;
+}
+
+a:hover {
+  color: #778;
+}
+
+#logo img {
+  margin-left: 37%;
+  width: 40%;
+}
+
+#velocimetro {
+  background-color: #FF0000;
+  border-radius: 15px;
+  width: 190px;
+  text-align: center;
+}
+
+/* definir as propriedades do logo redondo */
+
+.logo_redondo {
+  position: absolute;
+  margin-top: 60px;
+  left: 6%;
+  width: 120px;
+}
+
+.logo_redondo img {
+  width: 100%;
+  position: relative;
+  transition: transform 0.7s ease-in-out;
+}
+
+.logo_redondo img:hover {
+  transform: rotate(360deg);
+}
+
+/* definir as propriedades da logo whatsapp */
+
+.whatsapp_logo {
+  position: fixed;
+  width: 13%;
+  bottom: 16%;
+  right: 30px;
+  z-index: 1;
+}
+
+.whatsapp_logo img {
+  width: 35%;
+  transition: all 0.5s;
+}
+
+.whatsapp_logo a img:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+
+
+/* Slides pagina home */
 
 .slider {
   position: relative;
@@ -189,106 +287,13 @@ html {
 }
 
 .imagemDeFundo_home img {
+  width: 100%;
   display: none;
 }
 
 .imagemDeFundo_homeBaixo img {
-  display: none;
-}
-
-
-/* definir as propriedades do topo */
-
-#header {
-  box-sizing: border-box;
-  top: 0;
-  height: 100px;
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: linear-gradient(90deg, #58a2f1, #03256C);
-  box-shadow: 0px 3px 10px #464646;
-  position: fixed;
-  z-index: 2;
-}
-
-#rede_socias_menu {
-  display: none;
-}
-
-#menu {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-}
-
-#menu a {
-  display: block;
-  padding: 0.2rem;
-}
-
-#btn-mobile {
-  display: none;
-}
-
-a {
-  color: #FFFFFF;
-  text-decoration: none;
-  font-family: sans-serif, Verdana, Tahoma, sans-serif;
-}
-
-a:hover {
-  color: #778;
-}
-
-#logo img {
-  margin-left: 37%;
-  width: 40%;
-}
-
-#velocimetro {
-  background-color: #FF0000;
-  border-radius: 15px;
-  width: 190px;
-  text-align: center;
-}
-
-/* definir as propriedades do logo redondo */
-.logo_redondo {
-  position: absolute;
-  margin-top: 60px;
-  left: 6%;
-  width: 120px;
-}
-
-.logo_redondo img {
   width: 100%;
-  position: relative;
-  transition: transform 0.7s ease-in-out;
-}
-
-.logo_redondo img:hover {
-  transform: rotate(360deg);
-}
-
-/* definir as propriedades da logo whatsapp */
-.whatsapp_logo {
-  position: fixed;
-  width: 13%;
-  bottom: 16%;
-  right: 30px;
-  z-index: 1;
-}
-
-.whatsapp_logo img {
-  width: 35%;
-  transition: all 0.5s;
-}
-
-.whatsapp_logo a img:hover {
-  transform: scale(1.2);
-  transition: all 0.5s;
+  display: none;
 }
 
 
@@ -521,19 +526,6 @@ a:hover {
   cursor: text;
 }
 
-.modalDialog3 .mensagem {
-  position: relative;
-  margin: 20px 0;
-}
-
-.modalDialog3 .mensagem label {
-  position: absolute;
-  left: 8px;
-  bottom: 20px;
-  transition: 0.4s;
-  cursor: text;
-}
-
 .modalDialog3:target {
   display: block;
   opacity: 1;
@@ -559,6 +551,7 @@ a:hover {
 
 .modalDialog3 input {
   font-size: 17px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   border: 0px;
   border-bottom: 2px solid #ccc;
   padding-left: 5px;
@@ -650,6 +643,11 @@ a:hover {
   opacity: 0.8;
   top: 0;
   float: left;
+}
+
+.planoPL3 {
+  position: relative;
+  bottom: -30px;
 }
 
 .planoPL3 img {
@@ -989,32 +987,29 @@ a:hover {
 
 #mapa {
   position: relative;
-  color: #03256C;
+  background: linear-gradient(90deg, #58a2f1, #03256C);
   width: 100%;
-  height: 480px;
+  height: 450px;
   float: right;
-}
-
-#mapa .quadro img {
-  position: absolute;
-  width: 100%;
 }
 
 #mapa iframe {
   position: relative;
-  width: 600px;
-  top: 84px;
-  left: 14%;
+  width: 650px;
+  top: 68px;
+  left: 13%;
   box-shadow: 0px 0px 10px 2px #000;
   float: left;
 }
 
 #mapa .endereco p {
   position: absolute;
-  top: 200px;
-  right: 250px;
+  color: #FFFFFF;
+  text-shadow: #000 4px 4px 6px;
+  top: 180px;
+  right: 180px;
   font-family: Hey August, Arial, Helvetica, sans-serif;
-  font-size: 3.2em;
+  font-size: 3.4em;
 }
 
 #mapa .endereco img {
@@ -1031,7 +1026,7 @@ a:hover {
   position: relative;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 100%;
-  min-height: 250px;
+  min-height: 230px;
   background-color: #0000CD;
   display: flex;
 }
@@ -1054,7 +1049,9 @@ a:hover {
 }
 
 #rodape .footer-texto h3 {
+  position: relative;
   color: #FFFFFF;
+  text-shadow: #000 3px 3px 4px;
   margin: 20px 60px 0;
 }
 
@@ -1066,6 +1063,7 @@ a:hover {
 }
 
 #rodape .footer-texto ul li a {
+  position: relative;
   color: #FFFFFF;
   text-decoration: none;
 }

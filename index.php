@@ -14,21 +14,20 @@
 <!-- menu e logomarca -->
 
 <body>
-    <div id="index.html" class="principal">
+    <div id="index" class="principal">
         <header id="header">
             <div class="logo_redondo">
                 <img src="imagens/logo.png" alt="logo redondo">
             </div>
 
-            <a id="logo" href="#index.html">
+            <a id="logo" href="#index">
                 <img src="imagens/logotitulo.png"></a>
             <nav id="nav">
-                <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
-                    aria-expanded="false">
+                <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
                     <span id="hamburger"></span>
                 </button>
                 <ul id="menu" role="Menu">
-                    <li><a id="menu-voltar" href="#index.html">Home</a></li>
+                    <li><a id="menu-voltar" href="#index">Home</a></li>
                     <li><a href="#planos">Planos</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#enviar_contato">Contato</a></li>
@@ -134,6 +133,9 @@
             <p>Planos básicos a partir<br>
                 de R$ 70,00
             </p>
+            <div class="assine">
+                <a href="#enviar_contato"><b>ASSINE JÁ</b></a>
+            </div>
         </div>
 
         <div class="planoPL4">
@@ -188,9 +190,6 @@
                 </p>
             </div>
         </div>
-        <div class="assine">
-            <a href="#enviar_contato"><b>ASSINE JÁ</b></a>
-        </div>
 
     </section>
 
@@ -213,10 +212,8 @@
     <div id="openmodal1" class="modalDialog2">
         <div>
             <a href="#close" title="Close" class="close">X</a>
-            <iframe frameborder='0' height='545px' scrolling='no'
-                src='https://www.testeavelocidade.net/p/velocimetro-widget.html' width='100%' /><br />
-            <font size="2" face="Arial"> O <a href='https://www.testeavelocidade.net' rel='noopener'
-                    style='text-decoration:none;font-size: 14px;font-weight: 700;' target='_blank'>Teste de
+            <iframe frameborder='0' height='545px' scrolling='no' src='https://www.testeavelocidade.net/p/velocimetro-widget.html' width='100%' /><br />
+            <font size="2" face="Arial"> O <a href='https://www.testeavelocidade.net' rel='noopener' style='text-decoration:none;font-size: 14px;font-weight: 700;' target='_blank'>Teste de
                     Velocidade</a>
             </font>
             </iframe>
@@ -258,10 +255,9 @@
             </div>
 
             <div class="input-single">
-                <input type="text" name="telefone" id="telefone-box" class="input" autocomplete="off" maxlength="15"
-                    onkeyup="mascaraTelefone('(  )     -    ', this)" required>
+                <input type="text" name="telefone" id="telefone-box" class="input" autocomplete="off" maxlength="15" onkeyup="mascaraTelefone('(  )     -    ', this)" required>
                 <label for="telefone-box">Telefone</label>
-                <script src="mascara.js"></script>
+                <script src="JS/mascara.js"></script>
             </div>
 
             <div class="input-single">
@@ -270,8 +266,7 @@
             </div>
 
             <div class="input-single">
-                <textarea type="text" name="mensagem" rows="6" cols="25" id="mensagem-box" class="textarea"
-                    autocomplete="off" maxlength="255" required></textarea>
+                <textarea type="text" name="mensagem" rows="6" cols="25" id="mensagem-box" class="textarea" autocomplete="off" maxlength="255" required></textarea>
                 <label for="mensagem-box">Deixe aqui uma mensagem...</label>
             </div>
 
@@ -308,17 +303,13 @@
     <div id="mapa">
         <div class="mapa">
             <div class="quadro">
-                <img src="imagens/quadro.png" alt="Imagem do mapa">
             </div>
             <div class="endereco">
                 <img src="imagens/SB.png" alt="imagem ilustrativa">
                 <p>VENHA CONHECER<br>
                     A NOSSA LOJA!
                 </p>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1602.6824106147901!2d-34.840956998483136!3d-7.898244195051964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab3e4a766c6085%3A0x33c7226231628883!2sARTE%20EM%20PC%20Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1665888290752!5m2!1spt-BR!2sbr"
-                    width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1602.6824106147901!2d-34.840956998483136!3d-7.898244195051964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab3e4a766c6085%3A0x33c7226231628883!2sARTE%20EM%20PC%20Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1665888290752!5m2!1spt-BR!2sbr" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
         </div>
@@ -331,7 +322,7 @@
         <div class="footer-texto">
             <h3>Menu</h3>
             <ul>
-                <li><a href="#index.html">Home</a></li>
+                <li><a href="#index">Home</a></li>
                 <li><a href="#planos">Nossos planos</a></li>
                 <li><a href="#sobre">Sobre a empresa</a></li>
             </ul>
@@ -340,14 +331,9 @@
         <div class="footer-texto">
             <h3>Fale Conosco</h3>
             <ul>
-                <li>
-                    <p>(81) 3435-6078</p>
-                </li>
-                <li>
+                <li><a href="#enviar_contato">(81) 3435-6078</a></li>
                 <li><a href="#enviar_contato">Entre em Contato</a></li>
-                </li>
-                <li><a href="mailto:tecnologia@arteempc.com.br" target="_blank"
-                        rel="noopener">tecnologia@arteempc.com.br</a></li>
+                <li><a href="mailto:tecnologia@arteempc.com.br" target="_blank" rel="noopener">tecnologia@arteempc.com.br</a></li>
             </ul>
         </div>
 
