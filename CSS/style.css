@@ -129,17 +129,18 @@ a:hover {
 /* Slides pagina home */
 
 .slider {
+  top: 100px;
   position: relative;
-  margin-top: 80px;
   width: 100%;
+  height: calc(100vh + 100px);
   overflow: hidden;
 }
 
 .slider h1 {
   position: absolute;
-  margin-top: 270px;
+  margin-top: 15%;
   left: 200px;
-  font-size: 3.4em;
+  font-size: 7.3vh;
   font-family: Androgyne_TB, Arial, Helvetica, sans-serif;
   color: #FFFFFF;
   z-index: 1;
@@ -171,9 +172,9 @@ a:hover {
 
 .slider p {
   position: absolute;
-  margin-top: 420px;
+  margin-top: 24%;
   left: 200px;
-  font-size: 1.5em;
+  font-size: 3.5vh;
   font-family: Androgyne_TB, Arial, Helvetica, sans-serif;
   color: #FFFFFF;
   z-index: 1;
@@ -261,7 +262,7 @@ a:hover {
 .navigation-auto {
   position: absolute;
   width: 100%;
-  margin-top: 650px;
+  margin-top: 40%;
   display: flex;
   justify-content: center;
 }
@@ -617,13 +618,14 @@ a:hover {
   position: relative;
   margin-top: -4px;
   width: 100%;
-  height: 850px;
+  height: 107vh;
   font-family: Arial Narrow black, Helvetica, sans-serif;
   color: #FFFFFF;
 }
 
 .banner_planos img {
   width: 100%;
+  height: 100%;
   position: absolute;
 }
 
@@ -647,7 +649,6 @@ a:hover {
 
 .planoPL3 {
   position: relative;
-  bottom: -30px;
 }
 
 .planoPL3 img {
@@ -756,6 +757,12 @@ a:hover {
   bottom: 200px;
   left: 780px;
   float: left;
+}
+
+.superPlanos {
+  position: relative;
+  top: 115vh;
+  left: 0;
 }
 
 .planoPL9 {
@@ -938,8 +945,8 @@ a:hover {
   position: relative;
   background: linear-gradient(90deg, #58a2f1, #03256C);
   width: 100%;
-  height: 800px;
-  margin-top: 0;
+  height: 100vh;
+  margin-top: 0px;
 }
 
 #sobre .SB1 img {
@@ -950,36 +957,38 @@ a:hover {
 
 .logo_sobre img {
   position: absolute;
-  width: 20%;
+  width: 15%;
   float: left;
-  top: 260px;
-  left: 90px;
+  top: 40%;
+  left: 9%;
 }
 
 .container-sobre {
   position: absolute;
-  width: 62%;
-  height: 410px;
-  top: 210px;
-  right: 100px;
+  width: 63%;
+  height: 54%;
+  left: 60%;
+  top: 55%;
+  transform: translate(-50%, -50%);
   background-color: #FFFFFF;
   box-shadow: #000 4px 4px 6px;
   border-radius: 15px;
-  float: right;
 }
 
 .container-sobre img {
-  width: 470px;
-  height: 360px;
-  top: 25px;
-  left: 450px;
+  position: absolute;
+  width: 50%;
+  height: 87%;
+  top: 6%;
+  left: 47%;
 }
 
 .container-sobre p {
-  width: 450px;
+  position: absolute;
+  width: 47%;
   text-align: center;
-  font-size: 1.1em;
-  padding: 25px;
+  font-size: 1.17vw;
+  padding: 21px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -989,15 +998,15 @@ a:hover {
   position: relative;
   background: linear-gradient(90deg, #58a2f1, #03256C);
   width: 100%;
-  height: 450px;
+  height: 60vh;
   float: right;
 }
 
 #mapa iframe {
   position: relative;
-  width: 650px;
-  top: 68px;
-  left: 13%;
+  width: 40%;
+  margin-top: 4%;
+  left: 12%;
   box-shadow: 0px 0px 10px 2px #000;
   float: left;
 }
@@ -1007,9 +1016,9 @@ a:hover {
   color: #FFFFFF;
   text-shadow: #000 4px 4px 6px;
   top: 180px;
-  right: 180px;
+  right: 13%;
   font-family: Hey August, Arial, Helvetica, sans-serif;
-  font-size: 3.4em;
+  font-size: 7vh;
 }
 
 #mapa .endereco img {
@@ -1026,7 +1035,7 @@ a:hover {
   position: relative;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 100%;
-  min-height: 230px;
+  min-height: 30vh;
   background-color: #0000CD;
   display: flex;
 }
@@ -1039,18 +1048,19 @@ a:hover {
 }
 
 #rodape .footer-texto {
-  padding: 20px;
-  width: 320px;
-  min-height: 150px;
+  padding: 1% 3.5%;
+  width: 44vh;
+  min-height: 33vh;
 }
 
 #rodape .footer-texto:nth-child(4) {
-  width: 400px;
+  width: 40vh;
 }
 
 #rodape .footer-texto h3 {
+  width: 300px;
   position: relative;
-  color: #FFFFFF;
+  color: #FF0000;
   text-shadow: #000 3px 3px 4px;
   margin: 20px 60px 0;
 }
@@ -1127,8 +1137,8 @@ a:hover {
   color: #FFFFFF;
   position: absolute;
   text-align: center;
-  bottom: 12%;
-  padding: 20px 0px 0px;
+  bottom: 10%;
+  padding: 1% 0 0;
   border-style: none;
   border-top: dotted;
   border-width: 1.5px;

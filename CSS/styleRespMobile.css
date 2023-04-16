@@ -1,4 +1,4 @@
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) and (min-height: 1000px) {
 
 
     /* definir as propriedades do logo redondo */
@@ -126,19 +126,18 @@
 
     .slider {
         background: linear-gradient(90deg, #58a2f1, #03256C);
-        height: 1700px;
-        margin-top: 0;
+        height: calc(82vh + 100px);
     }
 
     .slider h1 {
-        margin-top: 153%;
+        margin-top: 146%;
         left: 5%;
         text-align: left;
         font-size: 3.8em;
     }
 
     .slider p {
-        top: -100px;
+        top: -2%;
         left: 9%;
         font-size: 2.8em;
         text-align: center;
@@ -153,7 +152,7 @@
     }
 
     .slide img {
-        margin-top: 470px;
+        margin-top: 18%;
         margin-left: -28%;
 
     }
@@ -603,7 +602,7 @@
     .container-sobre {
         width: 80%;
         height: 1300px;
-        top: 200px;
+        left: 50%;
     }
 
     .container-sobre img {
@@ -624,8 +623,9 @@
 
     /* propriedades do mapa responsivo */
 
-    body #mapa {
-        height: 800px;
+
+    #mapa {
+        height: 44vh;
     }
 
     #mapa .quadro img {
@@ -634,8 +634,8 @@
 
     body #mapa iframe {
         width: 84%;
-        height: 500px;
-        top: 250px;
+        height: 27vh;
+        top: 12vh;
         left: 8%;
     }
 
@@ -659,6 +659,10 @@
 
     #rodape {
         flex-direction: column;
+    }
+
+    #rodape .footer-texto {
+        min-height: 8vh;
     }
 
     #rodape .footer-texto h3 {
