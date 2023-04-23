@@ -244,13 +244,13 @@
     </div>
 
     <div id="enviar_contato" class="modalDialog3">
-        <form id="enviar_formulario" name="email" method="POST" action="enviar.php">
+        <form id="enviar_formulario" name="email" method="POST" action="./configuracao/enviar.php">
             <a href="#close" class="close">X</a>
             <h1>Entre em contato</h1>
             <p>Preencha o formulário abaixo e entraremos em<br>contato com você</p>
 
             <div class="input-single">
-                <input type="text" name="nome" id="nome-box" class="input" autocomplete="off" maxlength="40" required>
+                <input type="text" name="nome" id="nome-box" class="input" autocomplete="off" maxlength="55" required>
                 <label for="nome-box">Nome completo</label>
             </div>
 
@@ -261,7 +261,7 @@
             </div>
 
             <div class="input-single">
-                <input type="text" name="email" id="email-box" class="input" autocomplete="off" maxlength="40" required>
+                <input type="text" name="email" id="email-box" class="input" autocomplete="off" maxlength="55" required>
                 <label for="email-box">e-mail</label>
             </div>
 
@@ -271,7 +271,7 @@
             </div>
 
             <div class="btn">
-                <input type="submit" name="enviar" value="Enviar" onClick="mostra()">
+                <input type="submit" name="submit" value="Enviar">
             </div>
         </form>
     </div>

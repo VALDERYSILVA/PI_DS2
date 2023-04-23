@@ -22,8 +22,7 @@ btnMobile.addEventListener('touchstart', toggleMenu);
 menuMobile.addEventListener('click', toggleMenu);
 
 
-
-// deslizando pagina home
+// Carrosssel deslizando pagina home
 
 let count = 1;
 document.getElementById("radio1").checked = true;
