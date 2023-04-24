@@ -31,7 +31,7 @@ header img {
 
 header .sair {
     position: relative;
-    width: 15%;
+    width: 13%;
 }
 
 .table-container {
@@ -50,6 +50,10 @@ header .sair {
 .table {
     width: 100%;
     border-collapse: collapse;
+}
+
+table {
+    box-shadow: 0px 0px 30px 8px #3C3F44;
 }
 
 .table thead {
@@ -153,4 +157,143 @@ header .sair {
         font-style: 14px;
         text-align: left;
     }
+}
+
+/* formulario contato */
+
+.modalDialog3 {
+    position: fixed;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    opacity: 1;
+    background: linear-gradient(90deg, #58a2f1, #03256C);
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    display: block;
+}
+
+.modalDialog3 form {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 70%;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+.modalDialog3 h1 {
+    text-align: center;
+    color: #03256C;
+}
+
+.modalDialog3 p {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.modalDialog3 .input-single {
+    position: relative;
+    margin: 20px 0;
+}
+
+.modalDialog3 .input-single label {
+    position: absolute;
+    left: 8px;
+    bottom: 15px;
+    transition: 0.3s;
+    cursor: text;
+}
+
+.modalDialog3:target {
+    display: block;
+    opacity: 1;
+
+}
+
+.modalDialog3 textarea {
+    resize: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: left;
+    font-size: 17px;
+    border: 0px;
+    border-bottom: 2px solid #ccc;
+    padding-left: 5px;
+    width: 100%;
+    height: 100px;
+    margin: 10px 0;
+}
+
+.modalDialog3 textarea:focus {
+    outline: 0;
+}
+
+.modalDialog3 input {
+    font-size: 17px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 0px;
+    border-bottom: 2px solid #ccc;
+    padding-left: 5px;
+    width: 100%;
+    height: 35px;
+    margin: 10px 0;
+    outline: 0;
+}
+
+.modalDialog3 form .input-single .input:focus~label,
+.modalDialog3 form .input-single .input:valid~label {
+    transform: translateY(-24px);
+    font-size: 12px;
+}
+
+.modalDialog3 form .input-single .textarea:focus~label,
+.modalDialog3 form .input-single .textarea:valid~label {
+    transform: translateY(24px);
+    font-size: 12px;
+}
+
+.modalDialog3 form input[type=submit] {
+    width: 100%;
+    height: 35px;
+    cursor: pointer;
+    background: #03256C;
+    text-align: center;
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.modalDialog3 form input[type=submit]:hover {
+    background-color: #0000CD;
+}
+
+/* Botão fechar */
+
+.close {
+    background-color: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: 12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+}
+
+.close:hover {
+    background-color: #b50900;
 }
