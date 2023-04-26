@@ -14,20 +14,31 @@ include("verificar_login.php"); // caminho do seu arquivo de conexão ao banco d
 </head>
 
 <body>
-    <header>
+    <header id="header">
+        <img src="imagens/logotitulo.png">
+        <nav id="nav">
+            <ul id="menu" role="Menu">
+                <li><a href="#">Alterar Acesso</a></li>
+                <li><a href="addclientes.php">Adicionar Contato</a></li>
+                <li id="sair"><a href="logout.php" onclick="return confirm('Tem certeza que deseja SAIR?')">SAIR</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- <header>
         <img src="imagens/logotitulo.png">
         <div class="sair">
             <a href="logout.php">
                 <img src="imagens/sair.png"></a>
         </div>
-    </header>
+    </header> -->
+
+    <h1 class="titulo">Contato de Clientes</h1>
 
     <div class="table-container">
-        <h1 class="heading">Contato de Clientes</h1>
         <table class="table">
             <thead>
                 <tr>
-                    <!-- <td>Código</td> -->
                     <td>Nome</td>
                     <td>Telefone</td>
                     <td>E-mail</td>
@@ -39,20 +50,19 @@ include("verificar_login.php"); // caminho do seu arquivo de conexão ao banco d
             <tbody>
                 <?php while ($dado = $con->fetch_array()) { ?>
                     <tr>
-                        <!-- <td data-label="Código"><?php echo $dado['id']; ?></td> -->
                         <td data-label="Nome"><?php echo $dado['nome']; ?></td>
                         <td data-label="Telefone"><?php echo $dado['telefone']; ?></td>
                         <td data-label="E-mail"><?php echo $dado['email']; ?></td>
                         <td data-label="Mensagem"><?php echo $dado['mensagem']; ?></td>
                         <td data-label="Data de Cadastro"><?php echo date('d/m/Y H:i', strtotime($dado['data_cadastro'])); ?></td>
-                        <!-- <td data-label=""><a href="editarclientes.php?id=<?php echo $dado['id']; ?>" class="btn_editar">Editar</a></td> -->
                         <td data-label=""><a href="editarclientes.php?id=<?php echo $dado['id']; ?>" class="btn_editar">Editar</a></td>
-                        <td data-label=""><a href="excluirclientes.php?id=<?php echo $dado['id']; ?> " onclick="return confirm('Tem certeza que deseja excluir?')" class="btn">Excluir</a></td>
+                        <td data-label=""><a href="excluirclientes.php?id=<?php echo $dado['id']; ?>" onclick="return confirm('Tem certeza que deseja excluir?')" class="btn">Excluir</a></td>
                     </tr>
                 <?php } ?>
             </tbody>
         </table>
     </div>
+
 
 </body>
 

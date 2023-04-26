@@ -36,10 +36,10 @@ while ($dado = $consuta->fetch(PDO::FETCH_ASSOC)) {
 </head>
 
 <div id="editarclientes" class="modalDialog3">
-    <form id="enviar_formulario" name="email" method="POST" action="alteracaoClientes.php">
+    <form id="formulario" name="email" method="POST" action="alteracaoClientes.php">
         <a href="painel.php" class="close">X</a>
-        <h1>Contato de cliente</h1>
-        <p>Alterar ou salvar contato</p>
+        <h1>Alterar contato/cliente</h1>
+        <p>Altere o formulário</p>
 
         <div class="input-single">
             <input type="hidden" name="id" value="<?php echo $codigo ?>" id="id-box" class="input" autocomplete="off" required>

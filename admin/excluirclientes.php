@@ -10,10 +10,13 @@ $delete = $pdo->prepare("DELETE FROM contato WHERE id= :id");
 $delete->bindValue(':id', $codigo);
 
 if ($delete->execute()) {
-    echo "<script>
+  echo "<script>
     alert('Cliente excluido!');
   </script>";
-    header("Refresh: 1; URL=painel.php");
+  header("Refresh: 1; URL=painel.php");
 } else {
-    echo "<h2>Erro ao excluir.<h2>";
+  echo "<script>
+    alert('<h2>Erro ao excluir.<h2>');
+    </script>";
+  header("Refresh: 1; URL=painel.php");
 }
