@@ -1,3 +1,7 @@
+ <?php
+    session_start();
+    ?>
+
  <!DOCTYPE html>
  <html lang="pt-br">
 
@@ -18,13 +22,25 @@
              <div id="imagem">
                  <!--Aqui vai a imagem nas CSS-->
              </div>
+
+             <?php
+                if (isset($_SESSION['nao_autenticado'])) :
+                ?>
+                 <div id="invalido">
+                     <p>ERRO: usuário ou senha inválidos.</p>
+                 </div>
+             <?php
+                endif;
+                unset($_SESSION['nao_autenticado']);
+                ?>
+
              <div id="formulario">
                  <h1>LOGIN</h1>
                  <p>Seja bem-vindo(a)! <br> Faça login para acessar sua conta.</p>
                  <form action="login.php" method="post" autocomplete="on">
                      <div class="campo">
                          <i class="material-icons">person</i>
-                         <input type="text" name="login" id="ilogin" placeholder="Login" autocomplete="login" required minlength="4" maxlength="20">
+                         <input type="text" name="login" id="ilogin" placeholder="Usuario" autocomplete="login" required minlength="4" maxlength="20">
                          <label for="ilogin"></label>
                      </div>
                      <div class="campo">

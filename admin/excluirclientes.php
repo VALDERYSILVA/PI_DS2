@@ -13,10 +13,10 @@ if ($delete->execute()) {
   echo "<script>
     alert('Cliente excluido!');
   </script>";
-  header("Refresh: 1; URL=painel.php");
+  header("Refresh: 0; URL=painel.php");
 } else {
   echo "<script>
     alert('<h2>Erro ao excluir.<h2>');
     </script>";
-  header("Refresh: 1; URL=painel.php");
+  header("Refresh: 0; URL=painel.php");
 }

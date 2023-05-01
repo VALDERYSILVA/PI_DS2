@@ -75,15 +75,13 @@ a:hover {
     width: 40%;
 }
 
-
-
 .titulo {
     position: fixed;
     font-size: 40px;
     text-align: center;
     color: #FFFFFF;
     left: 50%;
-    top: 20%;
+    top: 23%;
     transform: translate(-50%, -50%);
 }
 
@@ -201,6 +199,120 @@ a:hover {
         text-align: left;
     }
 }
+
+/* alterar acesso */
+
+.alterarAcesso {
+    position: fixed;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    opacity: 0;
+    background-color: rgba(58, 9, 181, 0.668);
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    display: none;
+}
+
+.alterarAcesso form {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 70%;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+.alterarAcesso h1 {
+    text-align: center;
+    color: #03256C;
+}
+
+.alterarAcesso .input-single {
+    position: relative;
+    margin: 20px 0;
+}
+
+.alterarAcesso .input-single label {
+    position: absolute;
+    left: 8px;
+    bottom: 15px;
+    transition: 0.3s;
+    cursor: text;
+}
+
+.alterarAcesso:target {
+    display: block;
+    opacity: 1;
+
+}
+
+.alterarAcesso textarea {
+    resize: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: left;
+    font-size: 17px;
+    border: 0px;
+    border-bottom: 2px solid #ccc;
+    padding-left: 5px;
+    width: 100%;
+    height: 100px;
+    margin: 10px 0;
+}
+
+.alterarAcesso textarea:focus {
+    outline: 0;
+}
+
+.alterarAcesso input {
+    font-size: 17px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 0px;
+    border-bottom: 2px solid #ccc;
+    padding-left: 5px;
+    width: 100%;
+    height: 35px;
+    margin: 10px 0;
+    outline: 0;
+}
+
+.alterarAcesso form .input-single .input:focus~label,
+.alterarAcesso form .input-single .input:valid~label {
+    transform: translateY(-24px);
+    font-size: 12px;
+}
+
+.alterarAcesso form .input-single .textarea:focus~label,
+.alterarAcesso form .input-single .textarea:valid~label {
+    transform: translateY(24px);
+    font-size: 12px;
+}
+
+.alterarAcesso form input[type=submit] {
+    width: 100%;
+    height: 35px;
+    cursor: pointer;
+    background: #03256C;
+    text-align: center;
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.alterarAcesso form input[type=submit]:hover {
+    background-color: #0000CD;
+}
+
+
 
 /* formulario contato */
 

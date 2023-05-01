@@ -9,6 +9,12 @@ $senha = "";
 
 $conexao = mysqli_connect($servidor, $usuario, $senha, $banco);
 
+
+// mostrar cliente no painel
+
+$consulta = "SELECT * FROM contato";
+$con = $conexao->query($consulta) or die($conexao->error);
+
 // Checar conexão
 
 // if (!$conexao) {
@@ -19,8 +25,3 @@ $conexao = mysqli_connect($servidor, $usuario, $senha, $banco);
 
 // mysqli_close($conexao);
 // ---------------------------------------------------------------
-
-// mostrar cliente no painel
-
-$consulta = "SELECT * FROM contato";
-$con = $conexao->query($consulta) or die($conexao->error);

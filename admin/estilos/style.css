@@ -70,6 +70,14 @@ div#formulario>p {
     color: #03256C
 }
 
+div#invalido>p {
+    position: absolute;
+    font-size: 0.9em;
+    color: #03256C;
+    bottom: 8px;
+    left: 20px;
+}
+
 form>div.campo {
     background-color: #4d83da;
     display: block;
