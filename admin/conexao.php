@@ -15,6 +15,7 @@ $conexao = mysqli_connect($servidor, $usuario, $senha, $banco);
 $consulta = "SELECT * FROM contato";
 $con = $conexao->query($consulta) or die($conexao->error);
 
+
 // Checar conexão
 
 // if (!$conexao) {

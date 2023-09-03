@@ -38,6 +38,7 @@
         top: 248px;
         height: 0;
         right: 0;
+	margin-right: 0px;
         visibility: hidden;
         background: linear-gradient(90deg, #58a2f1, #03256C);
         box-shadow: none;
@@ -70,7 +71,7 @@
         font-size: 3em;
     }
 
-    #velocimetro {
+    #teste_velocimetro {
         background-color: transparent;
         border-radius: 0;
         width: 90%;

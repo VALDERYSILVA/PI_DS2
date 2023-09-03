@@ -1,6 +1,9 @@
 
 <?php
 
+session_start();
+include("verificar_login.php"); // caminho do seu arquivo de conexão ao banco de dados 
+
 // conexao com banco começa aqui
 
 $pdo = new PDO('mysql:host=localhost;dbname=bd_projeto', 'root', '', array(PDO::ATTR_PERSISTENT => true));
@@ -28,15 +31,15 @@ $update->bindValue(':mensagem', $mensagem);
 $update->bindValue('data_cadastro', $data);
 
 if ($update->execute()) {
-    echo "<script>
+  echo "<script>
       alert('Alterado com sucesso!');
       window.history.go(-2);
     </script>";
-    exit();
+  exit();
 } else {
-    echo "<script>
+  echo "<script>
       alert('Nada foi alterado');
       window.history.go(-2);
     </script>";
-    exit();
+  exit();
 }

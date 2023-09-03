@@ -86,7 +86,7 @@ a:hover {
 }
 
 .table-container {
-    overflow: auto;
+    /* overflow: auto; */
     max-height: 65vh;
     padding: 0 10%;
     margin: 200px auto 0;

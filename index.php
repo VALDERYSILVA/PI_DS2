@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Projeto Integrador</title>
+    <title>APC Tecnologia</title>
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <link rel="stylesheet" type="text/css" href="CSS/styleRespWeb.css">
@@ -30,8 +30,8 @@
                     <li><a id="menu-voltar" href="#index">Home</a></li>
                     <li><a href="#planos">Planos</a></li>
                     <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#enviar_contato">Contato</a></li>
-                    <li><a id="velocimetro" href="#openmodal1">Teste de velocidade</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a id="teste_velocimetro" href="#velocimetro">Teste de velocidade</a></li>
                     <div id="rede_socias_menu" class="sociais">
                         <ul>
                             <div class="face">
@@ -126,15 +126,15 @@
 
         <div class="planoPL3">
             <img src="imagens/PL3.png" alt="Imagem ilustrativa de planos">
-            <h1>400</h1>
+            <h1>200</h1>
             <h2>MEGA</h2>
             <h3>Sempre ativo<br>
                 Pra você</h3>
             <p>Planos básicos a partir<br>
-                de R$ 70,00
+                de R$ 60,00
             </p>
             <div class="assine">
-                <a href="#enviar_contato"><b>ASSINE JÁ</b></a>
+                <a href="#contato"><b>ASSINE JÁ</b></a>
             </div>
         </div>
 
@@ -168,7 +168,7 @@
 
             <div class="planoPL13">
                 <img src="imagens/visto.png" alt="visto">
-                <h3>Plano Premium 100mb</h3>
+                <h3>Plano Premium 50mb</h3>
                 <p>Exelente para você que navega sem limites muito<br>
                     usados para pesquisas, e-mail, rede sociais e etc.
                 </p>
@@ -176,7 +176,7 @@
 
             <div class="planoPL14">
                 <img src="imagens/visto.png" alt="visto">
-                <h3>Plano Extra Top 200mb</h3>
+                <h3>Plano Extra Top 100mb</h3>
                 <p>Muito top para você que joga on-line, filmes, series<br>
                     entre outros.
                 </p>
@@ -184,7 +184,7 @@
 
             <div class="planoPL15">
                 <img src="imagens/visto.png" alt="visto">
-                <h3>Plano Maximus 400mb</h3>
+                <h3>Plano Maximus 200mb</h3>
                 <p>Tudo em um só plano, pelo menor preço e qualidade<br>
                     Nesse plano você só tem a ganhar.
                 </p>
@@ -209,7 +209,7 @@
         </div>
     </div>
 
-    <div id="openmodal1" class="modalDialog2">
+    <div id="velocimetro" class="modalDialog2">
         <div>
             <a href="#close" title="Close" class="close">X</a>
             <iframe frameborder='0' height='545px' scrolling='no' src='https://www.testeavelocidade.net/p/velocimetro-widget.html' width='100%' /><br />
@@ -243,7 +243,7 @@
         </div>
     </div>
 
-    <div id="enviar_contato" class="modalDialog3">
+    <div id="contato" class="modalDialog3">
         <form id="enviar_formulario" name="email" method="POST" action="./configuracao/enviar.php">
             <a href="#close" class="close">X</a>
             <h1>Entre em contato</h1>
@@ -331,8 +331,8 @@
         <div class="footer-texto">
             <h3>Fale Conosco</h3>
             <ul>
-                <li><a href="#enviar_contato">(81) 3435-6078</a></li>
-                <li><a href="#enviar_contato">Entre em Contato</a></li>
+                <li><a href="#contato">(81) 3435-6078</a></li>
+                <li><a href="#contato">Entre em Contato</a></li>
                 <li><a href="mailto:tecnologia@arteempc.com.br" target="_blank" rel="noopener">tecnologia@arteempc.com.br</a></li>
             </ul>
         </div>
@@ -342,7 +342,7 @@
             <ul>
                 <li><a href="#openmodal">Fibra óptica</a></li>
                 <li><a href="#openmodal2">O que é roteador</a></li>
-                <li><a href="#openmodal1">Teste sua velocidade</a></li>
+                <li><a href="#velocimetro">Teste sua velocidade</a></li>
             </ul>
         </div>
 
@@ -365,7 +365,7 @@
         </div>
 
         <div class="developer">
-            <p>Desenvolvedores do Projeto | Valdery Silva | Gideone Berg | Thamíris Albuquerque</p>
+            <p>Desenvolvedores | Valdery Silva | Gideone Berg | Thamíris Albuquerque</p>
         </div>
     </footer>
 

@@ -1,5 +1,10 @@
 <?php
 
+
+session_start();
+include("verificar_login.php"); // caminho do seu arquivo de conexão ao banco de dados 
+
+
 $pdo = new PDO('mysql:host=localhost;dbname=bd_projeto', 'root', '', array(PDO::ATTR_PERSISTENT => true));
 
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

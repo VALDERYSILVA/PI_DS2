@@ -31,9 +31,9 @@ html {
 #header {
   box-sizing: border-box;
   top: 0;
-  width: 100%;
+  width: 100vw;
   height: 100px;
-  padding: 2rem;
+  padding: 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -53,6 +53,7 @@ html {
   display: flex;
   list-style: none;
   gap: 2rem;
+  margin-right: 40px;
 }
 
 #menu a {
@@ -79,7 +80,7 @@ a:hover {
   width: 40%;
 }
 
-#velocimetro {
+#teste_velocimetro {
   background-color: #FF0000;
   border-radius: 15px;
   width: 190px;

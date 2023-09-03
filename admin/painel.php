@@ -1,6 +1,8 @@
 <?php
 session_start();
 include("verificar_login.php"); // caminho do seu arquivo de conexão ao banco de dados 
+
+
 ?>
 
 <!DOCTYPE html>
@@ -18,38 +20,14 @@ include("verificar_login.php"); // caminho do seu arquivo de conexão ao banco d
         <img src="imagens/logotitulo.png">
         <nav id="nav">
             <ul id="menu" role="Menu">
-                <li><a href="addclientes.php">Adicionar Contato</a></li>
+                <li><a href="painelCliente.php">Clientes Cadastrados</a></li>
+                <li><a href="addClientes.php">Adicionar Cliente</a></li>
                 <li id="sair"><a href="logout.php" onclick="return confirm('Tem certeza que deseja sair?')">SAIR</a></li>
             </ul>
         </nav>
     </header>
 
-    <div id="openmodal" class="alterarAcesso">
-        <div>
-            <a href="#close" class="close">X</a>
-            <form id="formulario" name="email" method="POST" action="alteraAcesso.php">
-                <a href="painel.php" class="close">X</a>
-                <h1>Alterar acesso ao painel</h1>
-
-                <div class="input-single">
-                    <input type="hidden" name="id" value="<?php echo $id ?>" id="id-box" class="input" autocomplete="off" required>
-                </div>
-
-                <div class="input-single">
-                    <input type="text" name="senha" value="<?php echo $senha ?>" id="nome-box" class="input" autocomplete="off" maxlength="55" required>
-                    <label for="nome-box">Nova senha</label>
-                </div>
-
-                <div class="btn">
-                    <input type="submit" name="submit" value="Salvar">
-                </div>
-            </form>
-        </div>
-    </div>
-
-
     <h1 class="titulo">Contato de Clientes</h1>
-
     <div class="table-container">
         <table class="table">
             <thead>

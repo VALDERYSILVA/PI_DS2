@@ -7,6 +7,194 @@
     3440 x 1440 Wide Quad High Definition (WQHD)
     3840 x 2160 4K ou Ultra High Definition (UHD) */
 
+
+@media screen and (max-width: 1100px) and (min-width: 1000px) {
+
+  /* definir as propriedades do topo */
+
+  #header {
+    padding: 0;
+    font-size: 1em;
+  }
+
+  #menu {
+    gap: 0;
+  }
+
+
+  #logo img {
+    margin-left: 40%;
+    width: 50%;
+  }
+
+
+  .logo_redondo {
+    left: 4%;
+  }
+
+
+  /* definir as propriedades do menu */
+
+  #logo img {
+    margin-left: 35%;
+    width: 40%;
+  }
+
+  nav {
+    bottom: 7px;
+  }
+
+  nav ul li {
+    margin: 1.3em;
+  }
+
+  .slider h1 {
+    margin-top: 14%;
+  }
+
+  .slider p {
+    margin-top: 23%;
+  }
+
+  /* velocimetro */
+
+  .modalDialog2 div {
+    margin: 3% auto;
+  }
+
+
+  /* definir as propriedades da logo whatsapp */
+
+  .whatsapp_logo {
+    width: 18%;
+    bottom: 15%;
+    right: -5%;
+  }
+
+  /* Bolinhas do carrossel */
+
+  .navigation-auto {
+    margin-top: 37%;
+  }
+
+
+  /* pagina de planos */
+
+  .slider {
+    height: auto;
+  }
+
+  .planoPL3 {
+    position: relative;
+    bottom: 18vh;
+    right: 15vh;
+  }
+
+  .planoPL3 img {
+    top: 195px;
+  }
+
+  .superPlanos {
+    top: 153vh;
+  }
+
+  .planoPL5 img {
+    position: absolute;
+  }
+
+  .planoPL7 img {
+    bottom: 15px;
+  }
+
+  .planoPL8 img {
+    bottom: 20px;
+  }
+
+  /* definições da pagina sobre responsivo */
+
+
+  .container-sobre {
+    width: 68%;
+    height: 65%;
+  }
+
+  .logo_sobre img {
+    display: block;
+    left: 5%;
+  }
+
+  .container-sobre img {
+    width: 50%;
+    height: 85%;
+    top: 7%;
+    left: 47%;
+  }
+
+
+  .container-sobre p {
+    top: 4%;
+    width: 48%;
+    font-size: 1.27vw;
+    padding: 18px;
+  }
+
+  /* propriedades do mapa */
+
+  #mapa {
+    height: 53vh;
+  }
+
+  #mapa iframe {
+    width: 45%;
+    height: 42vh;
+    left: 12%;
+    margin-top: 3%;
+  }
+
+  #mapa .endereco p {
+    top: 40%;
+    right: 13%;
+  }
+
+
+  /* definir as propriedade do footer (rodape) */
+
+  #rodape {
+    min-height: 40vh;
+  }
+
+  #rodape .footer-texto {
+    padding: 1% 0% 5% 3%;
+    width: 23%;
+  }
+
+  #rodape .footer-texto:nth-child(4) {
+    width: 42vh;
+  }
+
+  #rodape .footer-texto h3 {
+    width: 150px;
+  }
+
+  #rodape .sociais .face li a img {
+    width: 60px;
+    height: 40px;
+    left: -8vh;
+  }
+
+  #rodape .sociais .insta li a img {
+    width: 60px;
+    height: 40px;
+    left: 5vh;
+  }
+
+  #rodape .developer p {
+    padding: 10px 0px 0px;
+    border-top: dotted 0.5px;
+  }
+
+}
+
 @media screen and (max-width: 1360px) and (max-height: 768px) {
   /* Resolucçao de tela = 1360 x 768 */
 
