@@ -1,5 +1,8 @@
 <?php
 session_start();
+ob_start();
+include_once 'configuracao/conexao.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -8,50 +11,88 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="estilos/style.css">
-    <link rel="stylesheet" href="estilos/media-queries.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Login APC Tecnologia</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/custom.css">
 </head>
 
+<!-- <?php
+
+        //Exemplo criptografar a senha
+        //echo password_hash("sua_senha_aqui", PASSWORD_DEFAULT);
+
+        ?> -->
+
 <body>
-    <main>
-        <section id="login">
-            <div id="imagem">
-                <!--Aqui vai a imagem nas CSS-->
-            </div>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="" method="post" autocomplete="off">
 
-            <?php
-            if (isset($_SESSION['nao_autenticado'])) :
-            ?>
-                <div id="invalido">
-                    <p>ERRO: usuário ou senha inválidos.</p>
-                </div>
-            <?php
-            endif;
-            unset($_SESSION['nao_autenticado']);
-            ?>
+                    <?php
 
-            <div id="formulario">
-                <h1>LOGIN</h1>
-                <p>Seja bem-vindo(a)! <br> Faça login para acessar sua conta.</p>
-                <form action="login.php" method="post" autocomplete="on">
-                    <div class="campo">
-                        <i class="material-icons">person</i>
-                        <input type="text" name="login" id="ilogin" placeholder="Usuario" autocomplete="login" required minlength="4" maxlength="20">
-                        <label for="ilogin"></label>
+                    $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+
+                    if (!empty($dados['SendLogin'])) {
+                        // var_dump($dados);
+                        $query_usuario =  "SELECT * FROM usuarios WHERE login_usuario =:login_usuario LIMIT 1";
+                        $result_usuario = $conexao->prepare($query_usuario);
+                        $result_usuario->bindParam(':login_usuario', $dados['login_usuario'], PDO::PARAM_STR);
+                        $result_usuario->execute();
+
+                        if (($result_usuario) and ($result_usuario->rowCount() != 0)) {
+                            $row_usuario = $result_usuario->fetch(PDO::FETCH_ASSOC);
+                            //var_dump($row_usuario);
+                            if (password_verify($dados['senha'], $row_usuario['senha'])) {
+                                $_SESSION['id'] = $row_usuario['id'];
+                                $_SESSION['usuario'] = $row_usuario['usuario'];
+                                header("Location: dashboard.php");
+                            } else {
+                                $_SESSION['msg'] = "<div class='alert alert_danger' role='alert'>Usuário ou senha incorreto!
+                                                    </div>";
+                            }
+                        } else {
+                            $_SESSION['msg'] = "<div class='alert alert_danger' role='alert'>Usuário ou senha incorreto!
+                                                </div>";
+                        }
+                    }
+
+                    if (isset($_SESSION['msg'])) {
+                        echo $_SESSION['msg'];
+                        unset($_SESSION['msg']);
+                    }
+
+                    ?>
+
+                    <h2>APC Tecnologia</h2>
+                    <div class="inputbox">
+                        <ion-icon name="person"></ion-icon>
+                        <input type="text" name="login_usuario" id="ilogin" autocomplete="off" required minlength="4" maxlength="20">
+                        <label for="">Login</label>
                     </div>
-                    <div class="campo">
-                        <i class="material-icons">vpn_key</i>
-                        <input type="password" name="senha" id="isenha" placeholder="Senha" label for="isenha"></label>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" name="senha" id="isenha" label for="isenha" required minlength="5">
+                        <label for="">Senha</label>
                     </div>
-                    <input type="submit" value="Entrar">
+                    <div class="forget">
+                        <label for=""><a href="#">Esqueci minha senha</a></label>
+
+                    </div>
+                    <button type="submit" value="Entrar" name="SendLogin">Entrar
+                    </button>
                 </form>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

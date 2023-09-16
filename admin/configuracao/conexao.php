@@ -2,12 +2,20 @@
 
 // Conexão ao Banco de Dados modo 'PDO'
 
-// $servidor = "localhost";
-// $usuario = "root";
-// $senha = "";
-// $banco = "bd_projeto";
+$servidor = "localhost";
+$usuario = "root";
+$senha = "";
+$banco = "bd_projeto";
 
-// $conexao = new mysqli($servidor, $usuario, $senha, $banco);
+try {
+    $conexao = new PDO("mysql:host=$servidor;dbname=" . $banco, $usuario, $senha);
+
+    // echo "Conexão ok";
+} catch (PDOException $err) {
+    // echo "Erro: Conexão com banco de dados não foi realizada com sucesso. Erro gerado " . $err->getMessage();
+}
+
+//$conexao = new mysqli($servidor, $usuario, $senha, $banco);
 
 
 // Verificação (caso necessário)
@@ -27,15 +35,12 @@
 
 // Conexão ao Banco de Dados modo 'mysqli'
 
-$servidor = "localhost";
-$banco = "bd_projeto";
-$usuario = "root";
-$senha = "";
+// $servidor = "localhost";
+// $banco = "bd_projeto";
+// $usuario = "root";
+// $senha = "";
 
-$conexao = mysqli_connect($servidor, $usuario, $senha, $banco);
-
-$consulta = "SELECT * FROM contato";
-$con = $conexao->query($consulta) or die($conexao->error);
+// $conexao = mysqli_connect($servidor, $usuario, $senha, $banco);
 
 // Checar conexão
 

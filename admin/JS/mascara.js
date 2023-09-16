@@ -1,4 +1,4 @@
-// mask número de telefone
+// mascara número de telefone
 
 function mascaraTelefone(mascara, input) {
     const vetMask = mascara.split("")
@@ -18,4 +18,49 @@ function mascaraTelefone(mascara, input) {
         input.setSelectionRange(cursor, cursor)
     }
 
-}
+} 
+
+// mascara CPF
+
+const cpf = document.querySelector('#cpf')
+
+cpf.addEventListener('keypress', () => {
+    let inputLength = cpf.value.length
+
+    // MAX LENGHT 14  CPF
+    if (inputLength == 3 || inputLength == 7) {
+        cpf.value += '.'
+    } else if (inputLength == 11) {
+        cpf.value += '-'
+    }
+
+})
+
+
+// mascara Nascimento
+
+const nascimento = document.querySelector('#nascimento')
+
+nascimento.addEventListener('keypress', () => {
+    let inputLength = nascimento.value.length
+
+    //MAX LENGHT 12  RG
+    if (inputLength == 2 || inputLength == 5) {
+        nascimento.value += '/'
+    }
+
+})
+
+// mascara CEP
+
+const cep = document.querySelector('#cep')
+
+cep.addEventListener('keypress', () => {
+    let inputLength = cep.value.length
+
+    //MAX LENGHT 12  RG
+    if (inputLength == 5) {
+        cep.value += '-'
+    }
+
+})
