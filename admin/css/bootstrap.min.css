@@ -5482,6 +5482,18 @@ input[type=submit].btn-block {
     border-color: #CD5C5C;
 }
 
+.alert_danger-index {
+    position: relative;
+    padding: 0.4rem;
+    margin-bottom: 0;
+    border: 1px solid transparent;
+    border-radius: 0;
+    text-align: center;
+    color: #ffffff;
+    background-color: #DC143C;
+    border-color: #CD5C5C;
+}
+
 .alert-danger hr {
     border-top-color: #f1b0b7
 }

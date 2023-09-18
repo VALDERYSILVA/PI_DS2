@@ -67,6 +67,12 @@ include_once 'configuracao/conexao.php';
                     ?>
 
                     <h2>APC Tecnologia</h2>
+
+                    <?php
+                    echo "<div class='alert alert-success' role='alert'>Enviado email com instruções<br>
+                        para redifinir sua senha</div>";
+                    ?>
+
                     <div class="inputbox">
                         <ion-icon name="person"></ion-icon>
                         <input type="text" name="login_usuario" id="ilogin" autocomplete="off" required minlength="4" maxlength="20">
@@ -74,7 +80,7 @@ include_once 'configuracao/conexao.php';
                     </div>
                     <div class="inputbox">
                         <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" name="senha" id="isenha" label for="isenha" required minlength="8">
+                        <input type="password" name="senha" id="isenha" label for="isenha" required minlength="5">
                         <label for="">Senha</label>
                     </div>
                     <div class="forget">
