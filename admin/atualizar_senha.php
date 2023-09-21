@@ -20,50 +20,6 @@ include_once 'configuracao/conexao.php';
 
 <body>
 
-    <?php
-
-    $chave = filter_input(INPUT_GET, 'chave', FILTER_DEFAULT);
-    // var_dump($chave);
-    if (!empty($chave)) {
-        $query_usuario =  "SELECT id FROM usuarios WHERE recuperar_senha =:recuperar_senha LIMIT 1";
-        $result_usuario = $conexao->prepare($query_usuario);
-        $result_usuario->bindParam(':recuperar_senha', $chave, PDO::PARAM_STR);
-        $result_usuario->execute();
-
-        if (($result_usuario) and ($result_usuario->rowCount() != 0)) {
-            $row_usuario = $result_usuario->fetch(PDO::FETCH_ASSOC);
-            $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-            // var_dump($dados);
-            if (!empty($dados['SendNovaSenha'])) {
-                $senha_usuario = password_hash($dados['senha'], PASSWORD_DEFAULT);
-                $recuperar_senha = 'NULL';
-
-                $query_up_usuario = "UPDATE usuarios SET senha =:senha, recuperar_senha =:recuperar_senha WHERE id=:id LIMIT 1";
-                $result_up_usuario = $conexao->prepare($query_up_usuario);
-                $result_up_usuario->bindParam(':senha', $senha_usuario, PDO::PARAM_STR);
-                $result_up_usuario->bindParam(':recuperar_senha', $recuperar_senha);
-                $result_up_usuario->bindParam(':id', $row_usuario['id'], PDO::PARAM_INT);
-
-                if ($result_up_usuario->execute()) {
-                    $_SESSION['msg'] = "<div class='alert alert-success' role='alert'>Sua senha foi alterada com sucesso!<br>
-                Insira a nova senha</div>";
-                    header("Location: index.php");
-                } else {
-                    echo "<div class='alert alert_danger' role='alert'>Tente novamente!
-                    </div>";
-                }
-            }
-        } else {
-            $_SESSION['msg'] = "<div class='alert alert_danger-index' role='alert'>Link inválido! Solicite um novo link</div>";
-            header("Location: recuperar_senha.php");
-        }
-    } else {
-        $_SESSION['msg'] = "<div class='alert alert_danger-index' role='alert'>Link inválido! Solicite um novo link</div>";
-        header("Location: recuperar_senha.php");
-    }
-
-    ?>
-
     <section>
         <div class="form-box">
             <div class="form-value">
@@ -76,6 +32,50 @@ include_once 'configuracao/conexao.php';
                     $usuario = "";
                     if (isset($dados['senha'])) {
                         $usuario = $dados['senha'];
+                    }
+
+                    ?>
+
+                    <?php
+
+                    $chave = filter_input(INPUT_GET, 'chave', FILTER_DEFAULT);
+                    // var_dump($chave);
+                    if (!empty($chave)) {
+                        $query_usuario =  "SELECT id FROM usuarios WHERE recuperar_senha =:recuperar_senha LIMIT 1";
+                        $result_usuario = $conexao->prepare($query_usuario);
+                        $result_usuario->bindParam(':recuperar_senha', $chave, PDO::PARAM_STR);
+                        $result_usuario->execute();
+
+                        if (($result_usuario) and ($result_usuario->rowCount() != 0)) {
+                            $row_usuario = $result_usuario->fetch(PDO::FETCH_ASSOC);
+                            $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+                            // var_dump($dados);
+                            if (!empty($dados['SendNovaSenha'])) {
+                                $senha_usuario = password_hash($dados['senha'], PASSWORD_DEFAULT);
+                                $recuperar_senha = 'NULL';
+
+                                $query_up_usuario = "UPDATE usuarios SET senha =:senha, recuperar_senha =:recuperar_senha WHERE id=:id LIMIT 1";
+                                $result_up_usuario = $conexao->prepare($query_up_usuario);
+                                $result_up_usuario->bindParam(':senha', $senha_usuario, PDO::PARAM_STR);
+                                $result_up_usuario->bindParam(':recuperar_senha', $recuperar_senha);
+                                $result_up_usuario->bindParam(':id', $row_usuario['id'], PDO::PARAM_INT);
+
+                                if ($result_up_usuario->execute()) {
+                                    $_SESSION['msg'] = "<div class='alert1 alert-success1' role='alert'>Sua senha foi alterada com sucesso!<br>
+                                                        Insira a nova senha</div>";
+                                    header("Location: index.php");
+                                } else {
+                                    echo "<div class='alert alert_danger' role='alert'>Tente novamente!
+                                        </div>";
+                                }
+                            }
+                        } else {
+                            $_SESSION['msg'] = "<div class='alert alert_danger-index' role='alert'>Link inválido! Solicite um novo link</div>";
+                            header("Location: recuperar_senha.php");
+                        }
+                    } else {
+                        $_SESSION['msg'] = "<div class='alert alert_danger-index' role='alert'>Link inválido! Solicite um novo link</div>";
+                        header("Location: recuperar_senha.php");
                     }
 
                     ?>

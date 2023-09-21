@@ -69,8 +69,8 @@ include_once 'configuracao/conexao.php';
                     <h2>APC Tecnologia</h2>
 
                     <?php
-                    echo "<div class='alert alert-success' role='alert'>Enviado email com instruções<br>
-                        para redifinir sua senha</div>";
+                    echo "<div class='alert1 alert-success1' role='alert'>E-mail enviado com sucesso!<br>
+                    Verifique sua caixa de entrada ou<br>spam para redifinir sua senha</div>";
                     ?>
 
                     <div class="inputbox">

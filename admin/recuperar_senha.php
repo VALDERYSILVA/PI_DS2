@@ -59,16 +59,16 @@ $mail = new PHPMailer(true);
                     $mail->Host       = 'smtp.gmail.com';
                     $mail->SMTPAuth   = true;
                     $mail->Username   = 'nao-responder@arteempc.com.br';
-                    $mail->Password   = 'Arte88747295';
+                    $mail->Password   = 'suaSenhaAqui';
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                     $mail->Port       = 587;
 
-                    $mail->setFrom('nao-responder@arteempc.com.br', 'APC Tecnologia/Atendimento');
+                    $mail->setFrom('nao-responder@arteempc.com.br', 'Atendimento | APC Tecnologia');
                     $mail->addAddress($row_usuario['email'], $row_usuario['usuario']);
 
                     $mail->isHTML(true);                                  //Set email format to HTML
                     $mail->Subject = 'Recuperar senha';
-                    $mail->Body    = 'Prezado(a) ' . $row_usuario['usuario'] . ".<br><br>Você solicitou alteração de senha?
+                    $mail->Body    = 'Prezado(a) ' . $row_usuario['usuario'] . "<br><br>Você solicitou alteração de senha?
                 <br><br>Para continuar o processo de recuperação de senha, clique no link abaixo ou copie 
                 e cole o endereço no seu navegador: <br><br><a href='" . $link . "'> $link </a><br><br>Se você não solicitou essa alteração, 
                 nenhuma ação é necessária. Sua senha permanecerá a mesma até que você ative este código.<br><br>";

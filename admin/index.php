@@ -31,6 +31,8 @@ include_once 'configuracao/conexao.php';
             <div class="form-value">
                 <form action="" method="post" autocomplete="off">
 
+                    <h2>APC Tecnologia</h2>
+
                     <?php
 
                     $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
@@ -66,7 +68,7 @@ include_once 'configuracao/conexao.php';
 
                     ?>
 
-                    <h2>APC Tecnologia</h2>
+
                     <div class="inputbox">
                         <ion-icon name="person"></ion-icon>
                         <input type="text" name="login_usuario" id="ilogin" autocomplete="off" required minlength="4" maxlength="20">

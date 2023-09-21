@@ -17,7 +17,7 @@
     <div id="index" class="principal">
         <header id="header">
             <div class="logo_redondo">
-                <img src="imagens/logo.png" alt="logo redondo">
+                <img src="imagens/logotipo.png" alt="logo redondo">
             </div>
 
             <a id="logo" href="#index">
