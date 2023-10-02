@@ -17,7 +17,7 @@
     <div id="index" class="principal">
         <header id="header">
             <div class="logo_redondo">
-                <img src="imagens/logotipo.png" alt="logo redondo">
+                <img src="imagens/logo.png" alt="logo redondo">
             </div>
 
             <a id="logo" href="#index">
@@ -31,7 +31,7 @@
                     <li><a href="#planos">Planos</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#contato">Contato</a></li>
-                    <li><a id="teste_velocimetro" href="#velocimetro">Teste de velocidade</a></li>
+                    <li><a id="central_do_cliente" href="/cliente/login.php" target="_blank" rel="noopener">Já sou cliente</a></li>
                     <div id="rede_socias_menu" class="sociais">
                         <ul>
                             <div class="face">

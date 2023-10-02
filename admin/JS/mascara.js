@@ -18,7 +18,7 @@ function mascaraTelefone(mascara, input) {
         input.setSelectionRange(cursor, cursor)
     }
 
-} 
+}
 
 // mascara CPF
 
@@ -32,6 +32,20 @@ cpf.addEventListener('keypress', () => {
         cpf.value += '.'
     } else if (inputLength == 11) {
         cpf.value += '-'
+    }
+
+})
+
+const editcpf = document.querySelector('#editcpf')
+
+editcpf.addEventListener('keypress', () => {
+    let inputLength = editcpf.value.length
+
+    // MAX LENGHT 14  CPF
+    if (inputLength == 3 || inputLength == 7) {
+        editcpf.value += '.'
+    } else if (inputLength == 11) {
+        editcpf.value += '-'
     }
 
 })

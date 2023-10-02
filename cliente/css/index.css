@@ -13,7 +13,7 @@ section {
     min-height: 100vh;
     width: 100%;
 
-    background: url('/admin/img/background.jpg')no-repeat;
+    background: url('/imagens/background.jpg')no-repeat;
     background-position: center;
     background-size: cover;
 }
@@ -46,7 +46,7 @@ h2 {
 
 .inputbox {
     position: relative;
-    margin: 30px 0;
+    margin: 20px 0;
     width: 310px;
     border-bottom: 2px solid #fff;
 }
@@ -140,6 +140,5 @@ button {
 .form-value p {
     text-align: center;
     color: #fff;
-    font-size: 16px;
-    text-shadow: black 0.1em 0.1em 0.2em
+    font-size: 11px;
 }

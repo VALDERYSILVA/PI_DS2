@@ -114,6 +114,12 @@ if (empty($cliente_id)) {
                         // Extrair o array para imprimir os valores através da chave do array
                         extract($row_cliente);
 
+                        if (password_verify('12345678', $senha)) {
+                            $alterar = "Senha padrão";
+                        } else {
+                            $alterar =  "Senha alterada pelo cliente";
+                        }
+
                         echo "<dl class='row1'>";
                         echo "<dt class='col-sm-3'>Nome</dt>";
                         echo "<dd class='col-sm-9'>$nome</dd>";
@@ -159,9 +165,11 @@ if (empty($cliente_id)) {
                         echo "<dd class='col-sm-9'>$vencimento</dd>";
                         echo "</dl>";
 
+                        // $senha_verify = password_verify('senha', $senha,);
+
                         echo "<dl class='row1'>";
                         echo "<dt class='col-sm-3'>Senha para Mobile</dt>";
-                        echo "<dd class='col-sm-9'>$senha</dd>";
+                        echo "<dd class='col-sm-9'>$alterar</dd>";
                         echo "</dl>";
 
                         echo "<dl class='row1'>";
@@ -185,6 +193,7 @@ if (empty($cliente_id)) {
             <!----footer-inicio------------->
 
             <?php
+
             include_once "./include/footer.php"
             ?>
 

@@ -43,7 +43,8 @@ if (empty($dados['cod'])) {
     complemento=:complemento, bairro=:bairro, cidade=:cidade, uf=:uf, ibge=:ibge, observacao=:observacao WHERE cod=:cod";
 
     $edit_usuario = $conexao->prepare($query_usuario);
-    $edit_usuario->bindParam(':senha', $dados['senha']);
+    $senha_hash = password_hash($dados['senha'], PASSWORD_DEFAULT);
+    $edit_usuario->bindParam(':senha', $senha_hash);
     $edit_usuario->bindParam(':plano', $dados['plano']);
     $edit_usuario->bindParam(':vencimento', $dados['vencimento']);
     $edit_usuario->bindParam(':nome', $dados['nome']);

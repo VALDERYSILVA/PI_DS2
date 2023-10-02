@@ -12,10 +12,10 @@ include_once 'configuracao/conexao.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Login APC Tecnologia</title>
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="shortcut icon" href="/imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 
 <!-- <?php
@@ -33,33 +33,34 @@ include_once 'configuracao/conexao.php';
                     <div class="logo">
                         <img src="/imagens/logotipo.png" alt="logo redondo">
                     </div>
-                    <h2>APC Tecnologia</h2>
+                    <h2>Bem Vindo!</h2>
+                    <p>Por favor insira as informações abaixo para continuar</p>
 
                     <?php
 
                     $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
                     if (!empty($dados['SendLogin'])) {
-                        // var_dump($dados);
-                        $query_usuario =  "SELECT * FROM usuarios WHERE login_usuario =:login_usuario LIMIT 1";
+                        //var_dump($dados);
+                        $query_usuario =  "SELECT cod, nome, cpf, senha FROM clientes WHERE cpf =:cpf LIMIT 1";
                         $result_usuario = $conexao->prepare($query_usuario);
-                        $result_usuario->bindParam(':login_usuario', $dados['login_usuario'], PDO::PARAM_STR);
+                        $result_usuario->bindParam(':cpf', $dados['cpf']);
                         $result_usuario->execute();
 
                         if (($result_usuario) and ($result_usuario->rowCount() != 0)) {
                             $row_usuario = $result_usuario->fetch(PDO::FETCH_ASSOC);
                             //var_dump($row_usuario);
                             if (password_verify($dados['senha'], $row_usuario['senha'])) {
-                                $_SESSION['id'] = $row_usuario['id'];
-                                $_SESSION['usuario'] = $row_usuario['usuario'];
-                                header("Location: dashboard.php");
+                                $_SESSION['cod'] = $row_usuario['cod'];
+                                $_SESSION['nome'] = $row_usuario['nome'];
+                                header("Location: index.php");
                             } else {
                                 $_SESSION['msg'] = "<div class='alert alert_danger' role='alert'>Usuário ou senha incorreto!
-                                                    </div>";
+                                                         </div>";
                             }
                         } else {
                             $_SESSION['msg'] = "<div class='alert alert_danger' role='alert'>Usuário ou senha incorreto!
-                                                </div>";
+                                                 </div>";
                         }
                     }
 
@@ -73,12 +74,12 @@ include_once 'configuracao/conexao.php';
 
                     <div class="inputbox">
                         <ion-icon name="person"></ion-icon>
-                        <input type="text" name="login_usuario" id="ilogin" autocomplete="off" required minlength="4" maxlength="20">
-                        <label for="">Login</label>
+                        <input type="text" name="cpf" id="ilogin" autocomplete="off" required minlength="1" maxlength="14">
+                        <label for="">CPF</label>
                     </div>
                     <div class="inputbox">
                         <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" name="senha" id="isenha" label for="isenha" required minlength="8">
+                        <input type="password" name="senha" id="isenha" label for="isenha" required minlength="1" maxlength="8">
                         <label for="">Senha</label>
                     </div>
                     <div class="forget">
@@ -91,10 +92,7 @@ include_once 'configuracao/conexao.php';
             </div>
         </div>
     </section>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="js/mascara.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>

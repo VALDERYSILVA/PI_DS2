@@ -61,8 +61,7 @@ include_once 'configuracao/conexao.php';
                                 $result_up_usuario->bindParam(':id', $row_usuario['id'], PDO::PARAM_INT);
 
                                 if ($result_up_usuario->execute()) {
-                                    $_SESSION['msg'] = "<div class='alert1 alert-success1' role='alert'>Sua senha foi alterada com sucesso!<br>
-                                                        Insira a nova senha</div>";
+                                    $_SESSION['msg'] = "<div class='alert1 alert-success1' role='alert'>Sua senha foi alterada com sucesso!</div>";
                                     header("Location: index.php");
                                 } else {
                                     echo "<div class='alert alert_danger' role='alert'>Tente novamente!

@@ -80,12 +80,28 @@ a:hover {
   width: 40%;
 }
 
-#teste_velocimetro {
-  background-color: #FF0000;
+#central_do_cliente {
+  background-color: #008000;
   border-radius: 15px;
-  width: 190px;
+  width: 130px;
   text-align: center;
+  animation: cliente 0.7s linear infinite;
 }
+
+@keyframes cliente {
+  0% {
+    transform: scale(1.1);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
 
 /* definir as propriedades do logo redondo */
 

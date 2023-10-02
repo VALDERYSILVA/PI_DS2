@@ -107,6 +107,7 @@ async function editarCliente(cod) {
         document.getElementById("edituf").value = resposta['dados'].uf;
         document.getElementById("editsenha").value = resposta['dados'].senha;
         document.getElementById("editplano").value = resposta['dados'].plano;
+        document.getElementById("editibge").value = resposta['dados'].ibge;
         document.getElementById("editvencimento").value = resposta['dados'].vencimento;
         document.getElementById("editobservacao").value = resposta['dados'].observacao;
     }

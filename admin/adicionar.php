@@ -41,7 +41,9 @@ if (empty($dados['nome'])) {
       :cep, :logradouro, :numero, :complemento, :bairro, :cidade, :uf, :ibge, now(), :observacao)";
 
   $cad_usuario = $conexao->prepare($query_usuario);
-  $cad_usuario->bindParam(':senha', $dados['senha']);
+
+  $senha_hash = password_hash($dados['senha'], PASSWORD_DEFAULT);
+  $cad_usuario->bindParam(':senha', $senha_hash);
   $cad_usuario->bindParam(':plano', $dados['plano']);
   $cad_usuario->bindParam(':vencimento', $dados['vencimento']);
   $cad_usuario->bindParam(':nome', $dados['nome']);

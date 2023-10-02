@@ -43,30 +43,34 @@ include_once './include/header.php';
 									<ul class="nav navbar-nav flex-row ml-auto">
 
 										<li class="dropdown nav-item">
+											<img src="img/logotitulo.png" style="width:200px;" />
+										</li>
+
+										<li class="dropdown nav-item">
 											<a class="nav-link" href="#" data-toggle="dropdown">
-												<img src="img/logotitulo.png" style="width:200px;" />
+
+												<?php
+												$usuario = $_SESSION['usuario']
+												?>
+												<div class="xp-breadcrumbbar">
+													<div class="title">
+														<h6>Olá, <?php echo $usuario ?></h6>
+													</div>
+												</div>
 											</a>
 
-											<?php
-											$usuario = $_SESSION['usuario']
-											?>
-											<div class="xp-breadcrumbbar">
-												<div class="title">
-													<h6>Olá, <?php echo $usuario ?></h6>
-												</div>
-											</div>
-
 											<ul class="dropdown-menu small-menu">
-												<li><a href='#' id='$id' class='sair' onclick='editarUsuario($id)'>
+												<!-- <li><a href='#' id='$id' class='sair' onclick='editarUsuario($id)'>
 														<span class="material-icons">settings</span>
-														Alterar Senha
-													</a></li>
-												<li><a href="sair.php" class="sair">
-														<span class="material-icons">logout</span>
-														Sair
-													</a></li>
-											</ul>
+														Alterar Usuário/Senha -->
+												</a>
 										</li>
+										<li><a href="sair.php" class="sair">
+												<span class="material-icons">logout</span>
+												Sair
+											</a></li>
+									</ul>
+									</li>
 									</ul>
 								</nav>
 							</div>
@@ -378,7 +382,7 @@ include_once './include/header.php';
 
 								<div class="form_grupo">
 									<label for="cpf" class="form_label">CPF</label>
-									<input type="text" class="form_input" name="cpf" id="editcpf" autocomplete="off" maxlength="14">
+									<input type="text" class="form_input" name="cpf" id="editcpf" placeholder="Somente números" autocomplete="off" maxlength="14">
 								</div>
 
 								<div class="form_grupo">
@@ -437,13 +441,13 @@ include_once './include/header.php';
 								</div>
 
 								<div class="form_grupo">
-									<label class="form_label"></label>
-									<input hidden type="text" class="form_input" id="editibge" maxlength="7">
+									<label for="ibge" class="form_label">IBGE</label>
+									<input type="text" class="form_input" name="ibge" id="editibge" maxlength="7">
 								</div>
 
 								<div class="form_grupo">
-									<label for="senha" class="form_label">Senha</label>
-									<input type="text" class="form_input" name="senha" id="editsenha" autocomplete="off" maxlength="8">
+									<label for="senha" class="form_label">Senha criptografada</label>
+									<input type="text" class="form_input" name="senha" id="editsenha" autocomplete="off" maxlength="255">
 								</div>
 
 								<div class="form_grupo">
