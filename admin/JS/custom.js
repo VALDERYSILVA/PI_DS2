@@ -105,7 +105,6 @@ async function editarCliente(cod) {
         document.getElementById("editbairro").value = resposta['dados'].bairro;
         document.getElementById("editcidade").value = resposta['dados'].cidade;
         document.getElementById("edituf").value = resposta['dados'].uf;
-        document.getElementById("editsenha").value = resposta['dados'].senha;
         document.getElementById("editplano").value = resposta['dados'].plano;
         document.getElementById("editibge").value = resposta['dados'].ibge;
         document.getElementById("editvencimento").value = resposta['dados'].vencimento;
@@ -137,7 +136,7 @@ editForm.addEventListener("submit", async (e) => {
     } else {
         msgAlertaErroEdit.innerHTML = resposta['msg'];
         listarUsuarios(1);
-        $('.modal').modal('hide');
+        window.location.href = "dashboard.php";
     };
 
     document.getElementById("edit-cliente-btn").value = "Salvar";
@@ -184,6 +183,7 @@ async function deleteContato(id) {
 
 }
 
+// ------------------------------------------------------------------ //
 
 // Buscar
 
@@ -198,4 +198,86 @@ search.addEventListener("keydown", function (event) {
 
 function searchData() {
     window.location = 'dashboard.php?search=' + search.value;
+}
+
+
+// ------------------------------------------------------------------ //
+
+// Alterar Senha
+
+async function editar_registro(cod) {
+
+    // Ocultar o botão editar
+    document.getElementById("botao_editar" + cod).style.display = "none";
+
+    // Apresentar o botão salvar
+    document.getElementById("botao_salvar" + cod).style.display = "block";
+
+    // Recuperar o valor da senha
+    var senha = document.getElementById("valor_senha" + cod);
+    // console.log(senha);
+
+    // Substituir o texto pelo campo e atribuir o campo o valor que estava na senha
+    senha.innerHTML = "<input type='text' id='senha_text" + cod + "' value='" + senha.innerHTML + "'>";
+}
+
+/* Fim Substitulir texto pelo campo na tabela */
+
+/* Inicio editar o registro no banco de dados */
+//Função responçavel em salvar no banco de dados e receber i cod do registro que deveser editado
+
+async function salvar_registro(cod) {
+
+    // Recuperar o valor do campo senha
+    var senha_valor = document.getElementById("senha_text" + cod).value;
+    // console.log(senha_valor);
+
+    // Substituir o campo pelo texto senha
+    document.getElementById("valor_senha" + cod).innerHTML = senha_valor;
+
+    // Preparar a STRING de valores que deve ser enviado para o arquivo responsavel em salvar no banco de dados
+
+    var dadosFrom = "cod=" + cod + "&senha=" + senha_valor;
+    // console.log(dadosFrom);
+
+    // Fazer a requisição com o FETCH para um arquivo PHP e enviar atraves do metodo POST os dados do formulario
+
+    const dados = await fetch("editar_senha.php", {
+        method: "POST",
+        headers: { 'content-Type': 'application/x-www-form-urlencoded' },
+        body: dadosFrom
+    });
+
+    // Ler o objeto, a resposta do arquivo PHP
+
+    const resposta = await dados.json();
+    // console.log(resposta);
+
+    // Acessa o IF quando não conseguir editar no banco de dados
+    if (!resposta['erro']) {
+        // Envia mensagem de erro
+        document.getElementById("msgAlerta").innerHTML = resposta['msg'];
+    } else {
+        // Envia mensagem de sucesso
+        document.getElementById("msgAlerta").innerHTML = resposta['msg'];
+
+        // Chamar a função para remover a mensagem
+        removerMsgAlerta();
+
+        // Apresentar o botão editar
+        document.getElementById("botao_editar" + cod).style.display = "block";
+
+        // Ocultar o botão salvar
+        document.getElementById("botao_salvar" + cod).style.display = "none";
+
+    }
+
+}
+
+/* Fim editar a senha no banco de dados */
+
+function removerMsgAlerta() {
+    setTimeout(function () {
+        document.getElementById("msgAlerta").innerHTML = "";
+    }, 4000);
 }

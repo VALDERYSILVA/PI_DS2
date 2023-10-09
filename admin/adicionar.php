@@ -6,33 +6,33 @@ include_once "configuracao/conexao.php";
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 if (empty($dados['nome'])) {
-  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Erro: Necessário informar o nome!</div>"];
+  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Necessário informar o nome!</div>"];
 } elseif (empty($dados['cpf'])) {
-  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Erro: Necessário Informar o CPF!</div>"];
+  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Necessário Informar o CPF!</div>"];
 } elseif (empty($dados['rg'])) {
-  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Erro: Necessário Informar um número de documento de identificação!</div>"];
+  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Necessário Informar um número de documento de identificação!</div>"];
 } elseif (empty($dados['nascimento'])) {
-  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Erro: Necessário Informar a data de nascimento correta!</div>"];
+  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Necessário Informar a data de nascimento correta!</div>"];
 } elseif (empty($dados['telefone'])) {
-  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Erro: Necessário Informar o número de telefone correro!</div>"];
+  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Necessário Informar o número de telefone correro!</div>"];
 } elseif (empty($dados['email'])) {
-  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Erro: Necessário Informar o email corretamente!</div>"];
+  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Necessário Informar o email corretamente!</div>"];
 } elseif (empty($dados['cep'])) {
-  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Erro: Necessário Informar CEP</div>"];
+  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Necessário Informar CEP</div>"];
 } elseif (empty($dados['numero'])) {
-  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Erro: Necessário Informar o número da residência!</div>"];
+  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Necessário Informar o número da residência!</div>"];
 } elseif (empty($dados['bairro'])) {
-  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Erro: Necessário Informar o bairro!</div>"];
+  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Necessário Informar o bairro!</div>"];
 } elseif (empty($dados['cidade'])) {
-  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Erro: Necessário Informar o cidade!</div>"];
+  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Necessário Informar o cidade!</div>"];
 } elseif (empty($dados['uf'])) {
-  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Erro: Necessário Informar o estado!</div>"];
+  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Necessário Informar o estado!</div>"];
 } elseif (empty($dados['senha'])) {
-  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Erro: Necessário Informar a senha do usuário!</div>"];
+  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Necessário Informar a senha do usuário!</div>"];
 } elseif (empty($dados['plano'])) {
-  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Erro: Necessário Informar o plano!</div>"];
+  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Necessário Informar o plano!</div>"];
 } elseif (empty($dados['vencimento'])) {
-  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Erro: Necessário Informar o vencimento!</div>"];
+  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Necessário Informar o vencimento!</div>"];
 } else {
 
   $query_usuario = "INSERT INTO clientes (senha, plano, vencimento, nome, rg, cpf, nascimento,

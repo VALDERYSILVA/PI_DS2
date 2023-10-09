@@ -54,7 +54,8 @@ include_once './include/header.php';
 												?>
 												<div class="xp-breadcrumbbar">
 													<div class="title">
-														<h6>Olá, <?php echo $usuario ?></h6>
+														<h6>Olá, <?php echo $usuario ?>
+														</h6>
 													</div>
 												</div>
 											</a>
@@ -105,7 +106,6 @@ include_once './include/header.php';
 						<div class="modal-boby">
 
 							<form id="add-cliente-form" class="form" action="adicionar.php" method="post">
-								<span id="msgAlertaErroCad"></span>
 								<div class="form_grupo">
 									<label for="nome" class="form_label"></label>
 									<input type="text" name="nome" class="form_input" id="nome" placeholder="Nome Completo" autocomplete="off" maxlength="55">
@@ -194,7 +194,7 @@ include_once './include/header.php';
 									</select>
 
 								</div>
-
+								<span id="msgAlertaErroCad"></span>
 								<div class="form_grupo">
 
 									<span class="legenda">Dia de Vencimento</span>
@@ -365,10 +365,10 @@ include_once './include/header.php';
 								<span aria-hidden="true">&times;</span>
 							</button>
 						</div>
-						<div class="modal-boby">
-							<form id="edit-cliente-form" class="form">
-								<span id="msgAlertaErroEdit"></span>
 
+						<div class="modal-boby">
+
+							<form id="edit-cliente-form" class="form">
 
 								<div class="form_grupo">
 									<label for="cod" class="form_label"></label>
@@ -445,10 +445,10 @@ include_once './include/header.php';
 									<input type="text" class="form_input" name="ibge" id="editibge" maxlength="7">
 								</div>
 
-								<div class="form_grupo">
+								<!-- <div class="form_grupo">
 									<label for="senha" class="form_label">Senha criptografada</label>
 									<input type="text" class="form_input" name="senha" id="editsenha" autocomplete="off" maxlength="255">
-								</div>
+								</div> -->
 
 								<div class="form_grupo">
 
@@ -477,7 +477,7 @@ include_once './include/header.php';
 									</select>
 
 								</div>
-
+								<span id="msgAlertaErroEdit"></span>
 								<div class="form_message">
 
 									<label for="observacao" class="form_message_label"> Observação:</label>
@@ -489,7 +489,6 @@ include_once './include/header.php';
 									<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancelar</button>
 									<input type="submit" name="submit" class="btn btn-warning btn-sm" id="edit-cliente-btn" value="Salvar" />
 								</div>
-
 							</form>
 						</div>
 					</div>
@@ -516,8 +515,8 @@ include_once './include/header.php';
 									</div>
 									<div class="col-sm-6 p-0 flex justify-content-lg-end justify-content-center">
 										<a href="#adicionarClienteModal" type="button" class="btn btn-success" data-toggle="modal">
-											<i class="material-icons">&#xE147;</i>
-											<span>Adicionar Novo Cliente</span></a>
+											<i class="material-icons">&#xe7fe;</i>
+											<span>Adicionar Cliente</span></a>
 
 										<a href="visualizar-contato.php" type="button" class="btn btn-info">
 											<?php if ($row_total_clientes['qtd_clientes'] == 0)

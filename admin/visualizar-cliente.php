@@ -90,14 +90,19 @@ if (empty($cliente_id)) {
                             <div class="col-sm-6 p-0 flex justify-content-lg-start justify-content-center">
                             </div>
                             <div class="col-sm-6 p-0 flex justify-content-lg-end justify-content-center">
-                                <a href="javascript:history.back();" type="button" class="btn btn-success">
+                                <a href="dashboard.php" type="button" class="btn btn-success">
                                     <i class="material-icons">&#xe15e;</i>
                                     <span>Voltar</span></a>
                             </div>
                         </div>
                     </div>
+
+                    <span id='msgAlerta'>
+
                 </div>
+
                 <div class="col-md-12">
+
                     <?php
 
                     $query_cliente = "SELECT cod, senha, plano, vencimento, nome, rg, cpf, 
@@ -115,72 +120,78 @@ if (empty($cliente_id)) {
                         extract($row_cliente);
 
                         if (password_verify('12345678', $senha)) {
-                            $alterar = "Senha padrão";
+                            $senha_alt = "Senha padrão";
                         } else {
-                            $alterar =  "Senha alterada pelo cliente";
+                            $senha_alt =  "Senha alterada";
                         }
 
-                        echo "<dl class='row1'>";
-                        echo "<dt class='col-sm-3'>Nome</dt>";
-                        echo "<dd class='col-sm-9'>$nome</dd>";
-                        echo "</dl>";
+                        echo "<dl class='row1'>
+                        <dt class='col-sm-3'>Nome</dt>
+                        <dd class='col-sm-9'>$nome</dd>
+                        </dl>
 
-                        echo "<dl class='row1'>";
-                        echo "<dt class='col-sm-3'>Telefone</dt>";
-                        echo "<dd class='col-sm-9'>$telefone</dd>";
-                        echo "</dl>";
+                        <dl class='row1'>
+                        <dt class='col-sm-3'>Telefone</dt>
+                        <dd class='col-sm-9'>$telefone</dd>
+                        </dl>
 
-                        echo "<dl class='row1'>";
-                        echo "<dt class='col-sm-3'>Email</dt>";
-                        echo "<dd class='col-sm-9'>$email</dd>";
-                        echo "</dl>";
+                        <dl class='row1'>
+                        <dt class='col-sm-3'>Email</dt>
+                        <dd class='col-sm-9'>$email</dd>
+                        </dl>
 
-                        echo "<dl class='row1'>";
-                        echo "<dt class='col-sm-3'>Data de Nascimento</dt>";
-                        echo "<dd class='col-sm-9'>$nascimento_br</dd>";
-                        echo "</dl>";
+                        <dl class='row1'>
+                        <dt class='col-sm-3'>Data de Nascimento</dt>
+                        <dd class='col-sm-9'>$nascimento_br</dd>
+                        </dl>
 
-                        echo "<dl class='row1'>";
-                        echo "<dt class='col-sm-3'>RG</dt>";
-                        echo "<dd class='col-sm-9'>$rg</dd>";
-                        echo "</dl>";
+                        <dl class='row1'>
+                        <dt class='col-sm-3'>RG</dt>
+                        <dd class='col-sm-9'>$rg</dd>
+                        </dl>
 
-                        echo "<dl class='row1'>";
-                        echo "<dt class='col-sm-3'>CPF</dt>";
-                        echo "<dd class='col-sm-9'>$cpf</dd>";
-                        echo "</dl>";
+                        <dl class='row1'>
+                        <dt class='col-sm-3'>CPF</dt>
+                        <dd class='col-sm-9'>$cpf</dd>
+                        </dl>
 
-                        echo "<dl class='row1'>";
-                        echo "<dt class='col-sm-3'>Endereço</dt>";
-                        echo "<dd class='col-sm-9'>$logradouro, $numero, $complemento, $bairro, $cidade - $uf</dd>";
-                        echo "</dl>";
+                        <dl class='row1'>
+                        <dt class='col-sm-3'>Endereço</dt>
+                        <dd class='col-sm-9'>$logradouro, $numero, $complemento, $bairro, $cidade - $uf</dd>
+                        </dl>
 
-                        echo "<dl class='row1'>";
-                        echo "<dt class='col-sm-3'>Plano</dt>";
-                        echo "<dd class='col-sm-9'>$plano</dd>";
-                        echo "</dl>";
+                        <dl class='row1'>
+                        <dt class='col-sm-3'>Plano</dt>
+                        <dd class='col-sm-9'>$plano</dd>
+                        </dl>
 
-                        echo "<dl class='row1'>";
-                        echo "<dt class='col-sm-3'>Vencimento</dt>";
-                        echo "<dd class='col-sm-9'>$vencimento</dd>";
-                        echo "</dl>";
+                        <dl class='row1'>
+                        <dt class='col-sm-3'>Vencimento</dt>
+                        <dd class='col-sm-9'>$vencimento</dd>
+                        </dl>
 
-                        // $senha_verify = password_verify('senha', $senha,);
+                        <dl class='row1'>
+                        <dt class='col-sm-3'>Senha do Cliente</dt>
+                        <dd class='col-auto' id='valor_senha$cod'>$senha_alt</dd>
 
-                        echo "<dl class='row1'>";
-                        echo "<dt class='col-sm-3'>Senha para Mobile</dt>";
-                        echo "<dd class='col-sm-9'>$alterar</dd>";
-                        echo "</dl>";
+                        <dd class='col-auto'><botton type='button' id='botao_editar$cod' class='btn btn-warning1'
+                        onclick='editar_registro($cod)'>Alterar senha</botton>
 
-                        echo "<dl class='row1'>";
-                        echo "<dt class='col-sm-3'>IBGE</dt>";
-                        echo "<dd class='col-sm-9'>$ibge</dd>";
-                        echo "</dl>";
+                        <botton type='button' id='botao_salvar$cod' class='btn btn-danger1' data-toggle='modal'
+                        onclick='salvar_registro($cod)' style='display:none;'>Salvar</botton>
+                        </dd>
+                                                
+                        </dl>
 
-                        echo "<dl class='row1'>";
-                        echo "<dt class='col-sm-3'>Observação</dt>";
-                        echo "<dd class='col-sm-9'>$observacao</dd>";
-                        echo "</dl>";
+                        <dl class='row1'>
+                        <dt class='col-sm-3'>IBGE</dt>
+                        <dd class='col-sm-9'>$ibge</dd>
+                        </dl>
+
+                        <dl class='row1'>
+                        <dt class='col-sm-3'>Observação</dt>
+                        <dd class='col-sm-9'>$observacao</dd>
+                        </dl>";
                     } else {
                         echo "<div class='alert alert-danger' role='alert'>Erro: Cliente não encontrado!
                             </div>";
@@ -190,6 +201,7 @@ if (empty($cliente_id)) {
                 </div>
             </div>
 
+
             <!----footer-inicio------------->
 
             <?php
@@ -198,4 +210,7 @@ if (empty($cliente_id)) {
             ?>
 
             <!----footer-fim---------------->
+
+            <script src="js/custom.js"></script>
+
 </body>

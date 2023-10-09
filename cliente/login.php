@@ -11,7 +11,7 @@ include_once 'configuracao/conexao.php';
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Login APC Tecnologia</title>
+    <title>Login Cliente APC</title>
     <link rel="shortcut icon" href="/imagens/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">

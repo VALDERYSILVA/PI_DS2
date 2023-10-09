@@ -5,48 +5,30 @@ ob_start();
 include_once 'configuracao/conexao.php';
 
 if ((!isset($_SESSION['cod'])) and (!isset($_SESSION['cpf'])) and (!isset($_SESSION['senha']))) {
-    $_SESSION['msg'] = "<p style='color: #ff0000'>Necessário realizar login para acessar a pagina!</p>";
-    header("Location: login.php");
+	$_SESSION['msg'] = "<p style='color: #ff0000'>Necessário realizar login para acessar a pagina!</p>";
+	header("Location: login.php");
 };
 
 ?>
 
 
-<!DOCTYPE html>
-<html lang="pt-br">
+<?php include_once('header.php'); ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Cliente APC Tecnologia</title>
-    <link rel="shortcut icon" href="/imagens/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/custom.css">
-</head>
-
-<body>
+<!-------------------------sidebar------------>
+<?php include_once('sidebar.php'); ?>
+<!-- Sidebar  -->
 
 
-    <h1>Central do Cliente...</h1>
+<!--------page-content---------------->
 
 
-    <?php
-    $usuario = $_SESSION['nome']
-    ?>
-    <div class="xp-breadcrumbbar">
-        <div class="title">
-            <h6>Olá, <?php echo $usuario ?></h6>
-        </div>
-    </div>
 
-    <ul>
-        <li><a href="sair.php" class="sair">
-                <span class="material-icons"></span>
-                Sair
-            </a></li>
-    </ul>
+<!--top--navbar----design--------->
+<?php include_once('top-header.php'); ?>
 
-</body>
+<!--------main-content------------->
+<?php include_once('main-content.php'); ?>
 
-</html>
+
+<!---footer---->
+<?php include_once('footer.php'); ?>

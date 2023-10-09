@@ -168,7 +168,7 @@
 
             <div class="planoPL13">
                 <img src="imagens/visto.png" alt="visto">
-                <h3>Plano Premium 50mb</h3>
+                <h3>Plano Premium 100mb</h3>
                 <p>Exelente para você que navega sem limites muito<br>
                     usados para pesquisas, e-mail, rede sociais e etc.
                 </p>
@@ -176,7 +176,7 @@
 
             <div class="planoPL14">
                 <img src="imagens/visto.png" alt="visto">
-                <h3>Plano Extra Top 100mb</h3>
+                <h3>Plano Extra Top 200mb</h3>
                 <p>Muito top para você que joga on-line, filmes, series<br>
                     entre outros.
                 </p>
@@ -184,7 +184,7 @@
 
             <div class="planoPL15">
                 <img src="imagens/visto.png" alt="visto">
-                <h3>Plano Maximus 200mb</h3>
+                <h3>Plano Maximus 400mb</h3>
                 <p>Tudo em um só plano, pelo menor preço e qualidade<br>
                     Nesse plano você só tem a ganhar.
                 </p>

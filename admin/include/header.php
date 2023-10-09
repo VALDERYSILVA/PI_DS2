@@ -4,7 +4,7 @@ ob_start();
 include_once 'configuracao/conexao.php';
 
 if ((!isset($_SESSION['id'])) and (!isset($_SESSION['usuario'])) and (!isset($_SESSION['senha']))) {
-	$_SESSION['msg'] = "<p style='color: #ff0000'>Erro: Necessário realizar login para acessar a pagina!</p>";
+	$_SESSION['msg'] = "<p style='color: #ff0000'>Necessário realizar login para acessar<br>a pagina!</p>";
 	header("Location: index.php");
 };
 
@@ -19,12 +19,9 @@ if ((!isset($_SESSION['id'])) and (!isset($_SESSION['usuario'])) and (!isset($_S
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-	<title>APC Tecnologia Dashboard</title>
+	<title>Painel de Controle APC</title>
 
 	<!-- Bootstrap CSS -->
-
-
-	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
 
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 
