@@ -1,3 +1,6 @@
+<?php include_once('configuracao/select.php'); ?>
+
+
 <div class="main-content">
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-6">
@@ -9,12 +12,14 @@
 				</div>
 				<div class="card-content">
 					<h5 class="category"><strong>Serviço Contratado</strong></h5>
-					<p class="card-title">Em construção...</p>
+					<p class="card-title"><?php echo "Plano ", $plano ?></p>
+					<p class="card-title"><?php echo "Vencimento ", $vencimento ?></p>
+					<p class="card-title"><?php echo " " ?></p>
 				</div>
 				<div class="card-footer">
 					<div class="stats">
-						<i class="material-icons text-info">info</i>
-						<a href="#">Em construção...</a>
+						<i class="material-icons text-info">&#xe73c;</i>
+						<a href="https://wa.me/5581986271986?text=Olá! Gostaria de alterar meu plano" target="_blank" rel="noopener">Alterar Plano</a>
 					</div>
 				</div>
 			</div>
@@ -29,12 +34,13 @@
 				</div>
 				<div class="card-content">
 					<h5 class="category"><strong>Meus Dados</strong></h5>
-					<p class="card-title">Em construção...</p>
+					<p class="card-title"><?php echo $telefone ?></p>
+					<p class="card-title"><?php echo $email ?></p>
 				</div>
 				<div class="card-footer">
 					<div class="stats">
-						<i class="material-icons text-info">info</i>
-						<a href="#">Em construção...</a>
+						<i class="material-icons text-info">&#xe873;</i>
+						<a href="#">Visualizar Dados</a>
 					</div>
 				</div>
 			</div>
@@ -56,11 +62,11 @@
 					<table class="table table-hover">
 						<thead class="text-primary">
 							<tr>
-								<th>Vencimento</th>
-								<th>Pagamento</th>
-								<th>Valor</th>
-								<th>Valor Pago</th>
-								<th>Status</th>
+								<th><strong>Vencimento</strong></th>
+								<th><strong>Pagamento</strong></th>
+								<th><strong>Valor</strong></th>
+								<th><strong>Valor Pago</strong></th>
+								<th><strong>Status</strong></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -143,9 +149,9 @@
 					<table class="table table-hover">
 						<thead class="text-primary">
 							<tr>
-								<th>Data</th>
-								<th>Tempo</th>
-								<th>Tráfego</th>
+								<th><strong>Data</strong></th>
+								<th><strong>Tempo</strong></th>
+								<th><strong>Tráfego</strong></th>
 							</tr>
 						</thead>
 						<tbody>

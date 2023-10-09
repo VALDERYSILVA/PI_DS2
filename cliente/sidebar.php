@@ -1,3 +1,6 @@
+<?php include_once('configuracao/select.php'); ?>
+
+
 <nav id="sidebar">
     <div class="sidebar-header">
         <h3><img src="img/logo.png" class="img-fluid" /><span>APC Tecnologia</span></h3>
@@ -45,7 +48,7 @@
                     <a href="#">Chamados</a>
                 </li>
                 <li>
-                    <a href="#">Fale Conosco</a>
+                    <a href="https://wa.me/5581986271986?text=Olá! Pode me ajudar? Meu nome é <?php echo $nome ?>, CPF <?php echo $cpf ?>" target="_blank" rel="noopener">Fale Conosco</a>
                 </li>
             </ul>
         </li>

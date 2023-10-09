@@ -32,7 +32,7 @@ $cliente = substr($usuario, 0, strpos($usuario, ' '));
 						<ul class="dropdown-menu">
 							<li>
 								<a href="#">
-									<i class="material-icons mr-2">&#xe73c;</i>
+									<i class="material-icons mr-2">&#xeade;</i>
 									<span>Alterar Senha</span>
 								</a>
 							</li>
