@@ -31,7 +31,7 @@
                     <li><a href="#planos">Planos</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#contato">Contato</a></li>
-                    <li><a id="central_do_cliente" href="/cliente/login.php" target="_blank" rel="noopener">Já sou cliente</a></li>
+                    <li><a id="central_do_cliente" href="/cliente/login.php" target="_blank" rel="noopener">Sou Cliente</a></li>
                     <div id="rede_socias_menu" class="sociais">
                         <ul>
                             <div class="face">

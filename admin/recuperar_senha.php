@@ -59,7 +59,7 @@ $mail = new PHPMailer(true);
                     $mail->Host       = 'smtp.gmail.com';
                     $mail->SMTPAuth   = true;
                     $mail->Username   = 'nao-responder@arteempc.com.br';
-                    $mail->Password   = 'suasenhaaqui';
+                    $mail->Password   = 'suaSenhaAqui';
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                     $mail->Port       = 587;
 

@@ -1,7 +1,7 @@
 <?php
 
 
-// Receber o id
+// Recebe o id
 $cod = $_SESSION['cod'];
 
 $query_cliente = "SELECT cod, senha, plano, vencimento, nome, rg, cpf, 

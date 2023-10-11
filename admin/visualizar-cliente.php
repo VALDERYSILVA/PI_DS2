@@ -174,11 +174,11 @@ if (empty($cliente_id)) {
                         <dt class='col-sm-3'>Senha do Cliente</dt>
                         <dd class='col-auto' id='valor_senha$cod'>$senha_alt</dd>
 
-                        <dd class='col-auto'><botton type='button' id='botao_editar$cod' class='btn btn-warning1'
-                        onclick='editar_registro($cod)'>Alterar senha</botton>
+                        <dd class='col-auto'><botton type='button' id='botao_editar$cod' class='btn btn-outline-primary btn-sm'
+                        onclick='editar_registro($cod)' style='margin: 8px 0px 0px;'>Alterar Senha</botton>
 
-                        <botton type='button' id='botao_salvar$cod' class='btn btn-danger1' data-toggle='modal'
-                        onclick='salvar_registro($cod)' style='display:none;'>Salvar</botton>
+                        <botton type='button' id='botao_salvar$cod' class='btn btn-outline-danger btn-sm' data-toggle='modal'
+                        onclick='salvar_registro($cod)' style='display:none; margin: 8px 0px 0px;'>Salvar Senha</botton>
                         </dd>
                                                 
                         </dl>

@@ -23,29 +23,32 @@ $cliente = substr($usuario, 0, strpos($usuario, ' '));
 			</button>
 			<div class="collapse navbar-collapse d-lg-block d-xl-block d-sm-none d-md-none d-none" id="navbarcollapse">
 
-				<ul class="nav navbar-nav ml-auto">
+				<?php
+				echo "<ul class='nav navbar-nav ml-auto'>
 
-					<li class="nav-item">
-						<a class="navbar-brand" href="#" data-toggle="dropdown">
-							<h5>Olá, <?php echo $cliente ?></h5>
+					<li class='nav-item'>
+						<a class='navbar-brand' href='#' data-toggle='dropdown'>
+							<h5>Olá, $cliente</h5>
 						</a>
-						<ul class="dropdown-menu">
+						<ul class='dropdown-menu'>
 							<li>
-								<a href="#">
-									<i class="material-icons mr-2">&#xeade;</i>
-									<span>Alterar Senha</span>
+								<a href='#' onclick='editarSenha($cod)'>
+								<i class='material-icons mr-2'>&#xeade;</i>
+								<span>Alterar Senha</span>
 								</a>
 							</li>
 							<li>
-								<a href="sair.php">
-									<i class="material-icons mr-2">&#xe9ba;</i>
+								<a href='sair.php'>
+									<i class='material-icons mr-2'>&#xe9ba;</i>
 									<span>Sair</span>
 								</a>
 							</li>
 						</ul>
 					</li>
 
-				</ul>
+				</ul>"
+
+				?>
 
 			</div>
 

@@ -1,5 +1,11 @@
-<?php include_once('configuracao/select.php'); ?>
+<?php
 
+include_once('configuracao/select.php');
+
+?>
+
+<span id="msgAlerta"></span>
+<span id="msgAlertaErroEdit"></span>
 
 <div class="main-content">
 	<div class="row">
@@ -32,17 +38,21 @@
 						<span class="material-icons">&#xe2c9;</span>
 					</div>
 				</div>
-				<div class="card-content">
-					<h5 class="category"><strong>Meus Dados</strong></h5>
-					<p class="card-title"><?php echo $telefone ?></p>
-					<p class="card-title"><?php echo $email ?></p>
-				</div>
-				<div class="card-footer">
-					<div class="stats">
-						<i class="material-icons text-info">&#xe873;</i>
-						<a href="#">Visualizar Dados</a>
+
+				<?php
+				echo "<div class='card-content'>
+					<h5 class='category'><strong>Meus Dados</strong></h5>
+					<p class='card-title'>$email</p>
+					<p class='card-title'>$telefone</p>
 					</div>
-				</div>
+				<div class='card-footer'>
+					<div class='stats'>
+						<i class='material-icons text-info'>&#xe873;</i>
+						<a href='#' id='$cod' data-toggle='modal' onclick='visualizarDados($cod)'>Visualizar Dados</a>
+					</div>
+				</div>"
+
+				?>
 			</div>
 		</div>
 
@@ -193,6 +203,61 @@
 
 						</tbody>
 					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!----------------------------------------- Modal  ------------------------------------------>
+
+
+	<div class="modal fade" id="visualizarDados" tabindex="-1" aria-labelledby="visualizarDadosLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="visualizarDadosLabel"><strong>Meus Dados</strong></h4>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span class="material-icons">&#xe5c9;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+
+					<dl class="row">
+						<dt class="col-sm-3">Nome</dt>
+						<dd class="col-sm-9"><span id="nome"></span></dd>
+					</dl>
+
+					<dl class="row">
+						<dt class="col-sm-3">Telefone</dt>
+						<dd class="col-sm-9"><span id="telefone"></span></dd>
+					</dl>
+
+					<dl class="row">
+						<dt class="col-sm-3">Email</dt>
+						<dd class="col-sm-9"><span id="email"></span></dd>
+					</dl>
+
+					<!-- <dl class="row">
+						<dt class="col-sm-3">RG</dt>
+						<dd class="col-sm-9"><span id="rg"></span></dd>
+					</dl>
+
+					<dl class="row">
+						<dt class="col-sm-3">CPF</dt>
+						<dd class="col-sm-9"><span id="cpf"></span></dd>
+					</dl> -->
+
+					<dl class="row">
+						<dt class="col-sm-3">Endereço</dt>
+						<dd class="col-sm-9"><span id="logradouro"></span>, <span id="numero"></span> - <span id="complemento"></span></dd>
+						<dt class="col-sm-3"></dt>
+						<dd class="col-sm-9"><span id="bairro"></span>, <span id="cidade"></span> - <span id="uf"></span></dd>
+					</dl>
+
+				</div>
+				<div class="modal-footer">
+					<!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button> -->
 				</div>
 			</div>
 		</div>

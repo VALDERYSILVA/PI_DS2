@@ -42,43 +42,6 @@ cadForm.addEventListener("submit", async (e) => {
     document.getElementById("add-cliente-btn").value = "Adicionar";
 });
 
-async function visualizarCliente(cod) {
-    // console.log("Acessou: " + cod);
-    const dados = await fetch('visualizar.php?cod=' + cod);
-    const resposta = await dados.json();
-    console.log(resposta);
-
-    if (resposta['erro']) {
-        msgAlerta.innerHTML = resposta['msg'];
-    } else {
-        const visModel = new bootstrap.Modal(document.getElementById("visualizarCliente"));
-        visModel.show();
-
-        document.getElementById("nomeCliente").innerHTML = resposta['dados'].nome;
-        document.getElementById("cpfCliente").innerHTML = resposta['dados'].cpf;
-        document.getElementById("rgCliente").innerHTML = resposta['dados'].rg;
-        document.getElementById("nascimentoCliente").innerHTML = resposta['dados'].nascimento;
-        document.getElementById("telefoneCliente").innerHTML = resposta['dados'].telefone;
-        document.getElementById("emailCliente").innerHTML = resposta['dados'].email;
-        document.getElementById("cepCliente").innerHTML = resposta['dados'].cep;
-        document.getElementById("logradouroCliente").innerHTML = resposta['dados'].logradouro;
-        document.getElementById("numeroCliente").innerHTML = resposta['dados'].numero;
-        document.getElementById("complementoCliente").innerHTML = resposta['dados'].complemento;
-        document.getElementById("bairroCliente").innerHTML = resposta['dados'].bairro;
-        document.getElementById("cidadeCliente").innerHTML = resposta['dados'].cidade;
-        document.getElementById("estadoCliente").innerHTML = resposta['dados'].uf;
-        document.getElementById("ibgeCliente").innerHTML = resposta['dados'].ibge;
-        document.getElementById("senhaCliente").innerHTML = resposta['dados'].senha;
-        document.getElementById("planoCliente").innerHTML = resposta['dados'].plano;
-        document.getElementById("vencimentoCliente").innerHTML = resposta['dados'].vencimento;
-        document.getElementById("vencimentoCliente").innerHTML = resposta['dados'].vencimento;
-        document.getElementById("data_formatada").innerHTML = resposta['dados'].data_formatada;
-        document.getElementById("observacaoCliente").innerHTML = resposta['dados'].observacao;
-
-    }
-
-}
-
 async function editarCliente(cod) {
     msgAlertaErroEdit.innerHTML = "";
 
