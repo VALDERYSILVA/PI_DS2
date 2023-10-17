@@ -59,7 +59,7 @@ $mail = new PHPMailer(true);
                     $mail->Host       = 'smtp.gmail.com';
                     $mail->SMTPAuth   = true;
                     $mail->Username   = 'nao-responder@arteempc.com.br';
-                    $mail->Password   = 'suaSenhaAqui';
+                    $mail->Password   = 'Arte88747295';
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                     $mail->Port       = 587;
 
@@ -68,7 +68,7 @@ $mail = new PHPMailer(true);
 
                     $mail->isHTML(true);                                  //Set email format to HTML
                     $mail->Subject = 'Recuperar senha';
-                    $mail->Body    = 'Prezado(a) ' . $row_usuario['usuario'] . "<br><br>Você solicitou alteração de senha?
+                    $mail->Body    = 'Olá, ' . $row_usuario['usuario'] . "<br><br>Você solicitou alteração de senha?
                 <br><br>Para continuar o processo de recuperação de senha, clique no link abaixo ou copie 
                 e cole o endereço no seu navegador: <br><br><a href='" . $link . "'> $link </a><br><br>Se você não solicitou essa alteração, 
                 nenhuma ação é necessária. Sua senha permanecerá a mesma até que você ative este código.<br><br>";
@@ -82,23 +82,21 @@ $mail = new PHPMailer(true);
 
                     $_SESSION['msg'] = "<div class='alert alert_success' role='alert'>E-mail enviado com sucesso! Acesse a sua 
                     caixa de e-mail para recuperar a senha!</div>";
-                    header("Location: envio_senha.php");
+                    header("Location: receber_senha.php");
                 } catch (Exception $e) {
                     echo "E-mail não enviado. Mailer Error: {$mail->ErrorInfo}";
+                    header('Refresh:3');
                 }
             } else {
-                $_SESSION['msg'] = "<div class='alert alert_danger-index' role='alert'>Tente novamente!
+                $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Tente novamente!
                                 </div>";
+                header('Refresh:3');
             }
         } else {
-            $_SESSION['msg'] = "<div class='alert alert_danger-index' role='alert'>Usuário não encontrado!
+            $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>E-mail não registrado!
                             </div>";
+            header('Refresh:3');
         }
-    }
-
-    if (isset($_SESSION['msg'])) {
-        echo $_SESSION['msg'];
-        unset($_SESSION['msg']);
     }
 
     ?>
@@ -106,24 +104,34 @@ $mail = new PHPMailer(true);
         <div class="form-box">
             <div class="form-value">
                 <form action="" method="post" autocomplete="off">
+                    <div class="logo">
+                        <img src="img/logotipo.png" alt="logo redondo">
+                    </div>
+
+                    <h2>APC Tecnologia</h2>
 
                     <?php
+
+                    if (isset($_SESSION['msg'])) {
+                        echo $_SESSION['msg'];
+                        unset($_SESSION['msg']);
+                    }
+
                     $usuario = "";
                     if (isset($dados['login_usuario'])) {
                         $usuario = $usuario['login_usuario'];
                     } ?>
 
-                    <h2>APC Tecnologia</h2>
-                    <p>Insira seu e-mail para enviarmos<br>o link para alterar sua senha</p>
+                    <p>Insira seu email para alterar sua senha</p>
 
                     <div class="inputbox">
                         <ion-icon name="mail"></ion-icon>
-                        <input type="text" name="email" required minlength="5" value="<?php echo $usuario ?>">
+                        <input type="email" name="email" required minlength="1" value="<?php echo $usuario ?>">
                         <label for="">E-mail</label>
                     </div>
 
                     <div class="forget">
-                        <label for="">Não precisa trocar a senha? <a href="index.php">clique aqui</a></label>
+                        <label for="">lembrou? <a href="index.php"> clique aqui</a></label>
                     </div>
 
                     <button type="submit" value="Recuperar" name="SendRecupSenha">Enviar

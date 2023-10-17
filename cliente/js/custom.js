@@ -70,6 +70,7 @@ editarForm.addEventListener("submit", async (e) => {
         msgAlertaErroEdit.innerHTML = resposta['msg'];
     } else {
         msgAlertaErroEdit.innerHTML = resposta['msg'];
+        alert("Alterado com sucesso!")
         window.location.href = "index.php";
     };
 });
@@ -138,3 +139,12 @@ fone.addEventListener('keypress', () => {
     }
 
 })
+
+// Sair do Painel 
+
+function sairPainel() {
+    var sairPainel = confirm("Gostaria de sair da área do assinante?");
+    if (sairPainel == true) {
+        window.location.href = "sair.php";
+    }
+}

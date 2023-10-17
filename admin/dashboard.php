@@ -7,6 +7,32 @@ include_once './include/header.php';
 <body>
 
 
+	<?php
+
+	if ((isset($_SESSION['id'])) and (isset($_SESSION['usuario']))) {
+		include_once 'configuracao/conexao.php';
+
+		$query_usuario = "SELECT * FROM usuarios WHERE id =:id LIMIT 1";
+		$resul_usuario = $conexao->prepare($query_usuario);
+		$resul_usuario->bindParam(':id', $_SESSION['id'], PDO::PARAM_INT);
+		$resul_usuario->execute();
+
+		if (($resul_usuario) and ($resul_usuario->rowCount() != 0)) {
+			$row_usuario = $resul_usuario->fetch(PDO::FETCH_ASSOC);
+			///var_dump($row_usuario);
+			extract($row_usuario);
+		} else {
+			$_SESSION['msg'] = "<p style='color: #ff0000'>Necessário realizar login para acessar<br>a pagina!</p>";
+			header("Location: index.php");
+		}
+	} else {
+		$_SESSION['msg'] = "<p style='color: #ff0000'>Necessário realizar login para acessar<br>a pagina!</p>";
+		header("Location: index.php");
+	}
+
+	?>
+
+
 	<div class="wrapper">
 		<div class="body-overlay"></div>
 
@@ -25,7 +51,7 @@ include_once './include/header.php';
 									<div class="input-group">
 										<input type="search" name="buscar" id="pesquisar" class="form-control" placeholder="Pesquisar cliente">
 										<div class="input-group-append">
-											<button onclick="searchData()" class="btn" type="submit" id="button-addon2"><i class="material-icons">&#xf02f;</i>
+											<button title="Pesquisar cliente" onclick="searchData()" class="btn" type="submit" id="button-addon2"><i class="material-icons">&#xf02f;</i>
 											</button>
 										</div>
 									</div>
@@ -47,11 +73,8 @@ include_once './include/header.php';
 										</li>
 
 										<li class="dropdown nav-item">
-											<a class="nav-link" href="#" data-toggle="dropdown">
+											<a class="nav-link" href="#" title="Menu" data-toggle="dropdown">
 
-												<?php
-												$usuario = $_SESSION['usuario']
-												?>
 												<div class="xp-breadcrumbbar">
 													<div class="title">
 														<h6>Olá, <?php echo $usuario ?>
@@ -60,18 +83,35 @@ include_once './include/header.php';
 												</div>
 											</a>
 
-											<ul class="dropdown-menu small-menu">
-												<!-- <li><a href='#' id='$id' class='sair' onclick='editarUsuario($id)'>
-														<span class="material-icons">settings</span>
-														Alterar Usuário/Senha -->
-												</a>
+											<?php
+
+											// data-toggle='modal' data-whatever='$id' data-target='#altSenhaModal'
+
+											echo
+											"<ul class='dropdown-menu small-menu'>
+
+												<li><a href='#' class='menu' onclick='altSenhaUsuario($id)'>
+														<span class='material-icons'>&#xe73c</span>
+														Alterar Senha
+													</a>
+												</li>
+
+												<li><a href='#' class='menu' data-toggle='modal' data-target='#perfilUserModal'>
+														<span class='material-icons'>&#xe7fd</span>
+														Perfil
+													</a>
+												</li>
+
+												<li><a href='#' class='menu' onclick='sairDashboard()'>
+														<span class='material-icons'>logout</span>
+														Sair
+													</a>
+												</li>
+
+											</ul>"
+											?>
+
 										</li>
-										<li><a href="sair.php" class="sair">
-												<span class="material-icons">logout</span>
-												Sair
-											</a></li>
-									</ul>
-									</li>
 									</ul>
 								</nav>
 							</div>
@@ -178,8 +218,11 @@ include_once './include/header.php';
 
 								<div class="form_grupo">
 									<label for="senha" class="form_label">Senha</label>
-									<input type="text" name="senha" class="form_input" id="senha" placeholder="Para acesso ao App Mobile" autocomplete="off" maxlength="8">
+									<input type="text" name="senha" class="form_input" id="senha" placeholder="Senha do Cliente" autocomplete="off" maxlength="8">
 								</div>
+
+								<span id="msgAlerta"></span>
+								<span id="msgAlertaErroCad"></span>
 
 								<div class="form_grupo">
 
@@ -194,7 +237,7 @@ include_once './include/header.php';
 									</select>
 
 								</div>
-								<span id="msgAlertaErroCad"></span>
+
 								<div class="form_grupo">
 
 									<span class="legenda">Dia de Vencimento</span>
@@ -242,7 +285,7 @@ include_once './include/header.php';
 				<div class="modal-dialog">
 					<div class="modal-content"> <!-- alterado -->
 						<div class="modal-header">
-							<h5 class="modal-title" id="editClienteModalLabel"><b>Editar Cliente</b></h5>
+							<h5 class="modal-title" id="editClienteModalLabel"><b>Alterar dados de Cliente</b></h5>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
@@ -413,9 +456,6 @@ include_once './include/header.php';
 							</div>
 						</div>
 
-						<!--Mensagem cadastrado com sucesso! -->
-						<span id="msgAlerta"></span>
-
 						<?php
 
 						// Asessa o 'if' quando existir a variaval global
@@ -471,13 +511,13 @@ include_once './include/header.php';
 								<td>
 
 								<a href='visualizar-cliente.php?id=$cod' class='encode'>
-								<i class='material-icons' data-toggle='tooltip' title='Visualizar'>&#xE8b6;</i></a>
+								<i class='material-icons' data-toggle='tooltip' title='Visualizar'>&#xe8f4;</i></a>
 								
 								<a href='#' id='$cod' class='encode' onclick='editarCliente($cod)'>
-								  <i class='material-icons' data-toggle='tooltip' title='Editar'>&#xE254;</i></a>
+								  <i class='material-icons' data-toggle='tooltip' title='Editar'>&#xe254;</i></a>
 								
 								<a href='#' id='$cod' class='encode' onclick='deleteCliente($cod)'>
-								  <i class='material-icons' data-toggle='tooltip' title='Apagar'>&#xE872;</i></a>
+								  <i class='material-icons' data-toggle='tooltip' title='Apagar'>&#xe872;</i></a>
 													
 							</tr>";
 								}
@@ -499,6 +539,89 @@ include_once './include/header.php';
 						<!-- Visualizar clientes final -->
 
 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!----------------------------------------- Modal / perfil do Usuario ------------------------------------------>
+
+	<div class="modal fade" id="perfilUserModal" tabindex="-1" aria-labelledby="perfilUserModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="perfilUserModalLabel"><strong>Meus Dados</strong></h4>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span class="material-icons">&#xe5c9;</span>
+					</button>
+				</div>
+
+				<div class="modal-body">
+
+					<dl class="row">
+						<dt class="col-sm-3">Nome</dt>
+						<dd class="col-sm-9"><?php echo $usuario ?></dd>
+					</dl>
+
+					<dl class="row">
+						<dt class="col-sm-3">Login</dt>
+						<dd class="col-sm-9"><?php echo $login_usuario ?></dd>
+					</dl>
+
+					<dl class="row">
+						<dt class="col-sm-3">Email</dt>
+						<dd class="col-sm-9"><?php echo $email ?></dd>
+					</dl>
+
+				</div>
+				<div class="modal-footer">
+					<!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button> -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!----------------------------------------- Modal / Alterar senha do Usuario ------------------------------------------>
+
+
+	<div class="modal fade" id="altSenhaModal" tabindex="-1" aria-labelledby="altSenhaModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="altSenhaModalLabel"><strong>Meus Dados</strong></h4>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span class="material-icons">&#xe5c9;</span>
+					</button>
+				</div>
+
+				<div class="modal-boby">
+
+					<form id="alt-senha-user-form" class="form">
+
+						<span id="msgAlertaErroAlt"></span>
+
+						<div class="mb-33">
+							<label for="altId" class="form-label"></label>
+							<input type="hidden" name="id" id="altId">
+						</div>
+
+						<div class="mb-33">
+							<label for="novaSenha" class="form-label">Nova Senha</label>
+							<input type="text" class="form-control" name="senha" id="altSenha" autocomplete="off" maxlength="8">
+						</div>
+
+						<div class="mb-33">
+							<label for="novaSenha" class="form-label">Repita a Senha</label>
+							<input type="text" class="form-control" name="repsenha" id="repSenha" autocomplete="off" maxlength="8">
+						</div>
+
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancelar</button>
+							<input type="submit" class="btn btn-success btn-sm" id="alt-senha-btn" value="Alterar Senha" />
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>

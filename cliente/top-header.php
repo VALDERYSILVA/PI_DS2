@@ -17,7 +17,7 @@ $cliente = substr($usuario, 0, strpos($usuario, ' '));
 				<span class="material-icons">&#xe9bd;</span>
 			</button>
 
-			<a class="navbar-brand" href="#">Home</a>
+			<a class="navbar-brand" href="#">Área do Assinante</a>
 			<button class="d-inline-block d-lg-none ml-auto more-button" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarcollapse" aria-expanded="false" aria-label="Toggle">
 				<span class="material-icons">&#xe5d2;</span>
 			</button>
@@ -32,13 +32,13 @@ $cliente = substr($usuario, 0, strpos($usuario, ' '));
 						</a>
 						<ul class='dropdown-menu'>
 							<li>
-								<a href='#' onclick='editarSenha($cod)'>
+								<a href='#' class='menu' onclick='editarSenha($cod)'>
 								<i class='material-icons mr-2'>&#xeade;</i>
 								<span>Alterar Senha</span>
 								</a>
 							</li>
 							<li>
-								<a href='sair.php'>
+								<a href='#' class='menu' onclick='sairPainel()'>
 									<i class='material-icons mr-2'>&#xe9ba;</i>
 									<span>Sair</span>
 								</a>

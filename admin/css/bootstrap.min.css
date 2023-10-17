@@ -121,7 +121,7 @@ address {
 dl,
 ol,
 ul {
-    margin-top: -15px;
+    margin-top: 0px;
     margin-bottom: 1rem
 }
 
@@ -634,6 +634,7 @@ pre code {
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+    margin-top: -15px;
     background-color: #DDDDDD;
     color: #343a40;
 }
@@ -2856,7 +2857,6 @@ fieldset:disabled a.btn {
     color: #fff;
     background-color: #dc3545;
     box-shadow: #000 0px 0px 4px;
-    border-radius: 20px;
     margin: 7px 0px 0;
 }
 
@@ -5383,7 +5383,7 @@ input[type=submit].btn-block {
 .alert {
     position: relative;
     padding: .75rem 1.25rem;
-    margin-bottom: 0rem;
+    margin: 0 15px;
     border: 1px solid transparent;
     border-radius: .25rem
 }
@@ -5445,16 +5445,17 @@ input[type=submit].btn-block {
 }
 
 .alert-success {
-    color: #155724;
-    background-color: #d4edda;
-    border-color: #c3e6cb
+    color: #ffffff;
+    background-color: #109010;
+    border-color: #008000;
 }
 
 .alert-success1 {
+    font-size: 14px;
     text-align: center;
-    color: #155724;
-    background-color: #d4edda;
-    border-color: #c3e6cb
+    color: #ffffff;
+    background-color: #109010;
+    border-color: #008000;
 }
 
 
@@ -5495,9 +5496,10 @@ input[type=submit].btn-block {
 }
 
 .alert-danger {
-    color: #721c24;
-    background-color: #f8d7da;
-    border-color: #f5c6cb
+    text-align: center;
+    color: #ffffff;
+    background-color: #ff0000;
+    border-color: #ff0000;
 }
 
 .alert_danger {
@@ -8283,6 +8285,11 @@ button.bg-dark:hover {
 .mb-3,
 .my-3 {
     margin-bottom: 1rem !important
+}
+
+.mb-33 {
+    margin-bottom: 1rem !important;
+    padding: 0 15px;
 }
 
 .ml-3,

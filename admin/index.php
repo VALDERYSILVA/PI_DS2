@@ -31,7 +31,7 @@ include_once 'configuracao/conexao.php';
             <div class="form-value">
                 <form action="" method="post" autocomplete="off">
                     <div class="logo">
-                        <img src="/imagens/logotipo.png" alt="logo redondo">
+                        <img src="img/logotipo.png" alt="logo redondo">
                     </div>
                     <h2>APC Tecnologia</h2>
 
@@ -56,10 +56,12 @@ include_once 'configuracao/conexao.php';
                             } else {
                                 $_SESSION['msg'] = "<div class='alert alert_danger' role='alert'>Usuário ou senha incorreto!
                                                     </div>";
+                                header('Refresh:3');
                             }
                         } else {
                             $_SESSION['msg'] = "<div class='alert alert_danger' role='alert'>Usuário ou senha incorreto!
                                                 </div>";
+                            header('Refresh:3');
                         }
                     }
 
@@ -68,17 +70,18 @@ include_once 'configuracao/conexao.php';
                         unset($_SESSION['msg']);
                     }
 
+
                     ?>
 
 
                     <div class="inputbox">
                         <ion-icon name="person"></ion-icon>
-                        <input type="text" name="login_usuario" id="ilogin" autocomplete="off" required minlength="4" maxlength="20">
+                        <input type="text" name="login_usuario" id="ilogin" autocomplete="off" required minlength="1" maxlength="20">
                         <label for="">Login</label>
                     </div>
                     <div class="inputbox">
                         <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" name="senha" id="isenha" label for="isenha" required minlength="8">
+                        <input type="password" name="senha" id="isenha" label for="isenha" required minlength="1" maxlength="8">
                         <label for="">Senha</label>
                     </div>
                     <div class="forget">

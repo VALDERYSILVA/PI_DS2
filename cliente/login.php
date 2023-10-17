@@ -31,10 +31,10 @@ include_once 'configuracao/conexao.php';
             <div class="form-value">
                 <form action="" method="post" autocomplete="off">
                     <div class="logo">
-                        <img src="/imagens/logotipo.png" alt="logo redondo">
+                        <img src="img/logotipo.png" alt="logo redondo">
                     </div>
                     <h2>Bem Vindo!</h2>
-                    <p>Por favor insira as informações abaixo para continuar</p>
+                    <p>insira as informações para continuar</p>
 
                     <?php
 
@@ -55,11 +55,11 @@ include_once 'configuracao/conexao.php';
                                 $_SESSION['nome'] = $row_usuario['nome'];
                                 header("Location: index.php");
                             } else {
-                                $_SESSION['msg'] = "<div class='alert alert_danger' role='alert'>Usuário ou senha incorreto!
+                                $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Usuário ou senha incorreto!
                                                          </div>";
                             }
                         } else {
-                            $_SESSION['msg'] = "<div class='alert alert_danger' role='alert'>Usuário ou senha incorreto!
+                            $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Usuário ou senha incorreto!
                                                  </div>";
                         }
                     }
@@ -83,7 +83,7 @@ include_once 'configuracao/conexao.php';
                         <label for="">Senha</label>
                     </div>
                     <div class="forget">
-                        <label for=""><a href="recuperar_senha.php">Esqueci minha senha</a></label>
+                        <label for=""><a href="recuperar_senha_cliente.php">Esqueci minha senha</a></label>
 
                     </div>
                     <button type="submit" value="Entrar" name="SendLogin">Entrar

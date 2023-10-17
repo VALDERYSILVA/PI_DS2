@@ -40,7 +40,9 @@ include_once('configuracao/select.php');
 				</div>
 
 				<?php
-				echo "<div class='card-content'>
+				echo
+
+				"<div class='card-content'>
 					<h5 class='category'><strong>Meus Dados</strong></h5>
 					<p class='card-title'>$email</p>
 					<p class='card-title'>$telefone</p>

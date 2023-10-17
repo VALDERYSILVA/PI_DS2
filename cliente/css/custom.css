@@ -137,7 +137,7 @@ a:focus {
 	width: 260px;
 	overflow: auto;
 	transition: all 0.3s;
-	background-color: #fff;
+	background: linear-gradient(90deg, #58a2f1, #4C8ACE);
 	box-shadow: 0 10px 30px -12px rgba(0 0 0 / 42%),
 		0 4px 25px 0px rgba(0 0 0 / 12%),
 		0 8px 10px -5px rgba(0 0 0 / 20%);
@@ -170,12 +170,11 @@ a:focus {
 
 #sidebar .sidebar-header {
 	padding: 20px;
-	background-color: #fff;
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid linear-gradient(90deg#58a2f1, #4C8ACE);
 }
 
 .sidebar-header h3 {
-	color: #333;
+	color: #ffffff;
 	font-size: 17px;
 	margin: 0px;
 	text-transform: uppercase;
@@ -195,7 +194,6 @@ a:focus {
 
 
 #sidebar ul li.active>a {
-	color: #333;
 	background-color: rgba(200, 200, 200, 0.2);
 }
 
@@ -222,6 +220,7 @@ a:focus {
 }
 
 #sidebar ul li a {
+	color: #ffffff;
 	padding: 10px;
 	line-height: 30px;
 	border-radius: 5px;
@@ -240,8 +239,11 @@ a:focus {
 	position: relative;
 	margin-right: 10px;
 	top: 5px;
-	color: #555555;
 	margin-left: 10px;
+}
+
+.menu {
+	color: #b8b8b8
 }
 
 
@@ -706,12 +708,12 @@ footer .copyright {
 	#sidebar.active .menu {
 		position: absolute;
 		left: 81px;
-		background-color: white;
+		background-color: #4C8ACE;
 		width: 180px;
 		height: auto;
 		margin: 5px 0;
 		top: 0;
-		border: 1px solid #dcd9d9;
+		border: 1px solid #4C8ACE;
 		z-index: 4;
 	}
 

@@ -12,10 +12,10 @@ include_once 'configuracao/conexao.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Login APC Tecnologia</title>
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 
 <!-- <?php
@@ -30,6 +30,11 @@ include_once 'configuracao/conexao.php';
         <div class="form-box">
             <div class="form-value">
                 <form action="" method="post" autocomplete="off">
+                    <div class="logo">
+                        <img src="img/logotipo.png" alt="logo redondo">
+                    </div>
+
+                    <h2>APC Tecnologia</h2>
 
                     <?php
 
@@ -37,24 +42,24 @@ include_once 'configuracao/conexao.php';
 
                     if (!empty($dados['SendLogin'])) {
                         // var_dump($dados);
-                        $query_usuario =  "SELECT * FROM usuarios WHERE login_usuario =:login_usuario LIMIT 1";
+                        $query_usuario =  "SELECT * FROM clientes WHERE cpf =:cpf LIMIT 1";
                         $result_usuario = $conexao->prepare($query_usuario);
-                        $result_usuario->bindParam(':login_usuario', $dados['login_usuario'], PDO::PARAM_STR);
+                        $result_usuario->bindParam(':cpf', $dados['cpf'], PDO::PARAM_STR);
                         $result_usuario->execute();
 
                         if (($result_usuario) and ($result_usuario->rowCount() != 0)) {
                             $row_usuario = $result_usuario->fetch(PDO::FETCH_ASSOC);
                             //var_dump($row_usuario);
                             if (password_verify($dados['senha'], $row_usuario['senha'])) {
-                                $_SESSION['id'] = $row_usuario['id'];
-                                $_SESSION['usuario'] = $row_usuario['usuario'];
-                                header("Location: dashboard.php");
+                                $_SESSION['cod'] = $row_usuario['cod'];
+                                $_SESSION['nome'] = $row_usuario['nome'];
+                                header("Location: index.php");
                             } else {
-                                $_SESSION['msg'] = "<div class='alert alert_danger' role='alert'>Usuário ou senha incorreto!
+                                $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Usuário ou senha incorreto!
                                                     </div>";
                             }
                         } else {
-                            $_SESSION['msg'] = "<div class='alert alert_danger' role='alert'>Usuário ou senha incorreto!
+                            $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Usuário ou senha incorreto!
                                                 </div>";
                         }
                     }
@@ -64,27 +69,22 @@ include_once 'configuracao/conexao.php';
                         unset($_SESSION['msg']);
                     }
 
-                    ?>
-
-                    <h2>APC Tecnologia</h2>
-
-                    <?php
                     echo "<div class='alert1 alert-success1' role='alert'>E-mail enviado com sucesso!<br>
-                    Verifique sua caixa de entrada ou<br>spam para redifinir sua senha</div>";
+                    Verifique caixa de entrada ou spam</div>";
                     ?>
 
                     <div class="inputbox">
                         <ion-icon name="person"></ion-icon>
-                        <input type="text" name="login_usuario" id="ilogin" autocomplete="off" required minlength="4" maxlength="20">
-                        <label for="">Login</label>
+                        <input type="text" name="cpf" id="ilogin" autocomplete="off" required minlength="1" maxlength="14">
+                        <label for="">CPF</label>
                     </div>
                     <div class="inputbox">
                         <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" name="senha" id="isenha" label for="isenha" required minlength="5">
+                        <input type="password" name="senha" id="isenha" label for="isenha" required minlength="1" maxlength="8">
                         <label for="">Senha</label>
                     </div>
                     <div class="forget">
-                        <label for=""><a href="recuperar_senha.php">Esqueci minha senha</a></label>
+                        <label for=""><a href="recuperar_senha_cliente.php">Esqueci minha senha</a></label>
 
                     </div>
                     <button type="submit" value="Entrar" name="SendLogin">Entrar
@@ -97,6 +97,7 @@ include_once 'configuracao/conexao.php';
     <script src="js/popper.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/mascara.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>

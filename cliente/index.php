@@ -5,7 +5,7 @@ ob_start();
 include_once 'configuracao/conexao.php';
 
 if ((!isset($_SESSION['cod'])) and (!isset($_SESSION['cpf'])) and (!isset($_SESSION['senha']))) {
-	$_SESSION['msg'] = "<p style='color: #ff0000'>Necessário realizar login para acessar a pagina!</p>";
+	$_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Necessário realizar login!</div>";
 	header("Location: login.php");
 };
 

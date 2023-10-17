@@ -5346,6 +5346,15 @@ input[type=submit].btn-block {
     border-radius: .25rem
 }
 
+.alert1 {
+    font-size: 14px;
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin: 0 15px;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
 .alert-heading {
     color: inherit
 }
@@ -5395,9 +5404,16 @@ input[type=submit].btn-block {
 }
 
 .alert-success {
-    color: #155724;
-    background-color: #d4edda;
-    border-color: #c3e6cb
+    color: #ffffff;
+    background-color: #109010;
+    border-color: #008000;
+}
+
+.alert-success1 {
+    text-align: center;
+    color: #ffffff;
+    background-color: #109010;
+    border-color: #008000;
 }
 
 .alert-success hr {
@@ -5437,9 +5453,10 @@ input[type=submit].btn-block {
 }
 
 .alert-danger {
-    color: #721c24;
-    background-color: #f8d7da;
-    border-color: #f5c6cb
+    text-align: center;
+    color: #ffffff;
+    background-color: #ff0000;
+    border-color: #ff0000;
 }
 
 .alert-danger hr {

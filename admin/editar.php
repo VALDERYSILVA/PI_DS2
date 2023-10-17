@@ -63,9 +63,9 @@ if (empty($dados['cod'])) {
     $edit_usuario->bindParam(':cod', $dados['cod']);
 
     if ($edit_usuario->execute()) {
-        $retorna = ['erro' => false, 'msg' => "<div class='alert alert-success' role='alert'>Cliente editado com sucesso!</div>"];
+        $retorna = ['erro' => false, 'msg' => "<div class='alert alert-success' role='alert'>Alterado com sucesso!</div>"];
     } else {
-        $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Erro: Cliente não editado!</div>"];
+        $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Não alterado(s)!</div>"];
     }
 }
 

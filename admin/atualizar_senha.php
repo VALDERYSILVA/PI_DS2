@@ -24,9 +24,12 @@ include_once 'configuracao/conexao.php';
         <div class="form-box">
             <div class="form-value">
                 <form action="" method="post" autocomplete="off">
+                    <div class="logo">
+                        <img src="img/logotipo.png" alt="logo redondo">
+                    </div>
 
                     <h2>APC Tecnologia</h2>
-                    <p>Sua nova senha dever conter<br>mínimo de 8 caracteres</p>
+                    <p>A senha dever conter 8 caracteres</p>
 
                     <?php
                     $usuario = "";
@@ -61,7 +64,7 @@ include_once 'configuracao/conexao.php';
                                 $result_up_usuario->bindParam(':id', $row_usuario['id'], PDO::PARAM_INT);
 
                                 if ($result_up_usuario->execute()) {
-                                    $_SESSION['msg'] = "<div class='alert1 alert-success1' role='alert'>Sua senha foi alterada com sucesso!</div>";
+                                    $_SESSION['msg'] = "<div class='alert alert-success1' role='alert'>Senha foi alterada com sucesso!</div>";
                                     header("Location: index.php");
                                 } else {
                                     echo "<div class='alert alert_danger' role='alert'>Tente novamente!
@@ -80,12 +83,12 @@ include_once 'configuracao/conexao.php';
                     ?>
 
                     <div class="inputbox">
-                        <ion-icon name="mail"></ion-icon>
+                        <ion-icon name="senha"></ion-icon>
                         <input type="password" name="senha" required minlength="8" value="<?php echo $usuario; ?>">
                         <label for="">Nova senha</label>
                     </div>
                     <div class="forget">
-                        <label for="">Não precisa trocar a senha? <a href="index.php">clique aqui</a></label>
+                        <label for="">Lembrou? <a href="index.php"> clique aqui</a></label>
                     </div>
                     <button type="submit" value="Atualizar" name="SendNovaSenha">Alterar
                     </button>

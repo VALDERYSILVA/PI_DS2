@@ -151,12 +151,12 @@ include_once('configuracao/select.php');
 
                     <div class="mb-30">
                         <label for="novaSenha" class="col-form-label">Nova Senha</label>
-                        <input type="text" class="form-control" name="senha" id="altSenha" autocomplete="off" maxlength="255">
+                        <input type="text" class="form-control" name="senha" id="altSenha" autocomplete="off">
                     </div>
 
                     <div class="mb-30">
                         <label for="novaSenha" class="col-form-label">Repita a Senha</label>
-                        <input type="text" class="form-control" name="repsenha" id="repSenha" autocomplete="off" maxlength="255">
+                        <input type="text" class="form-control" name="repsenha" id="repSenha" autocomplete="off">
                     </div>
 
                     <div class="modal-footer">

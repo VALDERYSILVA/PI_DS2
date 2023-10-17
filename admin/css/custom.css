@@ -533,7 +533,6 @@ input[type="search"] {
 	font-size: 13px;
 	border: none;
 	min-width: 50px;
-	border-radius: 20px;
 	border: none;
 	outline: none !important;
 	margin-left: 10px;
@@ -602,7 +601,7 @@ table.table td a:hover {
 	color: #777;
 }
 
-.sair {
+.menu {
 	color: #b8b8b8
 }
 

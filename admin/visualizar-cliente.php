@@ -3,10 +3,10 @@
 include_once("./include/header.php");
 
 // Receber o id enviado na URL
-$cliente_id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+$cod = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 
 // Acessa o 'if' quando não é enviado o 'id' na URL
-if (empty($cliente_id)) {
+if (empty($cod)) {
 
     $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Erro: Cliente não encontrado!
    </div>";
@@ -97,8 +97,6 @@ if (empty($cliente_id)) {
                         </div>
                     </div>
 
-                    <span id='msgAlerta'>
-
                 </div>
 
                 <div class="col-md-12">
@@ -109,7 +107,7 @@ if (empty($cliente_id)) {
                             DATE_FORMAT(nascimento, '%d/%m/%Y') AS nascimento_br, telefone, email, cep, logradouro, numero, complemento, bairro, data_cadastro, 
                             cidade, uf ,ibge, observacao FROM clientes WHERE cod =:cod ORDER BY cod DESC  LIMIT 1";
                     $resul_cliente = $conexao->prepare($query_cliente);
-                    $resul_cliente->bindParam(':cod', $cliente_id);
+                    $resul_cliente->bindParam(':cod', $cod);
                     $resul_cliente->execute();
 
                     if (($resul_cliente) and ($resul_cliente->rowCount() != 0)) {
@@ -173,6 +171,8 @@ if (empty($cliente_id)) {
                         <dl class='row1'>
                         <dt class='col-sm-3'>Senha do Cliente</dt>
                         <dd class='col-auto' id='valor_senha$cod'>$senha_alt</dd>
+
+                        <span id='msgAlerta'>
 
                         <dd class='col-auto'><botton type='button' id='botao_editar$cod' class='btn btn-outline-primary btn-sm'
                         onclick='editar_registro($cod)' style='margin: 8px 0px 0px;'>Alterar Senha</botton>

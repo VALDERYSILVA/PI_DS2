@@ -3,8 +3,10 @@
 const tbody = document.querySelector(".listar-clientes");
 const cadForm = document.getElementById("add-cliente-form");
 const editForm = document.getElementById("edit-cliente-form");
+const altSenhaUserForm = document.getElementById("alt-senha-user-form");
 const msgAlertaErroCad = document.getElementById("msgAlertaErroCad");
 const msgAlertaErroEdit = document.getElementById("msgAlertaErroEdit");
+const msgAlertaErroAlt = document.getElementById("msgAlertaErroAlt");
 const msgAlerta = document.getElementById("msgAlerta");
 
 
@@ -36,11 +38,13 @@ cadForm.addEventListener("submit", async (e) => {
     } else {
         msgAlerta.innerHTML = resposta['msg'];
         cadForm.reset();
-        listarUsuarios(1);
-        $('.modal').modal('hide');
+        removerMsgAlerta();
     }
     document.getElementById("add-cliente-btn").value = "Adicionar";
 });
+
+
+/* ------------------------- Editar Cliente ------------------------- */
 
 async function editarCliente(cod) {
     msgAlertaErroEdit.innerHTML = "";
@@ -98,8 +102,9 @@ editForm.addEventListener("submit", async (e) => {
         msgAlertaErroEdit.innerHTML = resposta['msg'];
     } else {
         msgAlertaErroEdit.innerHTML = resposta['msg'];
-        listarUsuarios(1);
-        window.location.href = "dashboard.php";
+        removerMsgAlerta();
+        // listarUsuarios(1);
+        // window.location.href = "dashboard.php";
     };
 
     document.getElementById("edit-cliente-btn").value = "Salvar";
@@ -146,6 +151,18 @@ async function deleteContato(id) {
 
 }
 
+
+// -------------------------------------------------------------------//
+// Sair
+
+function sairDashboard() {
+    var sairDashboard = confirm("Gostaria de Sair do Painel de Controle?");
+    if (sairDashboard == true) {
+        window.location.href = "sair.php";
+    }
+};
+
+
 // ------------------------------------------------------------------ //
 
 // Buscar
@@ -166,7 +183,7 @@ function searchData() {
 
 // ------------------------------------------------------------------ //
 
-// Alterar Senha
+// Alterar Senha do cliente
 
 async function editar_registro(cod) {
 
@@ -237,10 +254,65 @@ async function salvar_registro(cod) {
 
 }
 
+/* ----------------------------------- Alterar Senha Usuario --------------------------------- */
+
+async function altSenhaUsuario(id) {
+    //console.log("Acessou o editar: " + id);
+    msgAlertaErroAlt.innerHTML = "";
+
+    const dados = await fetch('visualizar_usuario.php?id=' + id);
+    const resposta = await dados.json();
+    //console.log(resposta);
+
+    if (resposta['erro']) {
+        msgAlerta.innerHTML = resposta['msg'];
+    } else {
+        const editarModal = new bootstrap.Modal(document.getElementById("altSenhaModal"));
+        editarModal.show();
+        document.getElementById("altId").value = resposta['dados'].id;
+        //document.getElementById("altSenha").value = resposta['dados'].senha;
+        //document.getElementById("repSenha").value = resposta['dados'].senha;
+    }
+}
+
+altSenhaUserForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const dadosAltUserForm = new FormData(altSenhaUserForm);
+    //console.log(dadosAltUserForm);
+    //for (var dadosResposta of dadosAltUserForm.entries()) {
+    //    console.log(dadosResposta[0] + " - " + dadosResposta[1]);
+    //}
+
+    const dados = await fetch("editar_senha_usuario.php", {
+        method: "POST",
+        body: dadosAltUserForm
+
+    });
+
+    const resposta = await dados.json();
+    //console.log(resposta);
+
+    if (resposta['erro']) {
+        msgAlertaErroAlt.innerHTML = resposta['msg'];
+    } else {
+        alert("Senha alterada com sucesso!\nFavor realizar login com nova senha")
+        window.location.href = "sair.php";
+    }
+
+});
+
 /* Fim editar a senha no banco de dados */
+
+
+
+/* Remover alerta */
 
 function removerMsgAlerta() {
     setTimeout(function () {
         document.getElementById("msgAlerta").innerHTML = "";
-    }, 4000);
+        history.go(0);
+    }, 3000);
 }
+
+
+

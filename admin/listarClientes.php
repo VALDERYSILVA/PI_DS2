@@ -41,7 +41,7 @@ if (!empty($pagina)) {
                     <td>
                    
                     <a href='visualizar-cliente.php?id=$cod' class='encode'>
-                    <i class='material-icons' data-toggle='tooltip' title='Visualizar'>&#xE8b6;</i></a>
+                    <i class='material-icons' data-toggle='tooltip' title='Visualizar'>&#xe8f4;</i></a>
                     
                     <a href='#' id='$cod' class='encode' onclick='editarCliente($cod)'>
                       <i class='material-icons' data-toggle='tooltip' title='Editar'>&#xE254;</i></a>
@@ -69,25 +69,25 @@ if (!empty($pagina)) {
 
     $dados .= '<nav aria-label="Page navigation"><ul class="pagination pagination-sm justify-content">';
 
-    $dados .= "<li class='page-item'><a href='#' class='page-link' onclick='listarUsuarios(1)' >Primeira</a></li>";
+    $dados .= "<li class='page-item'><a href='#' class='page-link' title='Primeira página' onclick='listarUsuarios(1)' >Primeira</a></li>";
 
 
     for ($pag_ant = $pagina - $max_link; $pag_ant <= $pagina - 1; $pag_ant++) {
         if ($pag_ant >= 1) {
-            $dados .= "<li class='page-item'><a class='page-link' href='#' onclick='listarUsuarios($pag_ant)' >$pag_ant</a></li>";
+            $dados .= "<li class='page-item'><a class='page-link' href='#' title='Página $pag_ant' onclick='listarUsuarios($pag_ant)' >$pag_ant</a></li>";
         }
     }
 
-    $dados .= "<li class='page-item active'><a class='page-link' href='#'>$pagina</a></li>";
+    $dados .= "<li class='page-item active'><a class='page-link' title='Página $pagina' href='#'>$pagina</a></li>";
 
     for ($pag_dep = $pagina + 1; $pag_dep <= $pagina + $max_link; $pag_dep++) {
         if ($pag_dep <= $qtd_pagina) {
-            $dados .= "<li class='page-item'><a class='page-link' href='#' onclick='listarUsuarios($pag_dep)' >$pag_dep</a></li>";
+            $dados .= "<li class='page-item'><a class='page-link' href='#' title='Página $pag_dep' onclick='listarUsuarios($pag_dep)' >$pag_dep</a></li>";
         }
     }
 
 
-    $dados .= "<li class='page-item'><a class='page-link' href='#' onclick='listarUsuarios($qtd_pagina)' >Última</a></li>";
+    $dados .= "<li class='page-item'><a class='page-link' href='#' title='Última página' onclick='listarUsuarios($qtd_pagina)' >Última</a></li>";
     $dados .= '</ul></nav>';
 
     echo $dados;
