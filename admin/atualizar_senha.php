@@ -29,20 +29,18 @@ include_once 'configuracao/conexao.php';
                     </div>
 
                     <h2>APC Tecnologia</h2>
-                    <p>A senha dever conter 8 caracteres</p>
+                    <p>Crie uma nova senha para<br>acessar o painel de controle</p>
 
                     <?php
+
                     $usuario = "";
                     if (isset($dados['senha'])) {
                         $usuario = $dados['senha'];
                     }
 
-                    ?>
-
-                    <?php
-
                     $chave = filter_input(INPUT_GET, 'chave', FILTER_DEFAULT);
                     // var_dump($chave);
+
                     if (!empty($chave)) {
                         $query_usuario =  "SELECT id FROM usuarios WHERE recuperar_senha =:recuperar_senha LIMIT 1";
                         $result_usuario = $conexao->prepare($query_usuario);
@@ -53,7 +51,16 @@ include_once 'configuracao/conexao.php';
                             $row_usuario = $result_usuario->fetch(PDO::FETCH_ASSOC);
                             $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
                             // var_dump($dados);
+
+                            $qtd = "";
                             if (!empty($dados['SendNovaSenha'])) {
+                                $qtd = ($dados['senha']);
+                                //var_dump($qtd);
+                            }
+
+                            if (!empty($dados['SendNovaSenha']) and (strlen($qtd)) < 8) {
+                                echo "<div class='alert alert-danger' role='alert'>A senha deve conter 8 caracteres</div>";
+                            } elseif (!empty($dados['SendNovaSenha']) and (strlen($qtd)) == 8) {
                                 $senha_usuario = password_hash($dados['senha'], PASSWORD_DEFAULT);
                                 $recuperar_senha = 'NULL';
 
@@ -68,7 +75,7 @@ include_once 'configuracao/conexao.php';
                                     header("Location: index.php");
                                 } else {
                                     echo "<div class='alert alert_danger' role='alert'>Tente novamente!
-                                        </div>";
+                                                </div>";
                                 }
                             }
                         } else {
@@ -84,7 +91,7 @@ include_once 'configuracao/conexao.php';
 
                     <div class="inputbox">
                         <ion-icon name="senha"></ion-icon>
-                        <input type="password" name="senha" required minlength="8" value="<?php echo $usuario; ?>">
+                        <input type="password" name="senha" required minlength="1" value="<?php echo $usuario; ?>">
                         <label for="">Nova senha</label>
                     </div>
                     <div class="forget">

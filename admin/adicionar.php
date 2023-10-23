@@ -5,6 +5,8 @@ include_once "configuracao/conexao.php";
 
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
+$qtd = ($dados['senha']);
+
 if (empty($dados['nome'])) {
   $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Necessário informar o nome!</div>"];
 } elseif (empty($dados['cpf'])) {
@@ -29,6 +31,8 @@ if (empty($dados['nome'])) {
   $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Necessário Informar o estado!</div>"];
 } elseif (empty($dados['senha'])) {
   $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Necessário Informar a senha do usuário!</div>"];
+} elseif ((strlen($qtd)) < 8) {
+  $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>A senha deve conter 8 caracteres!</div>"];
 } elseif (empty($dados['plano'])) {
   $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Necessário Informar o plano!</div>"];
 } elseif (empty($dados['vencimento'])) {

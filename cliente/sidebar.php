@@ -2,6 +2,8 @@
 
 include_once('configuracao/select.php');
 
+
+
 ?>
 
 
@@ -35,10 +37,10 @@ include_once('configuracao/select.php');
 
         <li class="dropdown">
             <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                <i class="material-icons">&#xe8ad;</i><span>Impressões</span></a>
+                <i class="material-icons">&#xe8ad;</i><span>Documentos</span></a>
             <ul class="collapse list-unstyled menu" id="pageSubmenu2">
                 <li>
-                    <a href="#">Contrato</a>
+                    <?php echo "<a href='contrato.php?id=$cod' target='_blank'>Contrato</a>" ?>
                 </li>
                 <li>
                     <a href="#">Declaração de Quitação</a>
@@ -85,7 +87,7 @@ include_once('configuracao/select.php');
 
 <!----------------------------------------- Modal / Atualizar Dados  ------------------------------------------>
 
-<div class="modal fade" id="editarDadosModal" tabindex="-1" aria-labelledby="editarDadosModalLabel" aria-hidden="true">
+<div class="modal t-modal primary animated bounceInDown" id="editarDadosModal" tabindex="-1" aria-labelledby="editarDadosModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -102,11 +104,6 @@ include_once('configuracao/select.php');
                     <span id="msgAlertaErroEdit"></span>
 
                     <div class="mb-30">
-                        <label for="cod" class="col-form-label"></label>
-                        <input type="hidden" name="cod" id="editarCod">
-                    </div>
-
-                    <div class="mb-30">
                         <label for="telefone" class="col-form-label">Telefone</label>
                         <input type="text" class="form-control" name="telefone" id="editarTelefone" autocomplete="off" maxlength="14">
                     </div>
@@ -116,9 +113,14 @@ include_once('configuracao/select.php');
                         <input type="email" class="form-control" name="email" id="editarEmail" autocomplete="off" maxlength="255">
                     </div>
 
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancelar</button>
-                        <input type="submit" class="btn btn-success btn-sm" id="edit-dados-btn" value="Salvar" />
+                    <div class="mb-30">
+                        <label for="cod" class="col-form-label"></label>
+                        <input type="hidden" name="cod" id="editarCod">
+                    </div>
+
+                    <div class="modal-footer dados">
+                        <button type="button" class="btn btn-cancelar btn-sm" data-dismiss="modal">Cancelar</button>
+                        <input type="submit" class="btn btn-salvar btn-sm" id="edit-dados-btn" value="Salvar" />
                     </div>
                 </form>
             </div>
@@ -128,7 +130,7 @@ include_once('configuracao/select.php');
 
 <!----------------------------------------- Modal / Alterar Senha  ------------------------------------------>
 
-<div class="modal fade" id="altSenhaModal" tabindex="-1" aria-labelledby="altSenhaModalLabel" aria-hidden="true">
+<div class="modal t-modal primary animated bounceInDown" id="altSenhaModal" tabindex="-1" aria-labelledby="altSenhaModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -145,11 +147,6 @@ include_once('configuracao/select.php');
                     <span id="msgAlertaErroAlt"></span>
 
                     <div class="mb-30">
-                        <label for="altCod" class="col-form-label"></label>
-                        <input type="hidden" name="cod" id="altCod">
-                    </div>
-
-                    <div class="mb-30">
                         <label for="novaSenha" class="col-form-label">Nova Senha</label>
                         <input type="text" class="form-control" name="senha" id="altSenha" autocomplete="off">
                     </div>
@@ -159,9 +156,14 @@ include_once('configuracao/select.php');
                         <input type="text" class="form-control" name="repsenha" id="repSenha" autocomplete="off">
                     </div>
 
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancelar</button>
-                        <input type="submit" class="btn btn-success btn-sm" id="alt-senha-btn" value="Alterar Senha" />
+                    <div class="mb-30">
+                        <label for="altCod" class="col-form-label"></label>
+                        <input type="hidden" name="cod" id="altCod">
+                    </div>
+
+                    <div class="modal-footer dados">
+                        <button type="button" class="btn btn-cancelar btn-sm" data-dismiss="modal">Cancelar</button>
+                        <input type="submit" class="btn btn-salvar btn-sm" id="alt-senha-btn" value="Alterar Senha" />
                     </div>
                 </form>
             </div>

@@ -57,10 +57,12 @@ include_once 'configuracao/conexao.php';
                             } else {
                                 $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Usuário ou senha incorreto!
                                                          </div>";
+                                header('Refresh:3');
                             }
                         } else {
                             $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Usuário ou senha incorreto!
                                                  </div>";
+                            header('Refresh:3');
                         }
                     }
 

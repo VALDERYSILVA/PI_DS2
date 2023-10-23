@@ -1,0 +1,81 @@
+body {
+    background-color: #fefefe;
+}
+
+.t-modal .modal-dialog {
+    width: 600px;
+}
+
+.t-modal .modal-content {
+    border-radius: 15px;
+}
+
+.t-modal .modal-header {
+    padding: 10px 35px;
+}
+
+.t-modal .modal-title,
+.t-modal .close {
+    color: #ffffff;
+}
+
+.t-modal .modal-body {
+    padding: 30px 35px 5px
+}
+
+.t-modal.primary .modal-header {
+    background-color: #4C8ACE;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.t-modal .modal-footer {
+    background-color: #4C8ACE;
+
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    padding: 22px;
+}
+
+/* footer dados*/
+
+.t-modal .dados {
+    background-color: #4C8ACE;
+    padding: 8px 20px;
+}
+
+.t-modal .mb-30 {
+    margin: .8rem 2rem !important;
+}
+
+.btn-salvar {
+    color: #212529;
+    background-color: #fefefe;
+    border-color: #ffffff;
+}
+
+.btn-salvar:hover {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745
+}
+
+.btn-cancelar {
+    color: #212529;
+    background-color: #fefefe;
+    border-color: #ffffff;
+}
+
+.btn-cancelar:hover {
+    color: #fff;
+    background-color: #ffc107;
+    border-color: #ffc107
+}

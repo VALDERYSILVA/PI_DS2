@@ -318,7 +318,7 @@
     <!--rodapé da página-->
 
     <footer id="rodape">
-        <img src="imagens/rodape.jpg" alt="Imagem ilustrativa do rodape">
+        <img src="imagens/footer.png" alt="Imagem ilustrativa do rodape">
         <div class="footer-texto">
             <h3>Menu</h3>
             <ul>

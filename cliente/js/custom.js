@@ -33,6 +33,7 @@ async function visualizarDados(cod) {
     }
 }
 
+
 /* -------------------------------  Meus Dados / Atualizar Dados -------------------------------  */
 
 async function editarDados(cod) {
@@ -147,4 +148,12 @@ function sairPainel() {
     if (sairPainel == true) {
         window.location.href = "sair.php";
     }
+}
+
+
+// imprimir contrato
+
+function printContrato(text) {
+    text = document
+    print(text)
 }

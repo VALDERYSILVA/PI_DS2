@@ -71,6 +71,7 @@ include_once 'configuracao/conexao.php';
 
                     echo "<div class='alert1 alert-success1' role='alert'>E-mail enviado com sucesso!<br>
                     Verifique caixa de entrada ou spam</div>";
+                    header("refresh: 4;login.php");
                     ?>
 
                     <div class="inputbox">

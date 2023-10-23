@@ -61,7 +61,7 @@ $mail = new PHPMailer(true);
                     $mail->Host       = 'smtp.gmail.com';
                     $mail->SMTPAuth   = true;
                     $mail->Username   = 'nao-responder@arteempc.com.br';
-                    $mail->Password   = 'suasenhaaqui';
+                    $mail->Password   = 'suaSenhaAqui';
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                     $mail->Port       = 587;
 
@@ -91,10 +91,12 @@ $mail = new PHPMailer(true);
             } else {
                 $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Tente novamente!
                                 </div>";
+                header('Refresh:3');
             }
         } else {
             $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>E-mail não registrado!
                             </div>";
+            header('Refresh:3');
         }
     }
 
@@ -125,7 +127,7 @@ $mail = new PHPMailer(true);
 
                     <div class="inputbox">
                         <ion-icon name="mail"></ion-icon>
-                        <input type="text" name="email" required minlength="1" value="<?php echo $nome ?>">
+                        <input type="email" name="email" required minlength="1" value="<?php echo $nome ?>">
                         <label for="email">E-mail</label>
                     </div>
 

@@ -10,6 +10,10 @@
   <title>Area do Assinante APC</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- animate CSS -->
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/redesing.css">
+
   <!----css3---->
   <link rel="stylesheet" href="css/custom.css">
 

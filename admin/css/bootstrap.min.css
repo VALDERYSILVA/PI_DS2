@@ -5382,8 +5382,8 @@ input[type=submit].btn-block {
 
 .alert {
     position: relative;
-    padding: .75rem 1.25rem;
-    margin: 0 15px;
+    padding: .4rem 1.25rem;
+    margin: 1rem;
     border: 1px solid transparent;
     border-radius: .25rem
 }
@@ -5498,7 +5498,7 @@ input[type=submit].btn-block {
 .alert-danger {
     text-align: center;
     color: #ffffff;
-    background-color: #ff0000;
+    background-color: #f34336;
     border-color: #ff0000;
 }
 

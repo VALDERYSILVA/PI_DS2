@@ -3,8 +3,14 @@ include_once "configuracao/conexao.php";
 
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
+$qtd = ($dados['senha']);
+
 if (empty($dados['cod'])) {
     $retorna = ['erro' => false, 'msg' => "<div class='alert alert-danger' role='alert'>Necessário enviar o COD!</div>"];
+} elseif ((strlen($qtd)) < 8) {
+    $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>A senha deve conter 8 caracteres!</div>"];
+} elseif ((strlen($qtd)) > 8) {
+    $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>A senha deve conter 8 caracteres!</div>"];
 } elseif (empty($dados['senha'])) {
     $retorna = ['erro' => false, 'msg' => "<div class='alert alert-danger' role='alert'>Senha não pode ser em branco!</div>"];
 } else {

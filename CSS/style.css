@@ -82,10 +82,11 @@ a:hover {
 
 #central_do_cliente {
   background-color: #00a7b4;
+  border: 2px solid #dddddd;
   border-radius: 15px;
   width: 130px;
   text-align: center;
-  animation: cliente 0.7s linear infinite;
+  animation: cliente 1s linear infinite;
 }
 
 @keyframes cliente {
@@ -1061,7 +1062,7 @@ a:hover {
   position: absolute;
   width: 100%;
   height: 100%;
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 #rodape .footer-texto {
@@ -1077,7 +1078,7 @@ a:hover {
 #rodape .footer-texto h3 {
   width: 300px;
   position: relative;
-  color: #FF0000;
+  color: #FFFFFF;
   text-shadow: #000 3px 3px 4px;
   margin: 20px 60px 0;
 }

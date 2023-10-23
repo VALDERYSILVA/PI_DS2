@@ -214,7 +214,7 @@ include_once('configuracao/select.php');
 	<!----------------------------------------- Modal  ------------------------------------------>
 
 
-	<div class="modal fade" id="visualizarDados" tabindex="-1" aria-labelledby="visualizarDadosLabel" aria-hidden="true">
+	<div class="modal t-modal primary animated bounceIn" id="visualizarDados" tabindex="-1" aria-labelledby="visualizarDadosLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -252,9 +252,8 @@ include_once('configuracao/select.php');
 
 					<dl class="row">
 						<dt class="col-sm-3">Endereço</dt>
-						<dd class="col-sm-9"><span id="logradouro"></span>, <span id="numero"></span> - <span id="complemento"></span></dd>
-						<dt class="col-sm-3"></dt>
-						<dd class="col-sm-9"><span id="bairro"></span>, <span id="cidade"></span> - <span id="uf"></span></dd>
+						<dd class="col-sm-9"><span id="logradouro"></span>, <span id="numero"></span> - <span id="complemento">
+							</span> - <span id="bairro"></span>, <span id="cidade"></span> - <span id="uf"></span></dd>
 					</dl>
 
 				</div>

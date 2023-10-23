@@ -137,7 +137,7 @@ a:focus {
 	width: 260px;
 	overflow: auto;
 	transition: all 0.3s;
-	background: linear-gradient(90deg, #58a2f1, #4C8ACE);
+	background: #4C8ACE;
 	box-shadow: 0 10px 30px -12px rgba(0 0 0 / 42%),
 		0 4px 25px 0px rgba(0 0 0 / 12%),
 		0 8px 10px -5px rgba(0 0 0 / 20%);

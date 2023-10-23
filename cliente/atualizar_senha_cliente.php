@@ -29,17 +29,13 @@ include_once 'configuracao/conexao.php';
                     </div>
 
                     <h2>APC Tecnologia</h2>
-                    <p>Sua nova senha dever conter<br>mínimo de 8 caracteres</p>
+                    <p>Crie uma nova senha para<br>acessar a central do assinante</p>
 
                     <?php
                     $usuario = "";
                     if (isset($dados['senha'])) {
                         $usuario = $dados['senha'];
                     }
-
-                    ?>
-
-                    <?php
 
                     $chave = filter_input(INPUT_GET, 'chave', FILTER_DEFAULT);
                     // var_dump($chave);
@@ -53,7 +49,16 @@ include_once 'configuracao/conexao.php';
                             $row_usuario = $result_usuario->fetch(PDO::FETCH_ASSOC);
                             $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
                             // var_dump($dados);
+
+                            $qtd = "";
                             if (!empty($dados['SendNovaSenha'])) {
+                                $qtd = ($dados['senha']);
+                                //var_dump($qtd);
+                            }
+
+                            if (!empty($dados['SendNovaSenha']) and (strlen($qtd)) < 8) {
+                                echo "<div class='alert alert-danger' role='alert'>A senha deve conter 8 caracteres</div>";
+                            } elseif (!empty($dados['SendNovaSenha']) and (strlen($qtd)) == 8) {
                                 $senha_usuario = password_hash($dados['senha'], PASSWORD_DEFAULT);
                                 $recuperar_senha = 'NULL';
 
@@ -64,27 +69,27 @@ include_once 'configuracao/conexao.php';
                                 $result_up_usuario->bindParam(':cod', $row_usuario['cod'], PDO::PARAM_INT);
 
                                 if ($result_up_usuario->execute()) {
-                                    $_SESSION['msg'] = "<div class='alert1 alert-success1' role='alert'>Sua senha foi alterada com sucesso!</div>";
-                                    header("Location: index.php");
+                                    $_SESSION['msg'] = "<div class='alert alert-success1' role='alert'>Senha foi alterada com sucesso!</div>";
+                                    header("Location: login.php");
                                 } else {
                                     echo "<div class='alert alert_danger' role='alert'>Tente novamente!
                                         </div>";
                                 }
                             }
                         } else {
-                            $_SESSION['msg'] = "<div class='alert alert_danger-index' role='alert'>Link inválido! Solicite um novo link</div>";
-                            header("Location: recuperar_senha.php");
+                            $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Link inválido! Solicite um novo link</div>";
+                            header("Location: recuperar_senha_cliente.php");
                         }
                     } else {
-                        $_SESSION['msg'] = "<div class='alert alert_danger-index' role='alert'>Link inválido! Solicite um novo link</div>";
-                        header("Location: recuperar_senha.php");
+                        $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Link inválido! Solicite um novo link</div>";
+                        header("Location: recuperar_senha_cliente.php");
                     }
 
                     ?>
 
                     <div class="inputbox">
                         <ion-icon name="senha"></ion-icon>
-                        <input type="password" name="senha" required minlength="8" value="<?php echo $usuario; ?>">
+                        <input type="password" name="senha" required minlength="1" maxlength="8" value="<?php echo $usuario; ?>">
                         <label for="">Nova senha</label>
                     </div>
                     <div class="forget">
